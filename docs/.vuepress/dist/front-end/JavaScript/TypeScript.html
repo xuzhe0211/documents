@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>typescript | 随风</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="apple-touch-icon" href="/documents/apple-touch-icon.png">
+    <link rel="icon" href="/documents/favicon.ico">
+    <link rel="manifest" href="/documents/manifest.json">
+    <meta name="description" content="随风随雨又随流">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.061186d0.css" as="style"><link rel="preload" href="/documents/assets/js/app.12610c93.js" as="script"><link rel="preload" href="/documents/assets/js/2.c614a540.js" as="script"><link rel="preload" href="/documents/assets/js/25.5c70c33a.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.5d068f6f.js"><link rel="prefetch" href="/documents/assets/js/11.c51bb7c8.js"><link rel="prefetch" href="/documents/assets/js/12.43f78d74.js"><link rel="prefetch" href="/documents/assets/js/13.976bcd92.js"><link rel="prefetch" href="/documents/assets/js/14.9284e1a1.js"><link rel="prefetch" href="/documents/assets/js/15.22ebb483.js"><link rel="prefetch" href="/documents/assets/js/16.1e8733d1.js"><link rel="prefetch" href="/documents/assets/js/17.de8843f2.js"><link rel="prefetch" href="/documents/assets/js/18.efbae0aa.js"><link rel="prefetch" href="/documents/assets/js/19.ae9c56d2.js"><link rel="prefetch" href="/documents/assets/js/20.0cc91375.js"><link rel="prefetch" href="/documents/assets/js/21.265a9d22.js"><link rel="prefetch" href="/documents/assets/js/22.6e514783.js"><link rel="prefetch" href="/documents/assets/js/23.06fb3bed.js"><link rel="prefetch" href="/documents/assets/js/24.d66d44b1.js"><link rel="prefetch" href="/documents/assets/js/26.e4410c1e.js"><link rel="prefetch" href="/documents/assets/js/27.1b383071.js"><link rel="prefetch" href="/documents/assets/js/28.708a907f.js"><link rel="prefetch" href="/documents/assets/js/29.b0ef177c.js"><link rel="prefetch" href="/documents/assets/js/3.9e846f94.js"><link rel="prefetch" href="/documents/assets/js/30.508299b2.js"><link rel="prefetch" href="/documents/assets/js/31.81039bbe.js"><link rel="prefetch" href="/documents/assets/js/32.1f2f3833.js"><link rel="prefetch" href="/documents/assets/js/33.5bd66488.js"><link rel="prefetch" href="/documents/assets/js/34.ea13cc90.js"><link rel="prefetch" href="/documents/assets/js/35.3a3c0e45.js"><link rel="prefetch" href="/documents/assets/js/36.bd696621.js"><link rel="prefetch" href="/documents/assets/js/37.e8298d49.js"><link rel="prefetch" href="/documents/assets/js/38.bddcbabd.js"><link rel="prefetch" href="/documents/assets/js/39.ffa9fc9f.js"><link rel="prefetch" href="/documents/assets/js/4.23d18f9f.js"><link rel="prefetch" href="/documents/assets/js/40.9a68a4be.js"><link rel="prefetch" href="/documents/assets/js/41.5252216b.js"><link rel="prefetch" href="/documents/assets/js/42.0d04d587.js"><link rel="prefetch" href="/documents/assets/js/43.897ffa1f.js"><link rel="prefetch" href="/documents/assets/js/44.9b4952f5.js"><link rel="prefetch" href="/documents/assets/js/45.af0e5017.js"><link rel="prefetch" href="/documents/assets/js/46.392ab3ad.js"><link rel="prefetch" href="/documents/assets/js/47.b371ffb2.js"><link rel="prefetch" href="/documents/assets/js/48.40c00245.js"><link rel="prefetch" href="/documents/assets/js/49.527c3603.js"><link rel="prefetch" href="/documents/assets/js/5.f45af42c.js"><link rel="prefetch" href="/documents/assets/js/50.66b88d7b.js"><link rel="prefetch" href="/documents/assets/js/51.61a88da8.js"><link rel="prefetch" href="/documents/assets/js/6.07b7ae71.js"><link rel="prefetch" href="/documents/assets/js/7.b11055c7.js"><link rel="prefetch" href="/documents/assets/js/8.0a7518ab.js"><link rel="prefetch" href="/documents/assets/js/9.dc3bb890.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.061186d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">随风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Java Script</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/front-end/JavaScript/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/documents/front-end/JavaScript/TypeScript.html" aria-current="page" class="active sidebar-link">typescript</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/TypeScript.html#vue-cli支持" class="sidebar-link">Vue-CLI支持</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/TypeScript.html#改造组件" class="sidebar-link">改造组件</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/TypeScript.html#改造vue-router" class="sidebar-link">改造Vue Router</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/TypeScript.html#改造vuex" class="sidebar-link">改造Vuex</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/TypeScript.html#相关实践" class="sidebar-link">相关实践</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/TypeScript.html#参考文档" class="sidebar-link">参考文档</a></li></ul></li><li><a href="/documents/front-end/JavaScript/a-array-accessor-methods.html" class="sidebar-link">数组的访问方法</a></li><li><a href="/documents/front-end/JavaScript/a-object-prototype.html" class="sidebar-link">object原型链</a></li><li><a href="/documents/front-end/JavaScript/a-string-query-methods.html" class="sidebar-link">字符串查询方法</a></li><li><a href="/documents/front-end/JavaScript/browder-deep.html" class="sidebar-link">浏览器运行机制</a></li><li><a href="/documents/front-end/JavaScript/browser-session-cookie.html" class="sidebar-link">session和cookie区别</a></li><li><a href="/documents/front-end/JavaScript/deep-app-bridge.html" class="sidebar-link">App Bridge原理</a></li><li><a href="/documents/front-end/JavaScript/deep-design-model.html" class="sidebar-link">设计模式</a></li><li><a href="/documents/front-end/JavaScript/deep-weex.html" class="sidebar-link">weex原理</a></li><li><a href="/documents/front-end/JavaScript/es6-promise.html" class="sidebar-link">Promise</a></li><li><a href="/documents/front-end/JavaScript/es6-reflect.html" class="sidebar-link">Reflect</a></li><li><a href="/documents/front-end/JavaScript/es6-set-map.html" class="sidebar-link">Set/Map区别</a></li><li><a href="/documents/front-end/JavaScript/es6-super.html" class="sidebar-link">ES6中的super</a></li><li><a href="/documents/front-end/JavaScript/methods-debounce.html" class="sidebar-link">函数防抖、节流</a></li><li><a href="/documents/front-end/JavaScript/site-blob.html" class="sidebar-link">流文件</a></li><li><a href="/documents/front-end/JavaScript/wx-about.html" class="sidebar-link">小程序</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>(2020.01.07)其中有一些最佳时间可能会随着项目逐渐迭代进行调整，请自行辨别可行性</p></blockquote> <h2 id="vue-cli支持"><a href="#vue-cli支持" class="header-anchor">#</a> Vue-CLI支持</h2> <p>Vue-CLI内建了TypeScript工具支持，在新建项目时可以选择使用TypeScript扩展，包括针对Vue Core得官方类型声明，还包括了Vue Router和Vuex提供了相应得声明文件。</p> <p>使用Vue-CLI会自动创建tsconfig.json文件，基本上使用默认得配置文件就可以满足要求。</p> <h2 id="改造组件"><a href="#改造组件" class="header-anchor">#</a> 改造组件</h2> <p>使用TypeScript编写Vue文件组件有两种方式，一种是通过Vue.extend()方法，另一种是基于Vue组件(在使用Vue-CLI创建项目得时候可以选择)，我选择了后者，可以提供更优雅、更类似JSX得书写体验。</p> <p>需要安装vue-class-component用来将Vue组件改写成基于Class的形式，也可以选择使用vue-property-decorator，后者依赖于前者，而且提供了额外的装饰符，让编写更简单。</p> <p>使用得时候，将原来导出得类型由对象改为class，并且使用@Component装饰符，如果有要引入得其他子组件，也放到@Component中。</p> <div class="language- extra-class"><pre class="language-text"><code>@Component({
+	components: {
+    	Child
+    }
+})
+export default class HelloVue extends Vue{
+	//组件内容
+}
+</code></pre></div><p>要注意，虽然使用了export default, 但是Class的名字还是要最好准确定义，这样便于IDE和Lint工具进行追踪、提示。</p> <h3 id="_2-1-组件属性顺序"><a href="#_2-1-组件属性顺序" class="header-anchor">#</a> 2.1 组件属性顺序</h3> <p>没有发现Lint和Prettier规则来强制规定组件内的属性顺序，所以约定好一个书写顺序，最为最佳实践</p> <p>要注意，组件引用、Mixin和Filters都放到了组件外部。总体顺序分为了三个部门：</p> <ol><li>数据(Inject-&gt;Prop-&gt;Data-&gt;Computed-&gt;Model-&gt;Vuex-State-&gt;Vuex-Getter-&gt;Proivde)</li> <li>方法(VueX-Mutation-&gt;Vuex-Action-&gt;methods-&gt;Watch)</li> <li>钩子函数(生命周期钩子-&gt;路由钩子)</li></ol> <p>完整的组件如下，具体写法后面单独列出来(不包含Mixin)</p> <div class="language- extra-class"><pre class="language-text"><code>@Component({ comonents: { Child }})
+export default class App extends Vue{
+	// 数据(Inject -&gt; prop -&gt; Computed -&gt; Model -&gt; vuex-state -&gt; vuex-getter -&gt; Proivide);
+    // 使用祖先组件注入的数据
+    @Inject() readonly value1!: string;
+    
+    //组件的Data
+    value = 'hello';
+    
+    //父组件传入Prop
+    @Prop(Number) readonly value2!: number;
+    
+    //计算属性
+    get value3(): string{
+    	return this.value1;
+    }
+    
+    // 定义组件的Model属性
+    @Model('change', { type: Boolean, default: false }) checked!: boolean;
+    
+    // Vuex Store中定义的state, 作为计算属性定义在组件内
+    @State value4!: string;
+    
+    //Vuex Store 中定义的getter,作为计算属性定义在组件内
+    @Getter value5!: string
+    
+    //为子孙组件提供数据
+    @Provide() root = 'Root';
+    
+    /*--------------------------------*/
+    // 方法（Vuex-Mutation -&gt; Vuex-Action-&gt;Methods-&gt;Watch）
+    // Vuex Store中定义的Mutation，作为方法定义在组件内
+    @Mutation(UPDATE_TITLE_MUTATION) updateTitle!: (payload: {title: string}) =&gt; void;
+    
+    // Vuex Store 中定义的 Action，作为方法定义在组件内
+  @Action(UPDATE_TITLE_ACTION) updateTitleSync!: () =&gt; void;
+  
+  // 组件内的 Method
+  get foo(): string {
+    return this.isCollapse ? 'collapsed-menu' : 'expanded-menu';
+  }
+  
+  // 组件内的 Watch
+  @Watch('value1', { immediate: true, deep: true })
+  onDataChanged(newVal: string, oldVal: string): void {
+    this.foo();
+  }
+  
+  /*-------------------------------------------*/
+  //钩子函数
+  beforeCreated(){};
+  
+  created(){};
+  
+  beforeMount(){};
+  
+  mounted(){};
+  
+  beforeUpdate(){}
+  
+  updated(){};
+  
+  activated(){};
+  
+  deactivated(){};
+  
+  beforeDetory(){};
+  
+  destoryed(){}
+}
+</code></pre></div><h3 id="_2-2-相关api"><a href="#_2-2-相关api" class="header-anchor">#</a> 2.2 相关API</h3> <h4 id="_1-data"><a href="#_1-data" class="header-anchor">#</a> (1)Data</h4> <p>直接在Class定义即可(实际上就是Class的新语法，与在Class的constructor中定义相同)</p> <div class="language- extra-class"><pre class="language-text"><code>import {Vue, Component, Prop} from 'vue-property-decorator';
+@Component
+export default class YourComponent extends Vue {
+	msg: number = 123;
+}
+</code></pre></div><h4 id="_2-计算属性"><a href="#_2-计算属性" class="header-anchor">#</a> (2)计算属性</h4> <p>计算属性采取使用getter的形式定义，在Class内部可以使用get和set关键字,设置某个属性的存指函数和取值函数。</p> <div class="language- extra-class"><pre class="language-text"><code>import { Vue, Component, Prop } from 'vue-property-decorator';
+
+@Component
+export default class YourComponent extends Vue {
+	num: number = 1;
+    get: value: string() {
+    	return this.num + 1;
+    }
+}
+</code></pre></div><p>同时定义set实现了对计算属性的赋值</p> <h4 id="_3-prop"><a href="#_3-prop" class="header-anchor">#</a> (3)Prop</h4> <p>@Prop接受的参数就是原来在Vue中props中传入的参数</p> <div class="language- extra-class"><pre class="language-text"><code>import { Vue, Component, Prop } from 'vue-property-decorator';
+
+@Component
+export default class YourComponent extends Vue {
+	@Prop(Number) readonly propA: number | undefined
+    @Prop({ default: 'default value'}) readonly propB!: string
+    @Prop([String, Boolean]) readonly propC: string | boolean | undefined
+}
+</code></pre></div><h4 id="_4-propsync"><a href="#_4-propsync" class="header-anchor">#</a> (4)PropSync</h4> <p>@PropSync与Prop类似，不同之后在于@PropSync会自动生成一个计算属性，计算属性的getter返回传入的Prop，计算属性的setter中会执行Vue中提倡的更新Prop的emit:updatePropName</p> <div class="language- extra-class"><pre class="language-text"><code>import { Vue, Component, PropSync } from 'vue-property-decorator'
+
+@Component
+export default class YourComponent extends Vue {
+  @PropSync('name', { type: String }) syncedName!: string
+}
+//相当于
+export default {
+  props: {
+    name: {
+      type: String
+    }
+  },
+  computed: {
+    syncedName: {
+      get() {
+        return this.name
+      },
+      set(value) {
+        this.$emit('update:name', value)
+      }
+    }
+  }
+</code></pre></div><p>使用时需要配合.sync修饰符使用(即在组件上定义对应的更新方法)</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;hello-sync :my-prop.sync = &quot;syncValue&quot;/&gt;
+&lt;!--- 相当于 ---&gt; 
+&lt;hello-sync :my-prop=&quot;syncValue&quot; @update:name=&quot;(name) =&gt; syncValue = name&quot;/&gt;
+</code></pre></div><h4 id="_5-定义方法"><a href="#_5-定义方法" class="header-anchor">#</a> （5）定义方法</h4> <p>定义方法与Data类型，直接在Class中定义方法即可</p> <div class="language- extra-class"><pre class="language-text"><code>@Component
+export default class HelloChild extends Vue{
+	sayHi(): string{
+    	return 'hello'
+    }
+}
+</code></pre></div><h4 id="_6-watch"><a href="#_6-watch" class="header-anchor">#</a> (6)@Watch</h4> <p>使用@Watch定义侦听器，被装饰的函数就是侦听器执行方法</p> <div class="language- extra-class"><pre class="language-text"><code>@Component
+export default class HelloChild extends Vue {
+	@Watch('msg', {immediate: true, deep: true })
+    onMsgChanged(newVal: string, oldVal: string): void{
+    	this.oldMsg = oldVal;
+    }
+}
+</code></pre></div><h4 id="_7-emit"><a href="#_7-emit" class="header-anchor">#</a> (7)@Emit</h4> <p>想要触发父组件中定义在组件实例上的方法，需要使用@Emit装饰符。@Emit接受一个参数，是要触发的事件名，如果要触发的事件名和被装饰的方法同名，那么这个参数可以省略。@Emit返回值就是传递给事件的参数。</p> <div class="language- extra-class"><pre class="language-text"><code>@Component
+export default class HelloChild extends Vue{
+	@Emit()
+    sayHi(): strign{
+    	return 'hello'
+    }
+    
+    @Emit('go')
+    goHere(): string{
+    	return 'gogogo'
+    }
+}
+//相当于
+export default{
+	sayHi() {
+    	this.$emit('sayHi', 'hello');
+    },
+    goHere() {
+    	this.$emit('go', 'gogogo');
+    }
+}
+</code></pre></div><h4 id="_8-model"><a href="#_8-model" class="header-anchor">#</a> (8)Model</h4> <p>一般用来在自定义的组件上使用v-model，自定义组件中包含可交互元素(例如input或者checkbox),当组可交互元素绑定的值发生变化(oninput、onchange)时，会传递到父组件绑定的v-model属性上。</p> <p>关于自定义组件v-model的介绍可以参考<a href="https://cn.vuejs.org/v2/guide/components-custom-events.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E7%9A%84-v-model" target="_blank" rel="noopener noreferrer">官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+	&lt;el-checkbox :checked=&quot;checked&quot; @change=&quot;changeHandler&quot;
+&lt;/template&gt;
+
+&lt;script lang=&quot;ts&quot;&gt;
+import { Component, Vue, Model, Emit } from 'vue-property-decorator';
+
+@Component
+export default class HelloVModel extends Vue {
+	@Model('change', { type: Boolean, default: false } checked!: boolean )
+    
+    @Emit('change')
+    changeHandler(checked: boolean) {
+    	return checked;
+    }
+}
+&lt;/script&gt;
+</code></pre></div><p>使用的时候</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;hello-v-model v-model=&quot;componentVModel&quot;/&gt;
+</code></pre></div><p>自定义组件利用了@Model，定义了checked属性，并且利用了@change事件，当checkbox发生了change事件后，父组件中的componentVModel就会随之发生变化。</p> <p>实际上Model和.sync修饰符都是Vue为了方便同步数据到父组件实现的语法糖</p> <h4 id="_9-ref"><a href="#_9-ref" class="header-anchor">#</a> (9)Ref</h4> <p>当使用ref属性标记一个子组件或者HTML元素的时候，需要使用@Ref修饰符来找到标记的组件或者元素。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div ref=&quot;someRef&quot;&gt;&lt;/div&gt;
+&lt;hello-ref ref=&quot;hello&quot;/&gt;
+</code></pre></div><p>如果我们需要获取ref引用时</p> <div class="language- extra-class"><pre class="language-text"><code>import { Component, Vue, Watch, Ref } from 'vue-property-decorator';
+
+@Component({
+	components: {
+    	HelloChild,
+        HelloSync,
+        HelloVModel,
+        HelloRef
+    }
+})
+export default class HelloVue extends Vue {
+	@Ref() readonly hello!: HelloRef;
+    @Ref() readonly someRef!: HTMLDivElement;
+}
+</code></pre></div><p>@Ref后面跟的参数就是对应的ref的值，需要为其指定类型，如果是原生的元素，可以使用对应的与内置原生元素类型，如果是自定义的组件，那么可以将引入的组件作为类型。</p> <p>如果在HelloRef中定义了一个notify方法，我们就可以按照如下调用</p> <div class="language- extra-class"><pre class="language-text"><code>this.hello.notify();
+</code></pre></div><p>但是现在应该是Vue-Cli内置的Vue类型系统优一个Bug,始终会报如下的错误：</p> <div class="language- extra-class"><pre class="language-text"><code>Error:(141, 16) TS2551: Property 'notify' does not exist on type 'Vue'. Did you mean '$notify'?
+</code></pre></div><p>我的处理办法是，在为hello定义类型时，手写类型，传入我们需要的方法类型就ok了</p> <div class="language- extra-class"><pre class="language-text"><code>@Ref() readonly hello!: { notify: (from?: string) =&gt; {}};
+</code></pre></div><h4 id="_10-mixins"><a href="#_10-mixins" class="header-anchor">#</a> (10)Mixins</h4> <p>vue-property-decorator的Mixins方法完全来源于vue-class-component,使用方法如下。首先创建一个Mixin：</p> <div class="language- extra-class"><pre class="language-text"><code>//visible-control-mixins
+import Vue from 'vue';
+import Component from 'vue-class-component';
+
+@Component
+export default class MyMixin extends Vue {
+	visible = false;
+    get buttonText(): string{
+    	return this.visible ? 'Close' : 'Open';
+    }
+    toggleVisible() {
+    	this.visible = !this.visible;
+    }
+}
+</code></pre></div><p>然后在组件中引入，这时候我们就不再需要组件继承自Vue了，而是继承子Mixin后的组件，MiXins方法可以接受个参数，作为混入的Mixin；</p> <div class="language- extra-class"><pre class="language-text"><code>import { Component, Mixins } from 'vue-property-decorator';
+import VisibleControlMixin from '@/mixins/visible-control-mixin';
+
+@Component
+export default class MixinExample extends Mixins(VisibleControlMixin) {}
+</code></pre></div><h4 id="_11-inject-provide"><a href="#_11-inject-provide" class="header-anchor">#</a> (11)Inject/@Provide</h4> <p>provide和inject主要的目的就是透传属性，从一个根节点provide一个属性，无论多远的一个子节点都可以通过inject获得这个属性，与React的Context特性类似。</p> <p>虽然可以通过使用这两个属性，实现全局的数据共享，但是Vue的文档提示，这两个属性主要为高阶插件和组件库提供用例，并不直接推荐用于应用程序代码中；</p> <p>在根组件中使用@Provide提供数据</p> <div class="language- extra-class"><pre class="language-text"><code>import { Component, Vue, Provide } from 'vue-property-decorarot';
+
+import Child from '@/views/baseKnowLedge/inject-provide/@components/Child.vue';
+
+@Component();
+export default class InjectProvide extends Vue {
+	@Provide() root = 'Root';
+    @Provide('parent') readonly parentValue = 'Grandpa';
+    
+    //相当于
+    provide() {
+    	return {
+        	root: 'Root Initial Value',
+            parent: this.parentValue
+        }	 
+    }
+}
+</code></pre></div><p>在子组件中使用@Inject获取数据</p> <div class="language- extra-class"><pre class="language-text"><code>import { Component, Vue, Inject } from 'vue-property-decorator';
+
+@Component
+export default class InjectProvideChild extends Vue {
+	@Inject() readonly root!: string;
+    @Inject() readonly parent!: string;
+}
+</code></pre></div><p>要注意，provide和inject绑定并不是可响应的，这是可以为之。然而，如果传入一个可监听的对象，那么其对象的属性还是可响应的。</p> <p><strong>vue-property-decorator也提供了响应式插入数据的装饰器@ProvideReactive和@InjectReactive，但是有两个问题：</strong></p> <ol><li>无法与@Inject/@Provide在同一个组件中同时工作</li> <li>当从一个其他组件跳转到使用了@ProvideReactive和@InjectReactive后，会大概率报错Error in nextTick:&quot;TypeError: Cannot redefine property: parent&quot;导致渲染出错</li></ol> <h2 id="改造vue-router"><a href="#改造vue-router" class="header-anchor">#</a> 改造Vue Router</h2> <p>使用Vue CLI创建的TypeScript项目，Vue Router与TypeScript配合基本不再需要进行额外的处理，除了对组件内的路由钩子方法需要提前进行注册。</p> <p>使用vue-class-component提供的Component.registerHooks方法来提前注册，要注意，注册需要在引入理由之前完成。</p> <div class="language- extra-class"><pre class="language-text"><code>// ./src/components/class-component-hooks.ts
+
+// 在此注册其他插件提供的钩子函数，用来在Vue Class组件中使用
+// 例如Vue Router提供的钩子函数
+// 必须在router之前引入
+import Component from 'Vue-class-component'；
+
+// Register the router hooks with their names
+
+Compoent.registerHooks(['beforeRouteEnter', 'beforeRouteLeave'， 'beforeRouteUpdate']);
+</code></pre></div><p>在main.js中引入</p> <div class="language- extra-class"><pre class="language-text"><code>import '@/component/class-component-hooks';
+import router form './router';
+</code></pre></div><h2 id="改造vuex"><a href="#改造vuex" class="header-anchor">#</a> 改造Vuex</h2> <p>Vuex与TypeScript配合会负责一些，并且体验不算太好，需要安全额外的包实现与TypeScript的配合使用，有三种方案来帮助我们使用TypeScript版本的Vuex</p> <h3 id="_1-使用vue-class-component"><a href="#_1-使用vue-class-component" class="header-anchor">#</a> 1.使用vue-class-component</h3> <p>第一种方案是使用vue-class-component配合以前常常使用mapState等帮助方法。</p> <div class="language- extra-class"><pre class="language-text"><code>import { Component, Vue } from 'vue-property-decorator';
+import { mapState, mapMutations } from 'vuex';
+
+@Component(
+	{
+    	// Vuex's component binding helper can use here
+        computed: mapState(['count']);
+        methods: mapMutations(['increment']);
+    }
+)
+export default class App extends Vue {
+	count!: number
+    increment!: () =&gt; void
+}
+</code></pre></div><p>这种方式的好处是可以通过mapState等方法将Store中定义的数据、方法一次性引入组件，确定就是这种'一次性'其实也还需哟啊在组件内部再次定义，并且如果采用这种形式配合vue-property-decorator使用时，会将计算属性、方法等逻辑打乱。另外，通过这种方式调用Mutation和Action，也不是类型安全的</p> <h3 id="_2-使用vuex-class"><a href="#_2-使用vuex-class" class="header-anchor">#</a> 2.使用vuex-class</h3> <p>第二种方案是vuex-class, 它与上一种方案相同，并没有对Vuex的Store中的代码进行改造，而是在组件消费Store中的数据、方法时，提供了一些遍历的API，简化使用方法</p> <div class="language- extra-class"><pre class="language-text"><code>import { Component, Vue } from 'vue-property-decorator';
+import {
+	State,
+    Getter,
+    Action,
+    Mutation,
+    namespace
+} from 'vuex-class'
+
+const someModule = namespace('path/to/module');
+
+@Component
+export class MyComp extends Vue {
+	@State('foo') stateFoo
+    @State(state =&gt; state.bar) stateBar
+    @Getter('foo') getterFoo
+    @Action('foo') actionFoo
+    @Mutation('foo') mutationFoo
+    @someModule.Getter('foo') moduleGetterFoo
+    
+  	// If the argument is omitted, use the property name
+    // for each state/getter/action/mutation type
+    @State foo
+    @Getter bar
+    @Action baz
+    @Mutation qux
+    
+    created() {
+    	this.stateFoo // -&gt; store.state.foo
+        this.stateBar // -&gt; store.state.bar
+        this.getterFoo // -&gt; store.getters.foo
+        this.actionFoo({ value: true }) // -&gt; store.dispatch('foo', { value: true})
+        this.mutationFoo({ value: true }) // -&gt;store.commit('foo', { value: true})
+        this.moduleGetterFoo // -&gt; store.getters['path/to/module/foo']
+    }
+}
+</code></pre></div><p>注意，给namespace传入的参数是Vuex中module的命名空间，并非模块的目录路径</p> <p>这种方法虽然不能使用mapState等辅助函数，但是好在使用@State等装饰符集中导入，也还算清晰明了。但是缺点仍然是没有办法完全进行类型安全的Mutation和Action调用</p> <h3 id="_3-使用vuex-module-decorators"><a href="#_3-使用vuex-module-decorators" class="header-anchor">#</a> 3.使用vuex-module-decorators</h3> <p>如果想要实现获得完全类型安全的Vuex,那么就需要使用vuex-module-decorators,它对Vuex的store也进行了Class化的改造，引入了VuexModule和@Mutation等修饰符，让我们能够使用Class形式来编写Store</p> <p>使用的时候，按照下面的形式来改写Store</p> <div class="language- extra-class"><pre class="language-text"><code>import { Module, Mutation, Action, VuexModule } from 'vuex-module-decorators';
+
+import store from '@/store';
+import { setTimeoutThen } from '@/utils';
+
+@Module({ dynamic: true, namespaced: true, store, name: 'testStore'})
+
+export default class TestStore extends VuexModule {
+	//state
+    message: string = '';
+    get UpperMessage() {
+    	return this.message;
+    }
+    
+    @Mutation
+    UPDATE_MESSAGE_MUTATION(title: string):void {
+    	this.message = title;
+    }
+    
+    @Action
+    async UPDATE_MESSAGE_ACTION():Promise&lt;string&gt; {
+    	const result: string = await setTimeoutThen(1000, 'ok');
+        this.context.commit('UPDATE_MESSAGE_MUTATION', result);
+        return result;
+    }
+}
+
+</code></pre></div><p>要注意，改写的Module在@Module中传入了几个属性，传入namesapced和name来使用Module成为命名空间下的模块，此外还需要传入dynamic，让这个模块成为动态注册的模块，同时还需要将完全空白的store传入给这个模块</p> <p>完成改造之后，在使用的时候就可以使用他提供的getModule方法获得类型安全了，使用方法：</p> <div class="language- extra-class"><pre class="language-text"><code>import { getModule } from 'vuex-module-decorators';
+import TestStore from '@/store/modules/testStore';
+
+const testStore = getModule(TestStore);
+testStore.message;
+testStore.UPDATE_MESSAGE_MUTATION('Hello');
+testStore.UPDATE_MESSAGE_ACTION();
+</code></pre></div><p>当我们调用Mutation的时候，它会自动校验我们传入的参数的类型，与我们定义在Store中的payload类型是否匹配，如果不匹配TS就会给出错误提示</p> <p>这种方案的好处就是能够获得类型安全，缺点就是对Store的也有比较大的改动，而且只能定义动态注册的命名空间下的模块，这也就意味着，如果想在根节点下注册全局状态时无法实现的（毕竟这个包的名字就是vuex-module-decorators）</p> <h3 id="最终选择vuex-class"><a href="#最终选择vuex-class" class="header-anchor">#</a> 最终选择vuex-class</h3> <p>最终选择使用第二种方案，相比于第一种方案能够将组件内的逻辑，并且通过相关修饰符能够显示的提醒代码的含义。相比于第三种方案编写复杂度也有一定降低。</p> <p>对于类型安全做法是，当在组件内引入Mutation时再次编写对应的函数接口，在Vuex，在Vuex中编写的时候，通过引入Vuex提供的类型配合自定义类型，保证类型安全</p> <h2 id="相关实践"><a href="#相关实践" class="header-anchor">#</a> 相关实践</h2> <h3 id="typescript类型校验"><a href="#typescript类型校验" class="header-anchor">#</a> TypeScript类型校验</h3> <p>Vue-CLI使用的TypeScript插件是@vue/cli-plugin-typeScript，它将ts-loader和fork-ts-checker-webpack-plugin配合使用，市县乡i安城外的快速类型检查。</p> <p>在默认配置下，如果发现了TypeScript类型错误，仅仅会在终端进行提示，而不会中断编译过程。我认为TpyeScript发现的类型错误是比较严重的错误类型，应当中断编译过程，让开发者给予足够的重视，所以需要进行配置，让TypeScript发现的错误中断编译过程并且在浏览器界面上进行提示。</p> <p>常规的TypeScript项目只需要在tsconfig.json中的compilerOptions选项中配置noEmitOnError即可，这就会阻止Typescript编译器在发现错误的时候将继续将.TS文件编译成.js文件。</p> <p>但是由于Vue CLI使用了fork-ts-checker-webpack-plugin这个插件，需要进行额外的配置(在@vue/cli-plugin-typescript的文档中并没有明确的介绍，需要到fork-ts-checker-webpack-plugin的文档中自行查找)</p> <p>在vue.config.js中，使用chainWebpack属性，对其进行配置，将saync设置为false</p> <div class="language- extra-class"><pre class="language-text"><code>module.export = {
+	chainWebpack: config =&gt; {
+    	//配置TypeScript检查配置
+        // https://github.com/TypeStrong/fork-ts-checker-webpack-plugin#options
+        config.plugin('fork-ts-checker').tap(option =&gt; {
+        	option[0].async = false;
+            return option;
+        })
+    }
+}
+</code></pre></div><p>另外，在tsconfig.json中的compolerOptions选项中将noImplicitAny设定为true,这样如果编译器推导出的结果默认为any的话，编译器会报错。不推荐轻易使用any，除非有明确的理由。即使需要any也要现实的标注为any，这样才能享受到TypeScript的强类型提示的好处（更何况这不是一个就项目改造）</p> <h3 id="lint工具"><a href="#lint工具" class="header-anchor">#</a> Lint工具</h3> <p>配置比较高的lint级别，可能回导致开发时的效率稍微降低，但是有助于项目的长期发展，以及良好的代码习惯的养成，也避免了保存代码时不提示；</p> <p>配置lint的工具</p> <ol><li>eslint</li></ol> <p>使用了plugin:vue/recommended/@vue/prettier/@vue/typescript/plugin:prettier/recommended四个规则，使用@typescript-eslint/parse解析器对.vue文件和.ts文件都会进行校验</p> <p>同时在vue.config.js中配置了lintOnSave: process.env.NODE_ENV === 'development' ? 'error' : 'false', 让ESlint检测到错误时不仅在中断中提示，还会在浏览器界面上展示，同时中断编译过程。</p> <ol start="2"><li>Prettier</li></ol> <p>配置了Prettier,根据它提供的不多的选项进行配置，有可能会与公司代码提交平台的规范有冲突，如果发现冲突后在进行调整。</p> <p>由于ESLint中配置了@vue/prettier和plugin:prettier/recommended，Prettier发现的错误也会中断编译过程。</p> <p>不过Prettier的问题相对比较好修复，IDE中配置好Prettier的插件后，可以一键进行修复。</p> <ol start="3"><li>StyleLint</li></ol> <p>对于样式文件使用StyleLint进行了检查，在vue.config.js中通过configureWebpack方法引入了StyleLint插件，对所有样式文件以及.vue单文件组件、HTML组件中的样式代码进行校验。</p> <p>同样如果出错会中断编译过程（这个应该是Bug，即便想关闭配置了相关选项后也无法关闭）</p> <p>在.stylelintrc.js中定义了一些规则，也可能与公司的代码规范有冲突，后续进行调整。</p> <h3 id="目录组织"><a href="#目录组织" class="header-anchor">#</a> 目录组织</h3> <h2 id="参考文档"><a href="#参考文档" class="header-anchor">#</a> 参考文档</h2> <p><a href="https://blog.csdn.net/duola8789/article/details/103979022" target="_blank" rel="noopener noreferrer">TS05 在Vue中使用TypeScript
+<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/front-end/JavaScript/" class="prev router-link-active">
+        首页
+      </a></span> <span class="next"><a href="/documents/front-end/JavaScript/a-array-accessor-methods.html">
+        数组的访问方法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.12610c93.js" defer></script><script src="/documents/assets/js/2.c614a540.js" defer></script><script src="/documents/assets/js/25.5c70c33a.js" defer></script>
+  </body>
+</html>
