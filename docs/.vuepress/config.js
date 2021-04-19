@@ -5,6 +5,7 @@ const headConf = require('./config/headConf.js');
 module.exports = {
     title: '随风',
     description: '随风随雨又随流',
+    base: '/documents/',
     head: headConf,
     plugins: pluginConf,
     themeConfig: {

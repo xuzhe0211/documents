@@ -5,10 +5,15 @@ const secretKeyConf = require('./secretKeyConf.js');
 
 module.exports = {
     "vuepress-plugin-auto-sidebar": {
-        titleMode: "uppercase",
+        titleMode: "titlecase",
         collapsable: true,
         titleMap: {
-            javascript: "JS 基础",
+            Interview: "面试",
+            Engineering: "工程化",
+            Frame: "框架",
+            Code: "算法",
+            Work: "工作",
+            Life: "生活"
         },
         collapseList: [
             "/frontend/js/"
