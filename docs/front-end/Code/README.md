@@ -340,6 +340,22 @@ var quickSort_New = function(ary, left, right) {
       } 
       return arr;
   }
+
+
+  // 交集并集差集
+    var set1 = new Set([1,2,3]);
+    var set2 = new Set([2,3,4]);
+
+    并集
+    let union = new Set([...set1, ...set2]);
+
+    交集
+    let intersect = new Set([...set1].filter( x => set2.has(x)));
+
+    差集
+    let difference = new Set([...set1].filter(x => !set2.has(x)));
+
+
   ```
 ## 分割数组最大值
 
