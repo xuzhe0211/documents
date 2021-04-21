@@ -341,7 +341,7 @@ MessagePort对象具有onmessage和onmessageerror两个属性
 
 这个端口可以相互发送消息，port1发送的消息可以在port2接收到哦，反之亦然。
 
-![消息通道](/images/1059788-20190308164731842-1262102501.png)
+<img :src="$withBase('/images/1059788-20190308164731842-1262102501.png')" alt="消息通道">
 
 #### 多个Web Worker之间通信
 

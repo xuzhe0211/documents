@@ -307,9 +307,9 @@ a.constructor // function Object() {native code}
 这是因为变量a所对应的对象是事先声明好的，不是跟随函数一起创建的，所以他没有constructor属性，这时候寻找construcotor属性就会到父对象上去找，而所有对象默认都继承自己Object.Prototype,所以最后找的就是Object.Prototype.Contructor,也就是Object函数。
 
 继承又是怎么一回事呢？？？
-所有对象都有一个__proto__属性，这个属性指向其父元素，也就是所继承的对象，一版为构造函数的prototype对象
+所有对象都有一个__proto__属性，这个属性指向其父元素，也就是所继承的对象，一般为构造函数的prototype对象
 
-![upload successful](https://img-blog.csdn.net/20180407174353545?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hmODcyOTE0MzM0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![upload successful](./images/20180407174353545.png)
 
 prototype是函数独有的；__proto__是所有对象都有的，是继承的。调用一个对象的某一个属性，如果该对象上没有该属性，就去其原型链上找。
 
@@ -346,7 +346,7 @@ Object.prototype与Function.prototype是原型链中最难理解也是最重要�
 
 后来，又诞生了一个对象，也不知其姓名，只知道他的类型为"[object Function]",他是一切函数的先祖，继承于对象先祖，为二代对象
 
-![function null object](https://img-blog.csdn.net/20180407174416232?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hmODcyOTE0MzM0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![function null object](./images/20180407174416232.png)
 
 经年流转，函数先祖发挥特长，制造出了一系列的函数，如Object,Function,Array, Date, String, Number等，都说龙生九子，这些函数虽说各个都貌美如花，神通通天，但功能上还是有很大的去别的
 
@@ -369,14 +369,14 @@ b.a                          //结果是???
 ```
 Object.getOwnPropertyDescriptor(Object,"prototype"); 
 ```
-![prototype](/images/20180408130006343.png)
+<img :src="$withBase('/images/20180408130006343.png')" alt="prototype">
 
 可以看到，其writable、enumerable、configurable属性均为false，也就是其prototype属性不可修改，不可删除，不可修改属性特性。
 
   其实不光Object.prototype不能修改，Function. Prototype、String. Prototype等内部对象都不允许修改。
 
 
-![原型链](/images/20180407174211796.png)
+<img :src="$withBase('/images/20180407174211796.png')" alt="原型链">
 
 因为Object、Function、Array、String等都继承自Function.prototype，所以有
 ```
@@ -418,7 +418,8 @@ var a = new F();   //__proto__赋值 a.__proto__ = F.prototype;
 ```
 a.__proto__.__proto__ === Object.prototype;  // true
 ```
-![自定义构造函数原型链](/images/20180408120353800.png)
+
+<img :src="$withBase('/images/20180408120353800.png')" alt="自定义构造函数原型链">
 
 
 综上我们可以看出，原型链就是根据__proto__维系的由子对象-父对象的一条单向通道，不过要理解这条通道，我们还需要理解构造对象，类，prototype，constructor等，这些都是原型链上的美丽的风景。

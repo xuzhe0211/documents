@@ -10,7 +10,7 @@ title: session和cookie区别
 
 HTTP协议是无状态的协议。一旦数据交换完毕，客户端与服务端的连接就会关闭，再次交换数据需要重新建立新的了解。**这就意味着服务器无法从连接上跟踪会话**。
 
-![无状态的协议](/images/14132861-cdc994a3d941704a.webp)
+<img :src="$withBase('/images/14132861-cdc994a3d941704a.webp')" alt="无状态的协议">
 
 > 我们浏览网页使用的HTTP协议是无状态的协议，就是说网页一关闭，浏览器和服务端的连接就会断开，下次打开网页又要重新连接，服务器无法从你一打开的连接上恢复上一次的会话，服务器不知道是你又回来了。
 
@@ -18,18 +18,18 @@ HTTP协议是无状态的协议。一旦数据交换完毕，客户端与服务�
 
 会话，指用户登录网站后的一系列动作，比如浏览商品添加到购物车并购买。会话跟踪是Web程序中常用的技术，用来**跟踪用户的整个会话**。常会的会话跟踪技术是Cookie和Session。**Cookie通过客户端记录信息确定用户身份，Session通过服务端记录信息确定用户身份**。
 
-![cookie](/images/14132861-902a9c7a3c06e7c7.webp)
+<img :src="$withBase('/images/14132861-902a9c7a3c06e7c7.webp')" alt="cookie">
 
-![session](/images/14132861-0315933382a55fd4.webp)
+<img :src="$withBase('/images/14132861-0315933382a55fd4.webp')" alt="session">
 ## Cookie
 
 由于HTTP是一种无状态的协议，服务器单从网络连接无从知道客户身份。用户A购买了一件商品放入购物车内，当再次购买商品时已经无法判断该购买行为是属于用户A的会话还是用户B的会话了。怎么办呢？就给客户端颁发一个通行证，每人一个，无论是谁访问都必须携带自己的通行证，这样服务器就能从通行证上确定客户身份了。这就是Cookie的工作原理。
 
-![cookie工作原理](/imaages/14132861-bb3a8a004103cf52.webp)
+<img :src="$withBase('/imaages/14132861-bb3a8a004103cf52.webp')" alt="cookie工作原理">
 
 > 我们之前把你的信息记录在cookie里，在你打开网页和服务器建立连接的时候，把cookie记录的你的信息一起发送给服务器，这样服务器就能从cookie接收到的信息里识别你的身份，让页面为你提供特别属于你的内容
 
-![cookie请求](/images/14132861-6d283af6209bd245.webp)
+<img :src="$withBase('/images/14132861-6d283af6209bd245.webp')" alt="cookie请求">
 
 我们访问浏览器的时候，浏览器会发送一个HTTP请求到服务器端；
 
@@ -41,7 +41,7 @@ HTTP协议是无状态的协议。一旦数据交换完毕，客户端与服务�
 
 ![cookie存储大小限制](http://upload-images.jianshu.io/upload_images/14132861-ff1c907eb03493fc.png?imageMogr2/auto-orient/strip|imageView2/2/w/399/format/webp)
 
-![安全性不高](/images/14132861-a4b75bbbebabff3a.webp)
+<img :src="$withBase('/images/14132861-a4b75bbbebabff3a.webp')" alt="安全性不高">
 
 1. 会话cookie和持久cookie
 
@@ -150,7 +150,7 @@ https://blog.csdn.net/menghuanzhiming/java/article/details/102736312
 ```
 ## 跨域相关
 
-![跨域图片](/images/16103039-e0607376729c4421bb36540269c4c219.png)
+<img :src="$withBase('/images/16103039-e0607376729c4421bb36540269c4c219.png')" alt="跨域图片">
 
 JavaScript出于安全方面考虑，不允许跨域调用其他页面的对象。但在安全限制的同时也给注入iframe或ajax应用上带来了不少麻烦。
 

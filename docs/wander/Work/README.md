@@ -49,7 +49,7 @@ Cannot find module '@/utils/request' or its corresponding type declarations.Vetu
 ### 原因分析
 报错示例
 
-![报错示例](/images/2021021809232546.png)
+<img :src="$withBase('/images/2021021809232546.png')" alt="报错示例">
 
 ::: tip
 上述问题的产生，一般是由于Visual Studio Code中安装了Vetur插件，它要求：
@@ -62,7 +62,7 @@ Cannot find module '@/utils/request' or its corresponding type declarations.Vetu
 
 直接把项目移至工作区的第一位
 
-![解决方案](/images/20210219091528898.png)
+<img :src="$withBase('/images/20210219091528898.png')" alt="解决方案">
 
 
 ## 二进制/十进制互相转换
