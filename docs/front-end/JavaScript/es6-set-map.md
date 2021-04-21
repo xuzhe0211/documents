@@ -190,10 +190,10 @@ m.has(o); //false
 ```
 任何具有Iterator接口、且每个成员都是一个双元素的数组的数据结构都可以作为Map构造函数的参数，例如：
 ```
-const set = new Set({
+const set = new Set([
 	['foo', 1],
     ['bar', 2]
-})
+])
 const m1 = new Map(set);
 m1.get('foo');//1
 

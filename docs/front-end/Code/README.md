@@ -239,29 +239,30 @@ var quickSort_New = function(ary, left, right) {
 ## 大数相加
 
   思路遍历两个字符串从个位数算起开始相加，定义temp接受两个数之和，除以10取余拼接上结果，最后判断temp是否大于0，如果大于9则进位temp=1
-    ```
-    var addstring = function(num1, num2) {
-        var len1 = num1.length, len2 = num2.length; temp = 0; res = '';
-        while(len1 || len2) {
-            if(len1) {
-                temp += +num1[--len1];
-            }
-            if(len2) {
-                temp += +num2[--len2];
-            }
-            res  = temp % 10 +res;
-            if(temp > 9) {
-                temp =1;
-            } else {
-                temp = 0;
-            }
-            if (temp) {
-                res = 1 +res; 
-            }
+
+```
+var addstring = function(num1, num2) {
+    var len1 = num1.length, len2 = num2.length; temp = 0; res = '';
+    while(len1 || len2) {
+        if(len1) {
+            temp += +num1[--len1];
         }
-        return res;
+        if(len2) {
+            temp += +num2[--len2];
+        }
+        res  = temp % 10 +res;
+        if(temp > 9) {
+            temp =1;
+        } else {
+            temp = 0;
+        }
+        if (temp) {
+            res = 1 +res; 
+        }
     }
-    ```
+    return res;
+}
+```
 
 ## sqrt
 
