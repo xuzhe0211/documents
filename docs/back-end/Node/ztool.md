@@ -297,5 +297,3 @@ mongo express---基于Web的MongoDB管理界面
 
 docker 预习视频
 sequel pro 数据库工具
-
-自己本地mysql数据库 密码xuzhe153289653
