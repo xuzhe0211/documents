@@ -1,4 +1,5 @@
 ---
+autoGroup-3: ES6
 title: ES6中的super
 ---
 

@@ -1,4 +1,5 @@
 ---
+autoGroup-3: ES6
 title: Promise
 ---
 
@@ -497,7 +498,7 @@ Promise.all([getData1,getData2]).then(function([ResultJson1,ResultJson2]){
 
 [参考地址](https://www.imooc.com/article/301681)
 
-![题目](http://img3.sycdn.imooc.com/5e65b3e200015c9b12800383.jpg)
+![题目](./images/5e65b3e200015c9b12800383.jpeg)
 
 ```bash
 // 首先实现一个分割数组得函数~

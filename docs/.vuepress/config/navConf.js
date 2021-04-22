@@ -24,6 +24,14 @@ module.exports = [
         ]
     },
     {
+        text: '开发工具',
+        ariaLabel: 'tools End Menu',
+        items: [
+            { text: 'Git', link: '/tools/Git/' },
+            { text: 'VScode', link: '/tools/VScode/' },
+        ]
+    },
+    {
         text: '随记',
         ariaLabel: 'wander End Menu',
         items: [

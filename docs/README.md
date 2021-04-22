@@ -21,6 +21,9 @@ features: #  表明首页的特征，固定的格式为title + details，以三�
 
 这不是一个博客文档，仅仅是个人的笔记而已
 
+[vuepress](https://vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)
+
+[笔记侧栏Nav工具文档](https://shanyuhai123.github.io/vuepress-plugin-auto-sidebar/zh/)
 :::
 
 
