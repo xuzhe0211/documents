@@ -117,3 +117,4 @@ Session是另一种记录客户状态的机制，不同的是Cookie保存在客�
 ## SSO
 
 [参考地址](https://www.jianshu.com/p/75edcc05acfd)
+[参考地址](https://blog.csdn.net/zhang_java_11/article/details/107690042)

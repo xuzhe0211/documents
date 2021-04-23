@@ -431,32 +431,55 @@ function sendRequest(urls: string[], max: number, callback: () => void) {
 ```
 
 45.实现一个Promise.all
+
 47.[-1,-2,8,9,-10] 求最大和
+
 48.webpack的plugin与loader的区别，有没有写过plugin或者loader？
+
 49.React的diff算法原理？
+
 50.Node的SSR是否有做过，怎么做的？
+
 51.项目中自认为最好的项目是哪个，做了哪些比较有价值的事？
+
 52.重绘与回流？
+
 53.虚拟dom的好处?
+
 54.编程题：
+
 DomtoJson:将Dom树写成Json格式？
 链表环检测?
 请实现如下的函数，可以批量请求数据，所有的 URL 地址在 urls 参数中，同时可以通过 max 参数控制请求的并发度，当所有请求结束之后，需要执行 callback 回掉函数。发请求的函数可以直接使用 fetch 即可
 function sendRequest(urls: string[], max: number, callback: () => void) {
 }
+
 55.arguments是数组吗？如果不是，怎么转换成数组？
+
 56. macrotask和microtask
+
 57. 手写双向绑定实现，两种
+
 58. 顺序延时输出数组里的每一项
+
 59. promise是如何实现链式调用的
+
 60. 在哪些情况下一个元素绑定的点击事件不会被触发
+
 61. 一个完全二叉树，全部是大于0的整数，给出一个整数N，问从二叉树的根部开始向下，存不存在一个路径，使路径上所有的点的和是N
+
 62. N级台阶，一次只能跳3级4级或者5级，请问一种有多少种跳法
+
 63. 自我介绍，结合简历中写的项目问整个项目的架构设计
+
 64. 算法题，给一个字符串，给出该字符串字符的所有排列组合方式
+
 65. 前端代码题：EventEmitter 的实现
+
 66. http 协商缓存和强缓存
+
 67. 项目中的沉淀，做的比较好的项目
+
 68. node 开发相关，基于node 的项目介绍
 
 

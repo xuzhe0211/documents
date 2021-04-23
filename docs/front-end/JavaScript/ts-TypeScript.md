@@ -1,5 +1,6 @@
 ---
-title: typescript
+autoGroup-4: TypeScript
+title: vue中使用TS
 ---
 
 >  (2020.01.07)其中有一些最佳时间可能会随着项目逐渐迭代进行调整，请自行辨别可行性

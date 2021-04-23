@@ -1,5 +1,5 @@
 ---
-autoGroup-3: ES6
+autoGroup-5: ES6
 title: Promise
 ---
 
