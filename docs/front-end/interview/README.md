@@ -22,7 +22,28 @@ function add() {
     }
     return _adder;
 }
+
+// 可使用剩余参数的方式
+function add(..._args) {
+    // 在内部声明一个函数，利用闭包的特性保存_args并收集所有的参数值
+    var _adder = function() {
+        _args.push(...arguments);
+        return _adder;
+    };
+
+    // 利用toString隐式转换的特性，当最后执行时隐式转换，并计算最终的值返回
+    _adder.toString = function () {
+        return _args.reduce(function (a, b) {
+            return a + b;
+        });
+    }
+    return _adder;
+}
 ```
+[剩余参数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+
+剩余参数语法允许我们将一个不定数量的参数表示为一个数组。
+
 ### 虚拟DOM,diff算法，编译compile
 ### Q1 请说一下你的上一家公司开发发布流程。
 ### Q http 的 cache ，浏览器如何获取设置
