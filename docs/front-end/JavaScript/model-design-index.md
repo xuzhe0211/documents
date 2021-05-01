@@ -1,5 +1,6 @@
 ---
-title: 设计模式
+autoGroup-7: 设计模式
+title: 常用模式
 ---
 
 ## 发布订阅者模式
@@ -34,6 +35,22 @@ pubSub.subscribe('gender', gender => {
 })
 pubSub.publish('name', 'leaf33');
 pubSub.publish('gender', '18')
+
+// 简单实现
+let obj = {};
+const $on = (name, fn) => {
+    if (!obj[name]) {
+        obj[name] = [];
+    }
+    obj[name].push(fn);
+}
+const $emit = (name, val) => {
+    if (obj[name]) {
+        obj[name].map(fn => {
+            fn(val)
+        })
+    }
+}
 ```
 
 ## 单例模式
@@ -59,3 +76,5 @@ var ProxyMode = (function(){
 ```
 
 ## 装饰器模式
+
+[参考地址](/front-end/JavaScript/ts-anotation.html)

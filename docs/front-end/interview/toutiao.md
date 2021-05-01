@@ -490,10 +490,10 @@ function sendRequest(urls: string[], max: number, callback: () => void) {
 4. 讲一下 react 常用的优化项
 5. 讲一下 dom-diff 算法
 6. 实现下面功能
-    ```js
+ ```
     class Scheduler {
         add(promiseCreator) {
-        	//手写代码部门
+        	// 手写代码部分
              return new Promise((resolve, reject) => {
             promiseCreator().then(res => {
                 resolve()
@@ -523,9 +523,9 @@ function sendRequest(urls: string[], max: number, callback: () => void) {
     // 800ms时，3完成，输出3，任务4进队
     // 1000ms时，1完成，输出1
     // 1200ms时，4完成，输出4
-    ```
+```
 7. 实现下面功能
-    ```js
+```js
     function sum() {
         //...
     }
@@ -676,26 +676,35 @@ Promise.then 如何实现链式调用,返回值是什么?
  3. 先描述清楚解法再开始编码
  # 补充
  可以认为已知所有可能的排列情况，直接判断。
- ```
+
 8. 如何采集错误?
+
 9. 如何解决 window.onerror 监听跨iframe错误?
+
 10. 页面内一个元素点击后没有执行事件监听函数,原因可能有哪些?如何定位到问题代码?
+
 11. 算法: 回文数字判断,要尽可能高效的算法.
+
 12. 级联组件设计,及很大数据量时的优化;
+
 13. 页面卡顿如何定位,如何优化.
 
 14. 讲讲做过最难/有价值项目?学到什么?有啥问题,如何解决?
+
 15. 业务项目问题,性能问题,问题定位, 会被反复问到
 
 > http1-http2、缓存优化、加载链路优化、加载距离优化、响应顺序优化、文件大小优化、打包工具
 
 16. 用正则表达式把一个数字字符串分割成千分位形式
 
+[参考文档](https://blog.csdn.net/weixin_30487317/article/details/97648553)
+
 ```
-//参考文档https://blog.csdn.net/weixin_30487317/article/details/97648553
+
 var str = '100000000000';
 var reg = /(?=(\B\d{3})+$)/g;
 console.log(str.replace(reg, ','))
+
 ```
 
 17. 前端优化的思路和方法

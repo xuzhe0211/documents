@@ -575,3 +575,6 @@ sendRequest(ps, 3, ({reason, value}) => {
 ```
 
 ![输出](http://img1.sycdn.imooc.com/5e65b3e20001095e04850421.jpg)
+
+
+![promise.allSettled](https://segmentfault.com/a/1190000020034361)

@@ -402,7 +402,7 @@ import router form './router';
 ```
 ## 改造Vuex
 
-Vuex与TypeScript配合会负责一些，并且体验不算太好，需要安全额外的包实现与TypeScript的配合使用，有三种方案来帮助我们使用TypeScript版本的Vuex
+Vuex与TypeScript配合会复杂一些，并且体验不算太好，需要安全额外的包实现与TypeScript的配合使用，有三种方案来帮助我们使用TypeScript版本的Vuex
 
 ### 1.使用vue-class-component
 

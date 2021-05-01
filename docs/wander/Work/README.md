@@ -83,7 +83,7 @@ var num = 1100100;
 console.log(parseInt(num, 2))
 ```
 
-## 其他转换
+### 其他转换
 
 ```
 parseInt(num,8);   //八进制转十进制
@@ -96,4 +96,14 @@ parseInt(num,8).toString(2)   //八进制转二进制
 parseInt(num,8).toString(16)  //八进制转十六进制
 parseInt(num,16).toString(2)  //十六进制转二进制
 parseInt(num,16).toString(8)  //十六进制转八进制
+```
+
+## js获取指定时区的时间
+
+```
+const timezone = 8; // 目标时区时间，东八区  东时区正数 西时区负数
+const offset_GMT = new Date().getTimezoneOffset(); // 本地时间和格林威治的时间差，单位为分钟
+const nowDate = new Date().getTime(); // 本地时间距1970年1月1日午夜之间的毫秒数
+const targetDate = new Date(nowDate + offset_GMT * 60 * 1000 + timezone * 60 * 60 * 1000);
+console.log('东8区现在是：' + targetDate);
 ```

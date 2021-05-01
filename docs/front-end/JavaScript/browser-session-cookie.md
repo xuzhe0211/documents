@@ -112,6 +112,129 @@ Session是另一种记录客户状态的机制，不同的是Cookie保存在客�
 
 另一种方案是服务器索性不保存 session 数据了，所有数据都保存在客户端，每次请求都发回服务器。JWT 就是这种方案的一个代表。
 
+### JWT的原理
+JWT的原理，服务器认证以后，生成一个JSON对象，发回给用户
+
+```
+{
+    "姓名": "张三",
+    "角色": "管理员",
+    "到期时间": "2021年7月1日"
+}
+```
+以后，用户与服务端通信得时候，都要发回这个JSON对象。服务器完全只靠这个对象认定用户身份。为了防止用户篡改数据，服务器在生成这个对象得时候，会加上签名(详见后文)。
+
+服务器就不保存任何session数据了，也就是说，服务器编程了无状态了，从而比较容易实现扩展 
+
+### JWT得数据结构
+
+实际上得JWT大概就想下面这样 
+
+![JWT数据结构](./images/bg2018072304.jpeg)
+
+它是一个很长得字符串，中间用点(.)分割成三个部分。注意，JWT内部是没有换行得，这里只是为了便于展示，将他写成机场。
+
+JWT的三个部分依次如下。
+
+::: tip
+- Header (头部)
+- Payload (负载)
+- Signature (签名)
+:::
+
+写成一行，就是下面这个样子。
+
+```
+Header.Payload.Signature
+```
+
+![JWT三部分](./images/bg2018072303.jpeg)
+
+下面依次介绍这三个部分
+
+#### Header
+
+Header部分是一个JSON对象，描述JWT的元数据,通常是下面的样子
+
+```
+{
+    "alg": "HS256",
+    "typ": "JWT"
+}
+```
+上面代码中，alg属性表示签名的算法(algorithm)，默认是HMAC SHA256(写成HS256);typ属性表示这个令牌(token)的类型(type),JWT令牌统一写为JWT.
+
+最后，将上面的JSON对象使用Base64URL算法转成字符串。
+
+#### Payload
+
+Payload部分也是一个JSON对象，用来存放实际需要传递的数据。JWT规定了7个官方字段，供选用。
+
+::: tip
+- iss (issuer): 签发人
+- exp (expiration time): 过期时间
+- sub (subject)：主题
+- aud (audience): 受众
+- nbf (Not Before)： 生效时间
+- iat (Issued  At): 签发时间
+- jti (JWT ID): 编号
+:::
+
+除了官方字段，你还可以在这个部分定义私有字段,例如
+
+```
+{
+    sub: '123445',
+    name: 'John Doe',
+    admin: true
+}
+```
+
+注意，JWT默认是不加密的,任何人都可以读到，所以不要把秘密信息放在这个部分。
+
+这个JSON对象也要使用Base64URL算法转成字符串
+
+#### Signature
+
+Signature部分是对前两部分的签名，防止数据篡改。
+
+首先,需要指定一个密钥(secret)。这个密钥只有服务器才知道,不能泄露给用户。然后，使用Header里面指定的签名算法(默认是HMAC SHA256)，按照下面的公式产生签名
+
+```
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  secret)
+```
+算出签名以后，把Header、Payload、Signature三个部分拼成一个字符串，每个部分之间用"点"(.)分割，就可以返回给用户。
+
+#### Base54URL
+
+前面提到，Header和Payload串型化的算法是Base64URL。这个算法跟Base64算法基本类似，但是有一些小的不同。
+
+JWT作为一个令牌(token)，有些场合可能会放到URL(比如api.example.com/?token=xxx).Base64有三个字符+、/和=,在URL里面有特殊函数，所以要被替换掉：=被省略、+被替换成-，/替换成_。这就是Base64URL算法。
+
+### JWT的使用方式
+
+客户端收到服务器返回的JWT,可以存储在Cookie里面，也可以存储在localStorage.
+
+此后，客户端每次与服务器通信，都要带上这个JWT.你可以把它放在Cookie里面自动发送，但是这样不能跨域，所以更好的做法是放在HTTP请求的头信息Authorization字段里面
+
+```
+Authorization: Bearer <token>
+```
+另一种做法是，跨域的时候，JWT就放在POST请求的数据提里面。
+
+### JWT的几个特点
+
+1. JWT默认是不加密的，但也是可以加密的，生成原始Token以后，可以用密钥在加密一次
+2. JWT不加密的情况下，不能将秘密数据写入JWT
+3. JWT不仅可以用于认证，也可以用于交换信息。有效使用JWT，可以降低服务器查询数据库的次数
+4. JWT的最大缺点是，由于服务器不保存session状态，因此无法在使用过程中废某个token，或者更改token的权限。也就是说，一旦JWT签发了，在到期之前就会始终有效，除非服务器部署额外的逻辑
+5. JWT本身包含了认证信息，一旦泄露，任何人都可以获得该令牌的所有权限。为了减少盗用，JWT的有效期应该设置的比较短。对于一些比较重要的权限，使用时应该再次对用户进行认证。
+6. 为了减少盗用，JWT不应该使用HTTP协议明码传输，要使用HTTPS协议传输
+
+
 [参考地址](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
 
 ## SSO

@@ -106,13 +106,13 @@ title: 网络编程/http协议相关
 
 
 ## 其他
-- Get和Post的区别
++ Get和Post的区别
 	- GET回退无害化 POST会再次提交
-    - Get产生URL地址收藏 Post不可以
-    - GET请求会被浏览器主动缓存
-    - GET请求需要URL编码
-    - Get请求长度有限制
-    - Get参数通过URL传递 Post放在Request Body中
+    - Get产生URL地址收藏 Post不可以
+    - GET请求会被浏览器主动缓存
+    - GET请求需要URL编码
+    - Get请求长度有限制
+    - Get参数通过URL传递 Post放在Request Body中
 
 
 ### Restful风格
@@ -120,24 +120,24 @@ title: 网络编程/http协议相关
 - 客户端和服务器之间，传递这种自愿的某种表现层
 - 表现层状态转化 URL设计 动宾结构
 	- 动词
-    	- GET 读取
-        - Post 新建
-        - PUT 更新
-        - DELETE 删除
-    - 宾语
-    	- 名词 
-        	- GET /users --- 推荐  
-            - GET /getUsers --- 不推荐
-        - 复数
-        	- GET /users /users/1 ---推荐
-            - GET /user /user/1 ---不推荐
-        - 避免多级
-        	- GET /authors/12?categories=2
+        - GET 读取
+        - Post 新建
+        - PUT 更新
+        - DELETE 删除
+    - 宾语
+        - 名词 
+        	- GET /users --- 推荐
+            - GET /getUsers --- 不推荐
+        - 复数
+            - GET /users /users/1 ---推荐
+            - GET /user /user/1 ---不推荐
+        - 避免多级
+            - GET /authors/12?categories=2
             - GET /authors/12/categories/2
        
 - 状态码
 	- 1xx 相关信息
-    - 2xx 操作成功
-    - 3xx 重定向
-    - 4xx 客户端错误
-    - 5xx 服务器错误
+    - 2xx 操作成功
+    - 3xx 重定向
+    - 4xx 客户端错误
+    - 5xx 服务器错误
