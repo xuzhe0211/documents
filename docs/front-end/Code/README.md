@@ -431,6 +431,25 @@ function judge(list) {
     }
 }
 ```
+## 查找一个字符中指定的子串的所有位置
+
+```
+var str = 'fdhfgcsaedvcfhgfh';
+var index = str.indexOf('f'); // 字符出现的位置
+var num = 0; // 这个字符出现的紫薯
+
+while（index !=== -1）{
+    console.log(index);
+    num++;
+    index = str.indexOf('f', index + 1); // 从字符串出现的位置的下一个位置开始继续查找
+}
+console.log('f一共出现了'+num+'次')；
+```
+
+## 字符串有效性检查
+```
+// '{}[]()'
+```
 
 ## 逻辑思维
 + 一个班级60%喜欢足球，70%喜欢篮球，80%喜欢排球，问即三种球都喜欢占比有多少？

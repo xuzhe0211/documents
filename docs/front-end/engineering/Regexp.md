@@ -65,7 +65,7 @@ var aes = 'abc'
 ```
 var reg = /abg/gi;
 var abc = 'abcedabcsdfABC';
-console.log(abc.mathc(regs)); // ['abc', 'abc'];
+console.log(abc.match(regs)); // ['abc', 'abc'];
 ```
 
 ### search（）方法 第一个匹配字符串的下标

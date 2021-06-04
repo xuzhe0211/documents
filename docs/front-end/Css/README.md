@@ -1,5 +1,5 @@
 ---
-title: Css命名规范1
+title: Css命名规范
 ---
 
 ## CSS BEM命名规范

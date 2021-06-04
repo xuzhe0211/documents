@@ -29,6 +29,7 @@ module.exports = [
         items: [
             { text: 'Git', link: '/tools/Git/' },
             { text: 'VScode', link: '/tools/VScode/' },
+            { text: '工具', link: '/tools/Other/' },
         ]
     },
     {

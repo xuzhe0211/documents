@@ -116,6 +116,9 @@ git fetch <远程主机> <分支名>
 最长见的命令是取回origin主机的master分支
 ```
 git fetch origin master
+
+
+git checkout -b daily-jingxiong-v2 origin/daily-jingxiong-v2 // 拉取远程切换本地分支----
 ```
 取回更新后，会返回一个FETCH_HEAD,指的是某个branch在服务器上的最新状态，我们可以在本地通过它查看刚去会的更新信息
 ```
@@ -137,6 +140,21 @@ git merge FEATCH_HEAD//将拉去下来的最新内容合并到当前所在的分
 git pull <远程主机名> <远程分支名>:<本地分支名>
 //如果远程分支与当前分之合并，则冒号后面的部分可省略
 git pull origin dev
+```
+
+
+## Git Tag
+
+```
+git tag // 查看tag
+git tag test_tag c809ddbf83939a89659e51dc2a5fe183af384233 // 在某个commit上打tag
+git tag
+
+git push origin test_tag // 本地推送到线上
+...
+
+git tag -d test_tag // 本地删除tag
+git push origin :refs/tags/test_tag // 本地tag删除了,在执行该句，删除线上tag
 ```
 
 

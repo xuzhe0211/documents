@@ -165,6 +165,30 @@ promiseRace([promise1, promise2]).then(function(value) {
   console.log(value);// two
 })
 ```
+## Promise中三兄弟.all,.race, allSettled()
+[原文档](https://segmentfault.com/a/1190000020034361)
+
+### 概述
+
++ Promise.all
+```
+Promise.all<T>(promises:Iterable<Promise<T>>): Promise<Array<T>>
+```
+promise.all(iterable)方法返回一个Promise实例，此实例在iterable参数内所有的promise都完成(resolved)或参数中不包含promise时回调完成(resolve);如果参数中promise有一个失败(rejected)，此实例回调失败(reject)，失败原因是第一个失败promise结果
+
++ Promise.race
+```
+Promise.race<T>(promises:Iterable<Promise<T>>): Promise<T>
+```
+promise.race(interable)方法返回一个promise，一旦迭代器中的某个promise解决或者拒绝，返回的promise就会解决或拒绝。
+
++ Promise.allSettled
+
+```
+Promise.allSettled<T>(promise:Iterable<Promise<T>>):Promise<Array<SettlementObject<T>>>
+```
+promise.allSettled()方法返回一个promise，该promise在所有给定的promise已被解析或被拒绝后解析，并且每个对象都描述每个promise的结果
+
 
 ## Js控制最大并发请求实现，promise
 
@@ -226,6 +250,7 @@ return asyncPool(2, [1000, 5000, 3000, 2000], timeout).then(results => {
 
 然而这样的实现效果，本质上来说已经抛弃了Promise.all而另辟蹊径。所以期待有一天promise标准能提供这个功能
 
+[promise-finally](http://localhost:8080/documents/front-end/JavaScript/es6-es7-es8.html#promise-finally)
 
 ## 实例
 1.sleep实例

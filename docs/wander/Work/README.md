@@ -107,3 +107,61 @@ const nowDate = new Date().getTime(); // 本地时间距1970年1月1日午夜之
 const targetDate = new Date(nowDate + offset_GMT * 60 * 1000 + timezone * 60 * 60 * 1000);
 console.log('东8区现在是：' + targetDate);
 ```
+
+## css3的循环滚动
+
+解决css循环滚动 回到顶部卡顿问题
+
+每次循环滚动最后的list为下一次滚动的首个元素
+
+```
+// css
+@keyframes fadeOutUp {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    33% {
+        transform: translate3d(0, 0 / @pxtorem, 0);
+    }
+
+    49% {
+        transform: translate3d(0, -25 / @pxtorem, 0);
+    }
+
+    82% {
+        transform: translate3d(0, -25 / @pxtorem, 0);
+    }
+
+    100% {
+        transform: translate3d(0, -50 / @pxtorem, 0);
+    }
+}
+
+animation: fadeOutUp 6s ease-out;
+
+// js
+this.$refs.animation.addEventListener('animationend', this.handlerAnimationEnd.bind(this), false);
+
+//默认获取前三个  animationVisible 给dom添加动画class
+this.animationVisible = true;
+this.visibilityList = this.visibilityAllList.slice(this.index, 3);
+this.index = this.index + 2;
+
+
+handlerAnimationEnd() {
+    this.animationVisible = false;
+    if (this.index + 3 > this.visibilityAllList.length) {
+        this.visibilityList = this.visibilityAllList.slice(this.index, this.visibilityAllList.length).concat(this.visibilityAllList.slice(0, 3 - (this.visibilityAllList.length - this.index)));
+        this.index = 2 - (this.visibilityAllList.length - this.index);
+    } else {
+        this.visibilityList = this.visibilityAllList.slice(this.index, this.index + 3);
+        this.index = this.index + 2;
+    }
+    setTimeout(() => {
+        this.animationVisible = true;
+    }, 500);
+},
+
+```
+
