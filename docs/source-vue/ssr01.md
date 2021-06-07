@@ -1,5 +1,5 @@
 ---
-autoGroup-1: ssr
+autoGroup-10: ssr
 title: ssr01
 ---
 

@@ -436,7 +436,7 @@ function judge(list) {
 ```
 var str = 'fdhfgcsaedvcfhgfh';
 var index = str.indexOf('f'); // 字符出现的位置
-var num = 0; // 这个字符出现的紫薯
+var num = 0; // 这个字符出现的次数
 
 while（index !=== -1）{
     console.log(index);

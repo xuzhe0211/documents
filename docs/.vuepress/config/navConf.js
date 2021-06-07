@@ -2,6 +2,7 @@ module.exports = [
     { text: '首页', link: '/' },
     { text: '课程学习', link: '/source-study/' },
     { text: 'Vue源码', link: '/source-vue/'},
+    { text: 'React', link: '/source-react/'},
     {
         text: 'Front End',
         ariaLabel: 'Front End Menu',

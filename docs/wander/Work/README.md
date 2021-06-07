@@ -165,3 +165,27 @@ handlerAnimationEnd() {
 
 ```
 
+## 视频播放不出现loading黑屏调研
+由于客户要求视频播放禁止出现loading、黑屏情况
+
+### 调研
+前期思路-在视频播放前设置视频封面,尝试之后发现在视频开始推流但是视频未开始播放之后还是有个loading旋转，所以修改封面样式
+在视频真正播放前视频封面一直存在
+
+video.js
+```
+// 去掉覆盖层
+/deep/ .el-loading-mask {
+    display: none;
+}
+// 播放时候封面隐藏
+/deep/ .vjs-live .vjs-poster {
+    display: none !important;
+}
+// 播放等待真正播放的时候封面显示
+/deep/ .vjs-waiting .vjs-poster {
+    display: block !important;
+}
+```
+
+

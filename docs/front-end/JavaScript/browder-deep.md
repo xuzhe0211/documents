@@ -116,7 +116,7 @@ html解析包含一系列的步骤，过程Bytes->Characters->tokens->Noodes->cs
 1. translate3d translateZ
 2. opacity属性
 
-当一个元素使用了硬件加速，在其后的袁术，若z-index比他大或者相同，且absolute fixed的属性想通弄过，则默认这些元素也创建了各自的复合图层。
+当一个元素使用了硬件加速，在其后的元素，若z-index比他大或者相同，且absolute fixed的属性想通弄过，则默认这些元素也创建了各自的复合图层。
 
 所以我们人为的为这个元素添加z-index值，从而避免这种情况
 
