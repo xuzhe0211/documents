@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>常用模式 | 随风</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="apple-touch-icon" href="/documents/apple-touch-icon.png">
+    <link rel="icon" href="/documents/favicon.ico">
+    <link rel="manifest" href="/documents/manifest.json">
+    <meta name="description" content="随风随雨又随流">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.061186d0.css" as="style"><link rel="preload" href="/documents/assets/js/app.c707dd89.js" as="script"><link rel="preload" href="/documents/assets/js/2.3c62c32c.js" as="script"><link rel="preload" href="/documents/assets/js/62.27907374.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.69e99cad.js"><link rel="prefetch" href="/documents/assets/js/11.8fbb9784.js"><link rel="prefetch" href="/documents/assets/js/12.af316f6b.js"><link rel="prefetch" href="/documents/assets/js/13.8acb8718.js"><link rel="prefetch" href="/documents/assets/js/14.aa98616d.js"><link rel="prefetch" href="/documents/assets/js/15.2104e116.js"><link rel="prefetch" href="/documents/assets/js/16.f872625d.js"><link rel="prefetch" href="/documents/assets/js/17.ba745fa0.js"><link rel="prefetch" href="/documents/assets/js/18.51697a59.js"><link rel="prefetch" href="/documents/assets/js/19.35ff6f52.js"><link rel="prefetch" href="/documents/assets/js/20.37ea7475.js"><link rel="prefetch" href="/documents/assets/js/21.640a6f3a.js"><link rel="prefetch" href="/documents/assets/js/22.64d5e463.js"><link rel="prefetch" href="/documents/assets/js/23.81360713.js"><link rel="prefetch" href="/documents/assets/js/24.2e39871a.js"><link rel="prefetch" href="/documents/assets/js/25.067a6c74.js"><link rel="prefetch" href="/documents/assets/js/26.c948c8e8.js"><link rel="prefetch" href="/documents/assets/js/27.0172c73a.js"><link rel="prefetch" href="/documents/assets/js/28.5de342bb.js"><link rel="prefetch" href="/documents/assets/js/29.c25a7247.js"><link rel="prefetch" href="/documents/assets/js/3.c7fe7f92.js"><link rel="prefetch" href="/documents/assets/js/30.ade90ad4.js"><link rel="prefetch" href="/documents/assets/js/31.51548b2b.js"><link rel="prefetch" href="/documents/assets/js/32.7ae35906.js"><link rel="prefetch" href="/documents/assets/js/33.a2eedc65.js"><link rel="prefetch" href="/documents/assets/js/34.a1f44fcf.js"><link rel="prefetch" href="/documents/assets/js/35.83a76c5e.js"><link rel="prefetch" href="/documents/assets/js/36.7e32c612.js"><link rel="prefetch" href="/documents/assets/js/37.d3dea4df.js"><link rel="prefetch" href="/documents/assets/js/38.5b7974ad.js"><link rel="prefetch" href="/documents/assets/js/39.de5105d8.js"><link rel="prefetch" href="/documents/assets/js/4.e2d1f35b.js"><link rel="prefetch" href="/documents/assets/js/40.8aefc0a5.js"><link rel="prefetch" href="/documents/assets/js/41.5c837005.js"><link rel="prefetch" href="/documents/assets/js/42.b00cda00.js"><link rel="prefetch" href="/documents/assets/js/43.0496a7bb.js"><link rel="prefetch" href="/documents/assets/js/44.d4da3abc.js"><link rel="prefetch" href="/documents/assets/js/45.103bfc3d.js"><link rel="prefetch" href="/documents/assets/js/46.a9e570c2.js"><link rel="prefetch" href="/documents/assets/js/47.34ceda5f.js"><link rel="prefetch" href="/documents/assets/js/48.c13eede0.js"><link rel="prefetch" href="/documents/assets/js/49.d8be950d.js"><link rel="prefetch" href="/documents/assets/js/5.90a7d0ce.js"><link rel="prefetch" href="/documents/assets/js/50.c1a7ffc5.js"><link rel="prefetch" href="/documents/assets/js/51.36bed2d5.js"><link rel="prefetch" href="/documents/assets/js/52.4b402bc0.js"><link rel="prefetch" href="/documents/assets/js/53.40339bbf.js"><link rel="prefetch" href="/documents/assets/js/54.bb09090d.js"><link rel="prefetch" href="/documents/assets/js/55.1be86dcd.js"><link rel="prefetch" href="/documents/assets/js/56.f9897b08.js"><link rel="prefetch" href="/documents/assets/js/57.90e90dce.js"><link rel="prefetch" href="/documents/assets/js/58.60a63e8d.js"><link rel="prefetch" href="/documents/assets/js/59.2ec6ca9f.js"><link rel="prefetch" href="/documents/assets/js/6.e2fac099.js"><link rel="prefetch" href="/documents/assets/js/60.6e398555.js"><link rel="prefetch" href="/documents/assets/js/61.51e7f6a5.js"><link rel="prefetch" href="/documents/assets/js/63.8e7580d7.js"><link rel="prefetch" href="/documents/assets/js/64.e973d499.js"><link rel="prefetch" href="/documents/assets/js/65.f8485304.js"><link rel="prefetch" href="/documents/assets/js/66.f8c086b3.js"><link rel="prefetch" href="/documents/assets/js/67.bce45500.js"><link rel="prefetch" href="/documents/assets/js/68.64946ebc.js"><link rel="prefetch" href="/documents/assets/js/69.1dc4be67.js"><link rel="prefetch" href="/documents/assets/js/7.69cf438d.js"><link rel="prefetch" href="/documents/assets/js/70.0ff84dd2.js"><link rel="prefetch" href="/documents/assets/js/71.3fd48685.js"><link rel="prefetch" href="/documents/assets/js/72.9e715534.js"><link rel="prefetch" href="/documents/assets/js/73.e4dfdd52.js"><link rel="prefetch" href="/documents/assets/js/74.cf446ebe.js"><link rel="prefetch" href="/documents/assets/js/75.9f990d7e.js"><link rel="prefetch" href="/documents/assets/js/76.74313612.js"><link rel="prefetch" href="/documents/assets/js/77.7f838d05.js"><link rel="prefetch" href="/documents/assets/js/78.c17c2b93.js"><link rel="prefetch" href="/documents/assets/js/79.4c148acb.js"><link rel="prefetch" href="/documents/assets/js/8.9beca52e.js"><link rel="prefetch" href="/documents/assets/js/80.318549bf.js"><link rel="prefetch" href="/documents/assets/js/81.bfd5153e.js"><link rel="prefetch" href="/documents/assets/js/82.4878e630.js"><link rel="prefetch" href="/documents/assets/js/83.18adcc4a.js"><link rel="prefetch" href="/documents/assets/js/84.bd95cafa.js"><link rel="prefetch" href="/documents/assets/js/85.875809b6.js"><link rel="prefetch" href="/documents/assets/js/86.2033664c.js"><link rel="prefetch" href="/documents/assets/js/87.0e86ff75.js"><link rel="prefetch" href="/documents/assets/js/88.3deaf402.js"><link rel="prefetch" href="/documents/assets/js/89.1471fd1b.js"><link rel="prefetch" href="/documents/assets/js/9.f166463c.js"><link rel="prefetch" href="/documents/assets/js/90.ff07776f.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.061186d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">随风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java Script</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>对象方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数组方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>字符串方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>函数</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>设计模式</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/front-end/JavaScript/model-design-index.html" aria-current="page" class="active sidebar-link">常用模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/model-design-index.html#发布订阅者模式" class="sidebar-link">发布订阅者模式</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/model-design-index.html#单例模式" class="sidebar-link">单例模式</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/model-design-index.html#装饰器模式" class="sidebar-link">装饰器模式</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tips/方法实现</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="发布订阅者模式"><a href="#发布订阅者模式" class="header-anchor">#</a> 发布订阅者模式</h2> <div class="language- extra-class"><pre class="language-text"><code>let pubSub = {
+	subs: [],
+    subscribe(key, fn) {
+    	if(!this.subs[key]) {
+        	this.subs[key] = [];
+        }
+        this.subs[key].push(fn);
+    },
+    publish(...arg){
+    	let args = arg;
+        let key = args.shift();
+        let fns = this.subs[key];
+        if (!fns || fns.length &lt;= 0) return;
+        for (let i = 0, len = fns.length; i&lt; len; i++) {
+        	fns[i](args);
+        }
+    },
+    unSubscribe(key) {
+    	delete this.subs[key];
+    }
+}
+//测试
+pubSub.subscribe('name', name=&gt; {
+	console.log(`your name is ${name}`);
+})
+pubSub.subscribe('gender', gender =&gt; {
+	console.log(`your name is ${gender}`);
+})
+pubSub.publish('name', 'leaf33');
+pubSub.publish('gender', '18')
+
+// 简单实现
+let obj = {};
+const $on = (name, fn) =&gt; {
+    if (!obj[name]) {
+        obj[name] = [];
+    }
+    obj[name].push(fn);
+}
+const $emit = (name, val) =&gt; {
+    if (obj[name]) {
+        obj[name].map(fn =&gt; {
+            fn(val)
+        })
+    }
+}
+</code></pre></div><h2 id="单例模式"><a href="#单例模式" class="header-anchor">#</a> 单例模式</h2> <div class="language- extra-class"><pre class="language-text"><code>class CreatUser{
+	constructor(name) {
+        this.name = name;
+        this.getName();
+    }
+    getName() {
+    	console.log(this.name)
+    }
+}
+var ProxyMode = (function(){
+	var instance = null;
+    return function(name) {
+    	if(!instance) {
+        	instance = new CreatUser(name);
+        }
+        return instance;
+    }
+})()
+</code></pre></div><h2 id="装饰器模式"><a href="#装饰器模式" class="header-anchor">#</a> 装饰器模式</h2> <p><a href="/documents/front-end/JavaScript/ts-anotation.html">参考地址</a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/front-end/JavaScript/function-arguments.html" class="prev">
+        arguments&amp;剩余参数
+      </a></span> <span class="next"><a href="/documents/front-end/JavaScript/tips-bind.html">
+        实现一个bind
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.c707dd89.js" defer></script><script src="/documents/assets/js/2.3c62c32c.js" defer></script><script src="/documents/assets/js/62.27907374.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>浏览器运行机制 | 随风</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="apple-touch-icon" href="/documents/apple-touch-icon.png">
+    <link rel="icon" href="/documents/favicon.ico">
+    <link rel="manifest" href="/documents/manifest.json">
+    <meta name="description" content="随风随雨又随流">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.061186d0.css" as="style"><link rel="preload" href="/documents/assets/js/app.c707dd89.js" as="script"><link rel="preload" href="/documents/assets/js/2.3c62c32c.js" as="script"><link rel="preload" href="/documents/assets/js/51.36bed2d5.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.69e99cad.js"><link rel="prefetch" href="/documents/assets/js/11.8fbb9784.js"><link rel="prefetch" href="/documents/assets/js/12.af316f6b.js"><link rel="prefetch" href="/documents/assets/js/13.8acb8718.js"><link rel="prefetch" href="/documents/assets/js/14.aa98616d.js"><link rel="prefetch" href="/documents/assets/js/15.2104e116.js"><link rel="prefetch" href="/documents/assets/js/16.f872625d.js"><link rel="prefetch" href="/documents/assets/js/17.ba745fa0.js"><link rel="prefetch" href="/documents/assets/js/18.51697a59.js"><link rel="prefetch" href="/documents/assets/js/19.35ff6f52.js"><link rel="prefetch" href="/documents/assets/js/20.37ea7475.js"><link rel="prefetch" href="/documents/assets/js/21.640a6f3a.js"><link rel="prefetch" href="/documents/assets/js/22.64d5e463.js"><link rel="prefetch" href="/documents/assets/js/23.81360713.js"><link rel="prefetch" href="/documents/assets/js/24.2e39871a.js"><link rel="prefetch" href="/documents/assets/js/25.067a6c74.js"><link rel="prefetch" href="/documents/assets/js/26.c948c8e8.js"><link rel="prefetch" href="/documents/assets/js/27.0172c73a.js"><link rel="prefetch" href="/documents/assets/js/28.5de342bb.js"><link rel="prefetch" href="/documents/assets/js/29.c25a7247.js"><link rel="prefetch" href="/documents/assets/js/3.c7fe7f92.js"><link rel="prefetch" href="/documents/assets/js/30.ade90ad4.js"><link rel="prefetch" href="/documents/assets/js/31.51548b2b.js"><link rel="prefetch" href="/documents/assets/js/32.7ae35906.js"><link rel="prefetch" href="/documents/assets/js/33.a2eedc65.js"><link rel="prefetch" href="/documents/assets/js/34.a1f44fcf.js"><link rel="prefetch" href="/documents/assets/js/35.83a76c5e.js"><link rel="prefetch" href="/documents/assets/js/36.7e32c612.js"><link rel="prefetch" href="/documents/assets/js/37.d3dea4df.js"><link rel="prefetch" href="/documents/assets/js/38.5b7974ad.js"><link rel="prefetch" href="/documents/assets/js/39.de5105d8.js"><link rel="prefetch" href="/documents/assets/js/4.e2d1f35b.js"><link rel="prefetch" href="/documents/assets/js/40.8aefc0a5.js"><link rel="prefetch" href="/documents/assets/js/41.5c837005.js"><link rel="prefetch" href="/documents/assets/js/42.b00cda00.js"><link rel="prefetch" href="/documents/assets/js/43.0496a7bb.js"><link rel="prefetch" href="/documents/assets/js/44.d4da3abc.js"><link rel="prefetch" href="/documents/assets/js/45.103bfc3d.js"><link rel="prefetch" href="/documents/assets/js/46.a9e570c2.js"><link rel="prefetch" href="/documents/assets/js/47.34ceda5f.js"><link rel="prefetch" href="/documents/assets/js/48.c13eede0.js"><link rel="prefetch" href="/documents/assets/js/49.d8be950d.js"><link rel="prefetch" href="/documents/assets/js/5.90a7d0ce.js"><link rel="prefetch" href="/documents/assets/js/50.c1a7ffc5.js"><link rel="prefetch" href="/documents/assets/js/52.4b402bc0.js"><link rel="prefetch" href="/documents/assets/js/53.40339bbf.js"><link rel="prefetch" href="/documents/assets/js/54.bb09090d.js"><link rel="prefetch" href="/documents/assets/js/55.1be86dcd.js"><link rel="prefetch" href="/documents/assets/js/56.f9897b08.js"><link rel="prefetch" href="/documents/assets/js/57.90e90dce.js"><link rel="prefetch" href="/documents/assets/js/58.60a63e8d.js"><link rel="prefetch" href="/documents/assets/js/59.2ec6ca9f.js"><link rel="prefetch" href="/documents/assets/js/6.e2fac099.js"><link rel="prefetch" href="/documents/assets/js/60.6e398555.js"><link rel="prefetch" href="/documents/assets/js/61.51e7f6a5.js"><link rel="prefetch" href="/documents/assets/js/62.27907374.js"><link rel="prefetch" href="/documents/assets/js/63.8e7580d7.js"><link rel="prefetch" href="/documents/assets/js/64.e973d499.js"><link rel="prefetch" href="/documents/assets/js/65.f8485304.js"><link rel="prefetch" href="/documents/assets/js/66.f8c086b3.js"><link rel="prefetch" href="/documents/assets/js/67.bce45500.js"><link rel="prefetch" href="/documents/assets/js/68.64946ebc.js"><link rel="prefetch" href="/documents/assets/js/69.1dc4be67.js"><link rel="prefetch" href="/documents/assets/js/7.69cf438d.js"><link rel="prefetch" href="/documents/assets/js/70.0ff84dd2.js"><link rel="prefetch" href="/documents/assets/js/71.3fd48685.js"><link rel="prefetch" href="/documents/assets/js/72.9e715534.js"><link rel="prefetch" href="/documents/assets/js/73.e4dfdd52.js"><link rel="prefetch" href="/documents/assets/js/74.cf446ebe.js"><link rel="prefetch" href="/documents/assets/js/75.9f990d7e.js"><link rel="prefetch" href="/documents/assets/js/76.74313612.js"><link rel="prefetch" href="/documents/assets/js/77.7f838d05.js"><link rel="prefetch" href="/documents/assets/js/78.c17c2b93.js"><link rel="prefetch" href="/documents/assets/js/79.4c148acb.js"><link rel="prefetch" href="/documents/assets/js/8.9beca52e.js"><link rel="prefetch" href="/documents/assets/js/80.318549bf.js"><link rel="prefetch" href="/documents/assets/js/81.bfd5153e.js"><link rel="prefetch" href="/documents/assets/js/82.4878e630.js"><link rel="prefetch" href="/documents/assets/js/83.18adcc4a.js"><link rel="prefetch" href="/documents/assets/js/84.bd95cafa.js"><link rel="prefetch" href="/documents/assets/js/85.875809b6.js"><link rel="prefetch" href="/documents/assets/js/86.2033664c.js"><link rel="prefetch" href="/documents/assets/js/87.0e86ff75.js"><link rel="prefetch" href="/documents/assets/js/88.3deaf402.js"><link rel="prefetch" href="/documents/assets/js/89.1471fd1b.js"><link rel="prefetch" href="/documents/assets/js/9.f166463c.js"><link rel="prefetch" href="/documents/assets/js/90.ff07776f.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.061186d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">随风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Java Script</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/front-end/JavaScript/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/documents/front-end/JavaScript/a-object-prototype.html" class="sidebar-link">object原型链</a></li><li><a href="/documents/front-end/JavaScript/browder-deep.html" aria-current="page" class="active sidebar-link">浏览器运行机制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/browder-deep.html#进程与线程" class="sidebar-link">进程与线程</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/browder-deep.html#浏览器进程" class="sidebar-link">浏览器进程</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/browder-deep.html#相关问题" class="sidebar-link">相关问题</a></li></ul></li><li><a href="/documents/front-end/JavaScript/browser-session-cookie.html" class="sidebar-link">SSO/session/cookie/JWT</a></li><li><a href="/documents/front-end/JavaScript/deep-app-bridge.html" class="sidebar-link">App Bridge原理</a></li><li><a href="/documents/front-end/JavaScript/deep-weex.html" class="sidebar-link">weex原理</a></li><li><a href="/documents/front-end/JavaScript/methods-debounce.html" class="sidebar-link">函数防抖、节流</a></li><li><a href="/documents/front-end/JavaScript/request-animation-frame.html" class="sidebar-link">JS实现持续动画效果</a></li><li><a href="/documents/front-end/JavaScript/service-worker.html" class="sidebar-link">Service Worker</a></li><li><a href="/documents/front-end/JavaScript/site-blob.html" class="sidebar-link">流文件</a></li><li><a href="/documents/front-end/JavaScript/wx-about.html" class="sidebar-link">小程序</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>对象方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数组方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>字符串方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>函数</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tips/方法实现</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h4 id="前言"><a href="#前言" class="header-anchor">#</a> <a id="前言">前言</a></h4> <p>大家肯定都听说过很多浏览器优化原则吧，例如说减少DOM操作，使用transformX(0)进行硬件优化，避免js文件执行时间过长使用的页面卡顿等等。大部分可能都知道，但也仅限知道，即知其然，不知其所以然。</p> <p>所以接下来，梳理一下浏览器运行过程中需要的知识：</p> <h2 id="进程与线程"><a href="#进程与线程" class="header-anchor">#</a> 进程与线程</h2> <div class="language- extra-class"><pre class="language-text"><code>- 进程是一个工厂，每个工厂都有独立的资源。
+- 线程是工厂中的工人，可能只有一个，可能有好多个。多个工人协同完成工作。工人共享工作资源。
+</code></pre></div><p>回到硬件上来理解</p> <div class="language- extra-class"><pre class="language-text"><code>- 工厂的资源-&gt;系统分配的内存
+- 工厂之间相互独立-&gt;进程之间相互独立，也即进程分配到的内存相互独立，无法读取到对方内存中的数据
+- 一个工厂有一个或多个工人-&gt;一个进程中有一个或多个线程
+- 多个工人协同完成工作-&gt;进程中多个线程协同完成工作。即线程之间互相发送请求和接收结果。
+- 工人共享工作资源-&gt;进程中所有线程都能访问到相同一块内存，即信息是互通的
+</code></pre></div><p><strong>一个软件不等于一个进程，一个软件可能包含多个相互独立的进程</strong></p> <ul><li>进程是系统资源分配的最小单位(即系统以进程为最小单位分配内存空间，同时进程是能独立运行的)</li> <li>线程是系统调度的最小单位(即系统以线程为单位分配cup中的核)</li></ul> <h2 id="浏览器进程"><a href="#浏览器进程" class="header-anchor">#</a> 浏览器进程</h2> <p>首先，明确的是：<strong>浏览器是多线程的</strong></p> <p>浏览器都有哪些进程</p> <ul><li>Browser进程：是浏览器的主进程，负责主控，协调，只有一个，可以看做是浏览器的大脑。负责下载页面的网络文件，负责将renderer进程得到的存在内存中的位图渲染(显示)到页面上；负责创建和销毁tab(renderer进程)；负责与用户的交互</li> <li>GPU进程：只有一个，负责3D绘制，只有当该页面使用了硬件加速才会使用它，来渲染页面；否则的话，不适用这个进程，而是用Browser进程来渲染页面</li> <li>renderer进程，又名浏览器内核，每个tab页面对应一个独立的renderer进程，内部有多个线程；负责脚本执行，位图绘制，事件触发，任务队列轮询等</li> <li>第三方插件进程，每个类型的插件对应一个进程</li></ul> <p>浏览器是多进程好处非常明显，如果浏览器是单进程的话，则一个页面，一个插件的本会会导致整个浏览器的崩溃，用户体验会非常差</p> <h3 id="renderer进程是多线程的-以下是各个线程的名称及作用-仅列举常驻线程"><a href="#renderer进程是多线程的-以下是各个线程的名称及作用-仅列举常驻线程" class="header-anchor">#</a> renderer进程是多线程的，以下是各个线程的名称及作用(仅列举常驻线程)</h3> <ul><li>js引擎线程</li></ul> <p>也称js内核，解析js脚本，执行代码；与GUI线程互斥，即当js引擎线程运行时，GUI线程会被挂起，当js引擎线程结束运行时，才会继续运行GUI线程；由一个主线程和多个web worker线程组成，由于web worker是附属于主线程，无法操作DOM等，所以js还是单线程语言(在主线程运行js代码)</p> <ul><li><p>GUI线程</p> <p>用于解析html为DOM树，解析css为css Dom树，布局layout,绘制paint;当页面需要重排reflow，重绘repaint时，使用该线程；与js引擎线程互斥；</p></li> <li><p>事件触发线程</p> <p>当对应事件触发(不论是webapi完成事件触发，还是页面交互事件触发)时，该线程会将事件对应的回调函数放入callback queue(任务队列)中，等待js引擎线程的处理</p></li> <li><p>定时触发线程</p> <p>对应于setTimeout/setInterval API，由该线程来计时时，当计时结束，将事件对应的回调函数放入任务队列中；当setTimeout的定时的时间小于4ms，一律按照4ms来算</p></li> <li><p>http请求线程</p> <p>每有一个http请求就开一个该线程，当检测到状态变更的话，就会产生一个状态变更事件，如果该状态变更事件有回调函数的话，则放入任务队列中；</p></li> <li><p>任务队列轮训线程</p> <p>用于轮询监听任务队列，以便知道任务队列时候为空</p></li></ul> <h3 id="html解析"><a href="#html解析" class="header-anchor">#</a> html解析</h3> <p>html解析包含一系列的步骤，过程Bytes-&gt;Characters-&gt;tokens-&gt;Noodes-&gt;DOM 最终将html解析为dom树。</p> <h3 id="css解析"><a href="#css解析" class="header-anchor">#</a> css解析</h3> <p>html解析包含一系列的步骤，过程Bytes-&gt;Characters-&gt;tokens-&gt;Noodes-&gt;cssom 最终将html解析为dom树。</p> <h3 id="回流与重绘"><a href="#回流与重绘" class="header-anchor">#</a> 回流与重绘</h3> <div class="language- extra-class"><pre class="language-text"><code>- 布局是页面首次加载时进行的操作，重新布局即为回流
+- 绘制是页面首次加载时进行的操作，重新绘制即为重绘
+</code></pre></div><p><strong>什么时候会发生回流和重绘呢</strong></p> <ul><li>当页面的某部分元素发生了尺寸、位置、隐藏改变，页面进行回流。得对整个页面重新进行布局计算，将所有尺寸位置受到影响的元素回流</li> <li>当页面的某部分元素的外观发生了改变，但尺寸位置隐藏没有改变，页面进行重绘(同样，只重绘部分元素，而不是整个页面重绘)</li></ul> <p>回流的同时往往会伴随着重绘，重绘不一定导致回流</p> <p><strong>如何减少回流</strong></p> <ul><li>减少逐项更改样式，最好一次性更改style，或是将更改的样式定义在一个class中并一次性更新</li> <li>避免循环操作DOM，而是新建一个节点，在他上面应用所有的DOM操作，然后再将他接入到DOM中</li> <li>当要频繁得到如offset属性时，只读取一次然后赋值给变量，而不是每次都获取一次</li> <li>将复杂的元素绝对定位或固定定位，使他脱离文档流，否则回流代价很高</li> <li>使用硬件加速创建一个新的符合图层，使其需要回流时不会影响原始复合图层回流</li></ul> <h3 id="硬件加速"><a href="#硬件加速" class="header-anchor">#</a> 硬件加速</h3> <p>我们在未开启硬件加速的时候使用cpu渲染页面，只有开启了硬件加速，才会使用到GPU渲染页面</p> <p>在详细讲解硬件加速前，我们先了解下简单图层和复合图层</p> <ul><li>DOM中的每个节点对应一个简单图层</li> <li>复合图层是各个简单图层的合并,一个页面一般来说只一个复合图层,无论你创建了多少个元素,都在这个复合图层中</li> <li>其次,absolute,fixed布局，可以使该元素脱离文档流，但话还是在这个复合图层中，所以他还是会影响复合图层的绘制，但是不会影响重排</li></ul> <p><strong>当一个元素使用硬件加速后，会生成一个新的复合图层</strong> 这个不管其如何变化，都不会影响原复合图层，不过不要大量使用硬件加速，会导致资源消耗过，导致页面卡顿。</p> <p>所以使用了硬件加速后，会有多个复合图层，然后多个复合图层之间相互独立，单独布局，绘制</p> <p><strong>如何才能使用硬件加速</strong></p> <ol><li>translate3d translateZ</li> <li>opacity属性</li></ol> <p>当一个元素使用了硬件加速，在其后的元素，若z-index比他大或者相同，且absolute fixed的属性想通弄过，则默认这些元素也创建了各自的复合图层。</p> <p>所以我们人为的为这个元素添加z-index值，从而避免这种情况</p> <h3 id="浏览器页面的渲染流程"><a href="#浏览器页面的渲染流程" class="header-anchor">#</a> 浏览器页面的渲染流程</h3> <div class="language- extra-class"><pre class="language-text"><code>1.解析html得到DOM树
+2.解析css得到css树
+3.合并得到render树
+4.布局，当页面有元素尺寸 大小 隐藏有变化或增加 删除元素时，重新计算布局，并修改页面中所有收影响的部分
+5. 绘制，当页面元素的外观发生变化时候，重新绘制
+6.GUI线程将得到的各层的位图(每个元素对应的一个普通图层)发送给Browser进程，由Browser进程将各层合并 渲染到页面上
+</code></pre></div><h3 id="domcontentloaded和load事件"><a href="#domcontentloaded和load事件" class="header-anchor">#</a> DOMContentLoaded和load事件</h3> <div class="language- extra-class"><pre class="language-text"><code>DOMContentLoad：当DOM加载完成时触发
+load:当Dom 样式表 脚本架在你完成时触发
+</code></pre></div><p><strong>DOMContentLoad在load之前触发</strong></p> <h3 id="css堵塞情况"><a href="#css堵塞情况" class="header-anchor">#</a> css堵塞情况</h3> <p>首先，是在Browser进程中下载css文件，当下载完成后，发送给GUI线程。</p> <p>其次，是在GUI线程中解析html及css，不过这两者是并行的。</p> <p>由于css的下载和解析不会影响DOM树，所以不会堵塞html文件的解析，但会堵塞页面渲染。</p> <p>这样的设计是非常合理的，如果css文件的下载和解析不会堵塞页面渲染，那么在页面渲染的途中或结束后发现元素样式有变化，则又需要回流和重绘。</p> <h3 id="js堵塞情况"><a href="#js堵塞情况" class="header-anchor">#</a> js堵塞情况</h3> <p>确的是，js文件的下载和解析执行都会堵塞html文件的解析及页面渲染。</p> <p>因为js脚本可能会改变DOM结构，若是其不堵塞html文件的解析及页面渲染的话，那么当js脚本改变DOM结构或元素样式时，会引发回流和重绘，会造成不必要的性能浪费，不如等待js执行完，在进行html解析和页面渲染。</p> <p>如果你不想js堵塞的话，则使用async属性，这样就可以异步加载js文件，加载完成后立即执行</p> <h3 id="css和js文件应当放在html哪个位置"><a href="#css和js文件应当放在html哪个位置" class="header-anchor">#</a> css和js文件应当放在html哪个位置</h3> <p>当需要在DOM树完成之前用js进行初始化操作的话，在head中使用js。</p> <p>如果是需要在DOM树形成之后，即要操作DOM，则在body元素的末尾。不过也可以使用load事件。</p> <p>如果js的内容比较小，则推荐使用内部js而不是引用js，这样可以减少http请求。</p> <p><strong>css：</strong></p> <p>一般放在head中，因为css的解析不影响html的解析，所以越早引入，越早同时解析。</p> <h3 id="事件循环机制"><a href="#事件循环机制" class="header-anchor">#</a> 事件循环机制</h3> <p>事件循环机制的核心是事件触发线程，由于执行栈产生异步任务，异步任务完成后事件触发线程将其回调函数传入到任务队列中，当执行栈为空，任务队列将队列头的回调函数入执行栈，从而新的一轮循环开始。这就是称为循环的原因。</p> <p><strong>宏任务和微任务</strong>
+宏任务（macrotask）：</p> <p>- 主代码块和任务队列中的回调函数就是宏任务</p> <p>- 为了使js内部宏任务和DOM任务能够有序的执行，每次执行完宏任务后，会在下一个宏任务执行之前，对页面重新进行渲染。（宏任务 -&gt; 渲染 -&gt; 宏任务）</p> <h4 id="微任务-microtask"><a href="#微任务-microtask" class="header-anchor">#</a> 微任务（microtask）：</h4> <p>- 在宏任务执行过程中，执行到微任务时，将微任务放入微任务队列中。</p> <p>- 在宏任务执行完后，在重新渲染之前执行。</p> <p>- 当一个宏任务执行完后，他会将产生的所有微任务执行完。</p> <p>分别在什么场景下会产生宏任务或微任务呢：</p> <p>宏任务：主代码块，setTimeout，setInterval（任务队列中的所有回调函数都是宏任务）</p> <p>微任务：Promise</p> <h3 id="导致页面无法立即响应的原因"><a href="#导致页面无法立即响应的原因" class="header-anchor">#</a> 导致页面无法立即响应的原因</h3> <p>导致页面无法响应的原因是执行栈中还有任务未执行完，或者是js引擎线程被GUI线程堵塞。</p> <h3 id="html文件解析过程"><a href="#html文件解析过程" class="header-anchor">#</a> html文件解析过程</h3> <div class="language- extra-class"><pre class="language-text"><code>1. Browser进程下载html文件并将文件发送给renderer进程
+
+2. renderer进程的GUI进程开始解析html文件来构建出DOM
+
+3. 当遇到外源css时，Browser进程下载该css文件并发送回来，GUI线程再解析该文件，在这同时，html的解析也同时进行，但不会渲染（还未形成渲染树）
+
+4. 当遇到内部css时，html的解析和css的解析同时进行
+
+5. 继续解析html文件，当遇到外源js时，Browser进程下载该js文件并发送回来，此时，js引擎线程解析并执行js，因为GUI线程和js引擎线程互斥，所以GUI线程被挂起，停止继续解析html。直到js引擎线程空闲，GUI线程继续解析html。
+
+6. 遇到内部js也是同理
+
+7. 解析完html文件，形成了完整的DOM树，也解析完了css，形成了完整的CSSOM树，两者结合形成了render树
+
+8. 根据render树来进行布局，若在布局的过程中发生了元素尺寸、位置、隐藏的变化或增加、删除元素时，则进行回流，修改
+
+9. 根据render树进行绘制，若在布局的过程中元素的外观发生变换，则进行重绘
+
+10. 将布局、绘制得到的各个简单图层的位图发送给Browser进程，由它来合并简单图层为复合图层，从而显示到页面上
+
+11. 以上步骤就是html文件解析全过程，完成之后，如若当页面有元素的尺寸、大小、隐藏有变化时，重新布局计算回流，并修改页面中所有受影响的部分，如若当页面有元素的外观发生变化时，重绘
+</code></pre></div><hr> <p>参考文档：<a href="https://cnblogs.com/caiyy/p/10406934.html" target="_blank" rel="noopener noreferrer">https://cnblogs.com/caiyy/p/10406934.html<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="相关问题"><a href="#相关问题" class="header-anchor">#</a> 相关问题</h2> <h3 id="js是单线程为什么可以异步"><a href="#js是单线程为什么可以异步" class="header-anchor">#</a> js是单线程为什么可以异步</h3> <p>JavaScript语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。那么，为什么Javascript不能有多个线程呢?这样能提高效率</p> <p>Javascript的单线程，与它的用途有关。作为浏览器脚本语言，Javascript的主要用途是与用户交互，以及操作DOM。这决定它只能是单线程，否则会带来复杂的同步问题。比如，假定Javascript同时有两个线程，一个线程在某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？</p> <p>所以为了避免复杂性，从一诞生，Javascript就是单线程，这已经成了这门语言的核心特征，将来也不会改变。</p> <p><strong>为了利用多多核CPU的计算能力，HTML5提出Web Worker标准，允许Javascript脚本创建多个线程，但是子线程完全受主线程控制，且不得操作DOM。所以这个新标准并没有改变Javascript单线程的本质</strong></p> <p><strong>依赖于js的事件循环机制，js的主线程虽然是单线程运行的，但是底层还是有其他线程的，比如说网络请求线程，事件执行线程等，主线程遇到上述说的异步任务就回去放到事件队列里面，并由对应的线程去执行，执行完成会返回给主线程，异步就是这样来的</strong></p> <h4 id="怎样执行异步的代码"><a href="#怎样执行异步的代码" class="header-anchor">#</a> 怎样执行异步的代码</h4> <p>单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。</p> <p>js引擎执行异步代码而不用等待，是因为有消息队列和事件循环。</p> <ul><li>消息队列：消息队列是一个先进先出的队列，它里面存放着各种消息。</li> <li>事件循环：事件循环是指主线程重复从消息队列中取消息、执行的过程</li></ul> <p>实际上，主线程只会做一件事情，就是从消息队列里面读消息，再取消息，在执行。当消息队列为空时，就会等待直到消息队列变成非空。而且主线程只有在将当前的消息队列完成之后，才回去取下一个消息。这种机制叫做时间循环机制，取一个消息并执行的过程叫做一次循环</p> <p>事件循环用代码表示大概这样</p> <div class="language- extra-class"><pre class="language-text"><code>while(true) {
+	var message = queue.get();
+    execute(message);
+}
+</code></pre></div><p>那么，消息队列中放的消息具体是什么东西？消息的具体结构当然跟具体的实现有关了，但是为了简单起见，我们可以认为</p> <ul><li>消息就是注册异步任务时添加的回调函数</li></ul> <h3 id="html5-web-workers"><a href="#html5-web-workers" class="header-anchor">#</a> HTML5 Web Workers</h3> <p>web worker是运行在后台的JavaScript,不会影响页面性能</p> <p><strong>什么是Web Worker</strong></p> <p>当在HTML页面中执行脚本时，页面的状态是不可响应的，知道脚本完成
+web workder是运行在后台的JavaScript,独立于其他脚本，不会影响页面性能。您可以继续做任何愿意做的事情:点击、选取内容等等，而此时web worker在后台运行。</p> <p><strong>浏览器支持</strong></p> <p>Internet Explorer10，Firefox， chrome safari和Opera都支持</p> <p><strong>HTML Web Worker实例</strong></p> <div class="language- extra-class"><pre class="language-text"><code>//demo_worker.js文件代码
+var i = 0;
+function timedCount() {
+	i = i + 1;
+    postMessage(i);
+    setTimeout('timedCount()', 500);
+}
+timedCount();
+
+function startWorker(){
+	if(typeof (Worker) !== 'undefined') {
+    	if(typof(w) === undefined) {
+        	w = new Worker('demo_workers.js');
+        }
+        w.onmessage = function(event) {
+        	document.getElementById('result').innerHTML = event.data;
+        }
+    } else {
+    	document.getElementById('result').innerHTML = '抱歉，你的浏览器不支持Web Workers...'
+    }
+}
+function stopWorker() {
+	w.terminate();
+    w.undefined;
+}
+</code></pre></div><p><strong>Web Workers 和DOM</strong></p> <p>由于web worker位于外部文件中，他们无法访问下列Javascript对象</p> <ol><li>window对象</li> <li>document对象</li> <li>parent对象</li></ol> <h3 id="messagechannel通道"><a href="#messagechannel通道" class="header-anchor">#</a> MessageChannel通道</h3> <h4 id="初识messagechannel对象"><a href="#初识messagechannel对象" class="header-anchor">#</a> 初识MessageChannel对象</h4> <p>通过构造函数MessageChannel()可以创建一个消息通道，实例化的对象会继承两个属性：port1和port2</p> <div class="language- extra-class"><pre class="language-text"><code>let ms = new MessageChannel();
+//port1和port2都是MessagePort对象，在这里是只读的，无法对其进行字面量赋值
+ms.port1 = {name: 'wise'}
+//不过可以给port添加属性
+ms.port1.name = 'wise'
+</code></pre></div><p>MessagePort对象具有onmessage和onmessageerror两个属性</p> <p>这是两个回调方法，使用MessagePort.postMessage方法发送消息的时候，就回去触发另一个端口onmessage</p> <p>消息通道就想一条左右贯通的管道，左右两个端口就是port1和port2</p> <p>这个端口可以相互发送消息，port1发送的消息可以在port2接收到哦，反之亦然。</p> <img src="/documents/images/1059788-20190308164731842-1262102501.png" alt="消息通道"> <h4 id="多个web-worker之间通信"><a href="#多个web-worker之间通信" class="header-anchor">#</a> 多个Web Worker之间通信</h4> <p>MessageChannel可以结合Web Worker实现多线程通信</p> <div class="language- extra-class"><pre class="language-text"><code>//mian.js
+let worker1 = new Worker('./worker1.js');
+let worker2 = new Worker('./worker2.js');
+
+//把port1分配给worker1
+worker1.postMessage('main', [ms.port1]);
+//把port2分配给worker2
+worker2.postMessage('main', [ms.port2]);
+worker2.onmessage = function(event) {
+	console.log(event.data);
+}
+</code></pre></div><p>这里的postMessage()可以接收两个参数message、transferList</p> <table><thead><tr><th>-</th> <th>-</th></tr></thead> <tbody><tr><td>message</td> <td>消息内容，可以是任意基础数据类型</td></tr> <tr><td>transferList</td> <td>由被传输对象组成的数组，这些对象的所有权会转移给调用postMessage的对象</td></tr></tbody></table> <p>所以上面的代码，就是把消息通道的port1分配给了worker1，把port2分配给workerr2</p> <p>也就是用消息通道，将两个worker给连接起来</p> <div class="language- extra-class"><pre class="language-text"><code>//worker1.js
+onmessage = function(e) {
+	if(e.date === 'main') {
+    	const port = e.ports[0];
+        port.postMessage('Hi!I am worker1')
+    }
+}
+//worker2.js
+onmessage = function(e) {
+	if(e.data === 'main') {
+    	const port = e.ports[0];
+        port.onmessage = function(e) {
+        	postMessage(e.data)
+        }
+    }
+}
+</code></pre></div><p>代码运行的时候，worker1中通过port1发送的消息，然后worker2就能从port2中接收到消息</p> <h4 id="深拷贝"><a href="#深拷贝" class="header-anchor">#</a> 深拷贝</h4> <p>大部分需要深拷贝的场景，都可以使用下面代码</p> <div class="language- extra-class"><pre class="language-text"><code>JSON.parse(JSON.stringify(object));
+</code></pre></div><p>但是这种办法会忽略undefined、function、symbol和循环引用对象</p> <p>而通过postMessage()方法传输的message参数是深拷贝的。</p> <div class="language- extra-class"><pre class="language-text"><code>function deepClone(obj) {
+	return new Promise(resolve =&gt; {
+    	const { port1, port2 } = new MessageChannel();
+        port2.onmessage = e =&gt; resolve(e.data);
+        port1.postMessage(obj)
+    })
+}
+//定义一个包含undefined的对象
+let obj = {
+	a: 'wise',
+    b: undefined,
+    c: {
+    	d: 'wrong'
+    }
+}
+//循环引用
+obj.c.e = obj.c;
+async function test() {
+	const clone = await deepClone(obj);
+    console.log(clone)
+}
+</code></pre></div><p>这个深拷贝只能解决undefined和循环引用对象的问题，对于Symbol和function依然束手无策</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/front-end/JavaScript/a-object-prototype.html" class="prev">
+        object原型链
+      </a></span> <span class="next"><a href="/documents/front-end/JavaScript/browser-session-cookie.html">
+        SSO/session/cookie/JWT
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.c707dd89.js" defer></script><script src="/documents/assets/js/2.3c62c32c.js" defer></script><script src="/documents/assets/js/51.36bed2d5.js" defer></script>
+  </body>
+</html>

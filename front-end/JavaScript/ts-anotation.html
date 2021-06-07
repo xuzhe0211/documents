@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TS中的装饰器 | 随风</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="apple-touch-icon" href="/documents/apple-touch-icon.png">
+    <link rel="icon" href="/documents/favicon.ico">
+    <link rel="manifest" href="/documents/manifest.json">
+    <meta name="description" content="随风随雨又随流">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.061186d0.css" as="style"><link rel="preload" href="/documents/assets/js/app.c707dd89.js" as="script"><link rel="preload" href="/documents/assets/js/2.3c62c32c.js" as="script"><link rel="preload" href="/documents/assets/js/78.c17c2b93.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.69e99cad.js"><link rel="prefetch" href="/documents/assets/js/11.8fbb9784.js"><link rel="prefetch" href="/documents/assets/js/12.af316f6b.js"><link rel="prefetch" href="/documents/assets/js/13.8acb8718.js"><link rel="prefetch" href="/documents/assets/js/14.aa98616d.js"><link rel="prefetch" href="/documents/assets/js/15.2104e116.js"><link rel="prefetch" href="/documents/assets/js/16.f872625d.js"><link rel="prefetch" href="/documents/assets/js/17.ba745fa0.js"><link rel="prefetch" href="/documents/assets/js/18.51697a59.js"><link rel="prefetch" href="/documents/assets/js/19.35ff6f52.js"><link rel="prefetch" href="/documents/assets/js/20.37ea7475.js"><link rel="prefetch" href="/documents/assets/js/21.640a6f3a.js"><link rel="prefetch" href="/documents/assets/js/22.64d5e463.js"><link rel="prefetch" href="/documents/assets/js/23.81360713.js"><link rel="prefetch" href="/documents/assets/js/24.2e39871a.js"><link rel="prefetch" href="/documents/assets/js/25.067a6c74.js"><link rel="prefetch" href="/documents/assets/js/26.c948c8e8.js"><link rel="prefetch" href="/documents/assets/js/27.0172c73a.js"><link rel="prefetch" href="/documents/assets/js/28.5de342bb.js"><link rel="prefetch" href="/documents/assets/js/29.c25a7247.js"><link rel="prefetch" href="/documents/assets/js/3.c7fe7f92.js"><link rel="prefetch" href="/documents/assets/js/30.ade90ad4.js"><link rel="prefetch" href="/documents/assets/js/31.51548b2b.js"><link rel="prefetch" href="/documents/assets/js/32.7ae35906.js"><link rel="prefetch" href="/documents/assets/js/33.a2eedc65.js"><link rel="prefetch" href="/documents/assets/js/34.a1f44fcf.js"><link rel="prefetch" href="/documents/assets/js/35.83a76c5e.js"><link rel="prefetch" href="/documents/assets/js/36.7e32c612.js"><link rel="prefetch" href="/documents/assets/js/37.d3dea4df.js"><link rel="prefetch" href="/documents/assets/js/38.5b7974ad.js"><link rel="prefetch" href="/documents/assets/js/39.de5105d8.js"><link rel="prefetch" href="/documents/assets/js/4.e2d1f35b.js"><link rel="prefetch" href="/documents/assets/js/40.8aefc0a5.js"><link rel="prefetch" href="/documents/assets/js/41.5c837005.js"><link rel="prefetch" href="/documents/assets/js/42.b00cda00.js"><link rel="prefetch" href="/documents/assets/js/43.0496a7bb.js"><link rel="prefetch" href="/documents/assets/js/44.d4da3abc.js"><link rel="prefetch" href="/documents/assets/js/45.103bfc3d.js"><link rel="prefetch" href="/documents/assets/js/46.a9e570c2.js"><link rel="prefetch" href="/documents/assets/js/47.34ceda5f.js"><link rel="prefetch" href="/documents/assets/js/48.c13eede0.js"><link rel="prefetch" href="/documents/assets/js/49.d8be950d.js"><link rel="prefetch" href="/documents/assets/js/5.90a7d0ce.js"><link rel="prefetch" href="/documents/assets/js/50.c1a7ffc5.js"><link rel="prefetch" href="/documents/assets/js/51.36bed2d5.js"><link rel="prefetch" href="/documents/assets/js/52.4b402bc0.js"><link rel="prefetch" href="/documents/assets/js/53.40339bbf.js"><link rel="prefetch" href="/documents/assets/js/54.bb09090d.js"><link rel="prefetch" href="/documents/assets/js/55.1be86dcd.js"><link rel="prefetch" href="/documents/assets/js/56.f9897b08.js"><link rel="prefetch" href="/documents/assets/js/57.90e90dce.js"><link rel="prefetch" href="/documents/assets/js/58.60a63e8d.js"><link rel="prefetch" href="/documents/assets/js/59.2ec6ca9f.js"><link rel="prefetch" href="/documents/assets/js/6.e2fac099.js"><link rel="prefetch" href="/documents/assets/js/60.6e398555.js"><link rel="prefetch" href="/documents/assets/js/61.51e7f6a5.js"><link rel="prefetch" href="/documents/assets/js/62.27907374.js"><link rel="prefetch" href="/documents/assets/js/63.8e7580d7.js"><link rel="prefetch" href="/documents/assets/js/64.e973d499.js"><link rel="prefetch" href="/documents/assets/js/65.f8485304.js"><link rel="prefetch" href="/documents/assets/js/66.f8c086b3.js"><link rel="prefetch" href="/documents/assets/js/67.bce45500.js"><link rel="prefetch" href="/documents/assets/js/68.64946ebc.js"><link rel="prefetch" href="/documents/assets/js/69.1dc4be67.js"><link rel="prefetch" href="/documents/assets/js/7.69cf438d.js"><link rel="prefetch" href="/documents/assets/js/70.0ff84dd2.js"><link rel="prefetch" href="/documents/assets/js/71.3fd48685.js"><link rel="prefetch" href="/documents/assets/js/72.9e715534.js"><link rel="prefetch" href="/documents/assets/js/73.e4dfdd52.js"><link rel="prefetch" href="/documents/assets/js/74.cf446ebe.js"><link rel="prefetch" href="/documents/assets/js/75.9f990d7e.js"><link rel="prefetch" href="/documents/assets/js/76.74313612.js"><link rel="prefetch" href="/documents/assets/js/77.7f838d05.js"><link rel="prefetch" href="/documents/assets/js/79.4c148acb.js"><link rel="prefetch" href="/documents/assets/js/8.9beca52e.js"><link rel="prefetch" href="/documents/assets/js/80.318549bf.js"><link rel="prefetch" href="/documents/assets/js/81.bfd5153e.js"><link rel="prefetch" href="/documents/assets/js/82.4878e630.js"><link rel="prefetch" href="/documents/assets/js/83.18adcc4a.js"><link rel="prefetch" href="/documents/assets/js/84.bd95cafa.js"><link rel="prefetch" href="/documents/assets/js/85.875809b6.js"><link rel="prefetch" href="/documents/assets/js/86.2033664c.js"><link rel="prefetch" href="/documents/assets/js/87.0e86ff75.js"><link rel="prefetch" href="/documents/assets/js/88.3deaf402.js"><link rel="prefetch" href="/documents/assets/js/89.1471fd1b.js"><link rel="prefetch" href="/documents/assets/js/9.f166463c.js"><link rel="prefetch" href="/documents/assets/js/90.ff07776f.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.061186d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">随风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java Script</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>对象方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数组方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>字符串方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>TypeScript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/front-end/JavaScript/ts-TypeScript.html" class="sidebar-link">vue中使用TS</a></li><li><a href="/documents/front-end/JavaScript/ts-anotation.html" aria-current="page" class="active sidebar-link">TS中的装饰器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/ts-anotation.html#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/ts-anotation.html#定义一个方法" class="sidebar-link">定义一个方法</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/ts-anotation.html#装饰一下print函数" class="sidebar-link">装饰一下Print函数</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/ts-anotation.html#装饰器工厂" class="sidebar-link">装饰器工厂</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/ts-anotation.html#注解风格的装饰器" class="sidebar-link">注解风格的装饰器</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/ts-anotation.html#参考资料" class="sidebar-link">参考资料</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>函数</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tips/方法实现</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>装饰器模式允许向一个现有的对象添加新的功能，同时又不改变其结构。这种类型的设计模式属于结构型模式，它是作为现有类的一个包装。</p> <p>这种模式创建了一个装饰类，用来包装原有的类，并在保持类方法签名完整性的前提下，提供了额外的功能。</p> <p>我们通过下面的实例来演示装饰器模式的用法。其中，我们将吧一个形状装饰上不通的颜色，同时有不改变形状类。</p></div> <h2 id="定义一个方法"><a href="#定义一个方法" class="header-anchor">#</a> 定义一个方法</h2> <div class="language- extra-class"><pre class="language-text"><code>class log{
+    print(msg) {
+        console.log(msg);
+    }
+}
+const log = new Log();
+log.print('hello');
+</code></pre></div><h2 id="装饰一下print函数"><a href="#装饰一下print函数" class="header-anchor">#</a> 装饰一下Print函数</h2> <ul><li>日志美化</li> <li>执行日志AOP</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const dec = (target, property) =&gt; {
+    const old = target.prototype.print;
+    target.prototype[property] = msg =&gt; {
+        console.log('执行pront方法....')；
+        msg = `{${msg}}`;
+        old(msg);
+    }
+}
+dec(Log, 'print');
+</code></pre></div><h2 id="装饰器工厂"><a href="#装饰器工厂" class="header-anchor">#</a> 装饰器工厂</h2> <ul><li>打印定制化</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const dec = name =&gt; (target,proptery) =&gt; {
+    const old = target.prototype.print;
+    target.prototype[property] = msg =&gt; {
+        console.log('执行pront方法....')；
+        msg = `{${msg}}`;
+        old(msg);
+    }
+}
+dec('name')(Log, 'print');
+</code></pre></div><h2 id="注解风格的装饰器"><a href="#注解风格的装饰器" class="header-anchor">#</a> 注解风格的装饰器</h2> <div class="language- extra-class"><pre class="language-text"><code>function decorate(target, property, descriptor) {
+    var oldValue = descriptor.value;
+    descriptor.value = msg =&gt; {
+        msg = `[${msg}]`;
+        return oldValue.apply(null, [msg]);
+    }
+    return descriptor;
+}
+
+class Log{
+    @decorate
+    print(msg) {
+        console.log(msg);
+    }
+}
+</code></pre></div><ol><li>anotation 源码</li></ol> <div class="language- extra-class"><pre class="language-text"><code>const anotation = (target,proterty,decorate) =&gt; {
+    const descriptor = decorate(Log.prototype, proterty, Object.getOwnPropertyDescriptor(Log.prototype, proterty))
+    Object.defineProperty(Log.prototype, proterty, descriptor)
+}
+anotation(Log,'print',decorate)
+</code></pre></div><p><a href="https://juejin.cn/post/6844904164045094926" target="_blank" rel="noopener noreferrer">原文地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料</h2> <p>[地址] (https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)</p> <h3 id="object-getownpropertydescriptor"><a href="#object-getownpropertydescriptor" class="header-anchor">#</a> Object.getOwnPropertyDescriptor()</h3> <p>object.getOwnPropertyDescriptor()方法返回指定对象上一个自有属性对应的属性描述符(自有属性指的是直接赋予改对象的属性，不需要从原型链上进行查找的属性)。</p> <div class="language- extra-class"><pre class="language-text"><code>cosnt object1 = {
+    property1: 42
+}
+const descriptor1 = Object.getOwnPropertyDescriptor(object1, 'property1');
+
+console.log(descriptor1.configurable); // true;
+
+console.log(descriptor1.value); // 42
+
+</code></pre></div><h4 id="描述"><a href="#描述" class="header-anchor">#</a> 描述</h4> <p>该方法允许对一个属性的描述进行检索。</p> <h3 id="object-defineproperty"><a href="#object-defineproperty" class="header-anchor">#</a> Object.defineProperty</h3> <p>Object.defineProperty()方法直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此属性。</p> <div class="language- extra-class"><pre class="language-text"><code>const object1 = {};
+
+Object.defineProperty(object1, 'property1', {
+  value: 42,
+  writable: false
+});
+
+object1.property1 = 77;
+// throws an error in strict mode
+
+console.log(object1.property1);
+</code></pre></div><h4 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h4> <ul><li><p>obj</p> <p>要定义属性的对象</p></li> <li><p>prop</p> <p>要定义或修改的属性的名称或Symbol</p></li> <li><p>descriptor</p> <p>要定义或修改的属性描述符</p></li></ul> <h4 id="描述-2"><a href="#描述-2" class="header-anchor">#</a> 描述</h4> <p>该方法允许精确地添加或修改对象的属性。通过赋值操作添加的普通属性是可枚举的，在枚举对象属性时会被枚举到（for...in 或 Object.keys 方法），可以改变这些属性的值，也可以删除这些属性。这个方法允许修改默认的额外选项（或配置）。默认情况下，使用 Object.defineProperty() 添加的属性值是不可修改（immutable）的。</p> <p>对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符。数据描述符是一个具有值的属性，该值可以是可写的，也可以是不可写的。存取描述符是由 getter 函数和 setter 函数所描述的属性。一个描述符只能是这两者其中之一；不能同时是两者。</p> <p>这两种描述符都是对象。它们共享以下可选键值（默认值是指在使用 Object.defineProperty() 定义属性时的默认值）：</p> <ol><li><p>configurable</p> <p>当且仅当该属性的configurable键值为true时,该属性的描述符才能被改变，同时该属性也能从对应的对象上被删除</p> <p>默认为false</p></li> <li><p>enumberable</p> <p>当且仅当该属性的 enumerable 键值为 true 时，该属性才会出现在对象的枚举属性中。</p> <p>默认为 false。</p></li></ol> <h4 id="数据描述符还具有以下可选键值"><a href="#数据描述符还具有以下可选键值" class="header-anchor">#</a> 数据描述符还具有以下可选键值：</h4> <ol><li><p>value</p> <p>该属性对应的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。</p> <p>默认为 undefined。</p></li> <li><p>writable</p> <p>当且仅当该属性的 writable 键值为 true 时，属性的值，也就是上面的 value，才能被赋值运算符改变。</p> <p>默认为 false。</p></li></ol> <h4 id="存取描述符还具有以下可选键值"><a href="#存取描述符还具有以下可选键值" class="header-anchor">#</a> 存取描述符还具有以下可选键值：</h4> <ol><li><p>get</p> <p>属性的 getter 函数，如果没有 getter，则为 undefined。当访问该属性时，会调用此函数。执行时不传入任何参数，但是会传入 this 对象（由于继承关系，这里的this并不一定是定义该属性的对象）。该函数的返回值会被用作属性的值。</p> <p>默认为 undefined。</p></li> <li><p>set
+属性的 setter 函数，如果没有 setter，则为 undefined。当属性值被修改时，会调用此函数。该方法接受一个参数（也就是被赋予的新值），会传入赋值时的 this 对象。</p> <p>默认为 undefined。</p></li></ol> <h3 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h3> <ol><li>数据属性</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var person = {}
+Object.defineProperty(person,'name',{
+    configurable:false,// 能否使用delete、能否需改属性特性、或能否修改访问器属性、，false为不可重新定义，默认值为false
+    enumerable:false,// 对象属性是否可通过for-in循环，flase为不可循环，默认值为false
+    writable:false,// 对象属性是否可修改,flase为不可修改，默认值为false
+    value:'xiaoming' //对象属性的默认值，默认值为undefined
+});
+
+//value
+console.log(person);//xiaoming，默认value
+
+//writable
+person.name=&quot;qiang&quot;;
+console.log(person);//xiaoming，不可修改value
+
+//enumerable
+for(var i in person){
+    console.log(person[i]) //无结果，不可循环
+}
+
+//configurable
+delete person.name
+console.log(person.name)//xiaoming，不可删除
+
+Object.defineProperty(person,'name',{
+    configurable:true //不可修改，将抛出错误
+});
+
+</code></pre></div><ol start="2"><li>访问器属性</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var book = {
+    _year: 2004,//属性前面加_，代表属性只能通过对象方法访问
+    edition: 0
+}
+Object.defineProperty(book,'year',{
+    get: function(){
+        return this._year;
+    },
+    set: function(newValue){
+        if(newValue &gt; 2004){
+            this._year = newValue;
+            this.edition += newValue - 2004
+        }
+    }
+});
+console.log(book.year)//2004
+book.year = 2006;
+console.log(book.year)//2006
+console.log(book.edition)//2
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/front-end/JavaScript/ts-TypeScript.html" class="prev">
+        vue中使用TS
+      </a></span> <span class="next"><a href="/documents/front-end/JavaScript/es6-arrows.html">
+        箭头函数
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.c707dd89.js" defer></script><script src="/documents/assets/js/2.3c62c32c.js" defer></script><script src="/documents/assets/js/78.c17c2b93.js" defer></script>
+  </body>
+</html>

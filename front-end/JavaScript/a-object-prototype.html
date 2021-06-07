@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>object原型链 | 随风</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="apple-touch-icon" href="/documents/apple-touch-icon.png">
+    <link rel="icon" href="/documents/favicon.ico">
+    <link rel="manifest" href="/documents/manifest.json">
+    <meta name="description" content="随风随雨又随流">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.061186d0.css" as="style"><link rel="preload" href="/documents/assets/js/app.c707dd89.js" as="script"><link rel="preload" href="/documents/assets/js/2.3c62c32c.js" as="script"><link rel="preload" href="/documents/assets/js/10.69e99cad.js" as="script"><link rel="prefetch" href="/documents/assets/js/11.8fbb9784.js"><link rel="prefetch" href="/documents/assets/js/12.af316f6b.js"><link rel="prefetch" href="/documents/assets/js/13.8acb8718.js"><link rel="prefetch" href="/documents/assets/js/14.aa98616d.js"><link rel="prefetch" href="/documents/assets/js/15.2104e116.js"><link rel="prefetch" href="/documents/assets/js/16.f872625d.js"><link rel="prefetch" href="/documents/assets/js/17.ba745fa0.js"><link rel="prefetch" href="/documents/assets/js/18.51697a59.js"><link rel="prefetch" href="/documents/assets/js/19.35ff6f52.js"><link rel="prefetch" href="/documents/assets/js/20.37ea7475.js"><link rel="prefetch" href="/documents/assets/js/21.640a6f3a.js"><link rel="prefetch" href="/documents/assets/js/22.64d5e463.js"><link rel="prefetch" href="/documents/assets/js/23.81360713.js"><link rel="prefetch" href="/documents/assets/js/24.2e39871a.js"><link rel="prefetch" href="/documents/assets/js/25.067a6c74.js"><link rel="prefetch" href="/documents/assets/js/26.c948c8e8.js"><link rel="prefetch" href="/documents/assets/js/27.0172c73a.js"><link rel="prefetch" href="/documents/assets/js/28.5de342bb.js"><link rel="prefetch" href="/documents/assets/js/29.c25a7247.js"><link rel="prefetch" href="/documents/assets/js/3.c7fe7f92.js"><link rel="prefetch" href="/documents/assets/js/30.ade90ad4.js"><link rel="prefetch" href="/documents/assets/js/31.51548b2b.js"><link rel="prefetch" href="/documents/assets/js/32.7ae35906.js"><link rel="prefetch" href="/documents/assets/js/33.a2eedc65.js"><link rel="prefetch" href="/documents/assets/js/34.a1f44fcf.js"><link rel="prefetch" href="/documents/assets/js/35.83a76c5e.js"><link rel="prefetch" href="/documents/assets/js/36.7e32c612.js"><link rel="prefetch" href="/documents/assets/js/37.d3dea4df.js"><link rel="prefetch" href="/documents/assets/js/38.5b7974ad.js"><link rel="prefetch" href="/documents/assets/js/39.de5105d8.js"><link rel="prefetch" href="/documents/assets/js/4.e2d1f35b.js"><link rel="prefetch" href="/documents/assets/js/40.8aefc0a5.js"><link rel="prefetch" href="/documents/assets/js/41.5c837005.js"><link rel="prefetch" href="/documents/assets/js/42.b00cda00.js"><link rel="prefetch" href="/documents/assets/js/43.0496a7bb.js"><link rel="prefetch" href="/documents/assets/js/44.d4da3abc.js"><link rel="prefetch" href="/documents/assets/js/45.103bfc3d.js"><link rel="prefetch" href="/documents/assets/js/46.a9e570c2.js"><link rel="prefetch" href="/documents/assets/js/47.34ceda5f.js"><link rel="prefetch" href="/documents/assets/js/48.c13eede0.js"><link rel="prefetch" href="/documents/assets/js/49.d8be950d.js"><link rel="prefetch" href="/documents/assets/js/5.90a7d0ce.js"><link rel="prefetch" href="/documents/assets/js/50.c1a7ffc5.js"><link rel="prefetch" href="/documents/assets/js/51.36bed2d5.js"><link rel="prefetch" href="/documents/assets/js/52.4b402bc0.js"><link rel="prefetch" href="/documents/assets/js/53.40339bbf.js"><link rel="prefetch" href="/documents/assets/js/54.bb09090d.js"><link rel="prefetch" href="/documents/assets/js/55.1be86dcd.js"><link rel="prefetch" href="/documents/assets/js/56.f9897b08.js"><link rel="prefetch" href="/documents/assets/js/57.90e90dce.js"><link rel="prefetch" href="/documents/assets/js/58.60a63e8d.js"><link rel="prefetch" href="/documents/assets/js/59.2ec6ca9f.js"><link rel="prefetch" href="/documents/assets/js/6.e2fac099.js"><link rel="prefetch" href="/documents/assets/js/60.6e398555.js"><link rel="prefetch" href="/documents/assets/js/61.51e7f6a5.js"><link rel="prefetch" href="/documents/assets/js/62.27907374.js"><link rel="prefetch" href="/documents/assets/js/63.8e7580d7.js"><link rel="prefetch" href="/documents/assets/js/64.e973d499.js"><link rel="prefetch" href="/documents/assets/js/65.f8485304.js"><link rel="prefetch" href="/documents/assets/js/66.f8c086b3.js"><link rel="prefetch" href="/documents/assets/js/67.bce45500.js"><link rel="prefetch" href="/documents/assets/js/68.64946ebc.js"><link rel="prefetch" href="/documents/assets/js/69.1dc4be67.js"><link rel="prefetch" href="/documents/assets/js/7.69cf438d.js"><link rel="prefetch" href="/documents/assets/js/70.0ff84dd2.js"><link rel="prefetch" href="/documents/assets/js/71.3fd48685.js"><link rel="prefetch" href="/documents/assets/js/72.9e715534.js"><link rel="prefetch" href="/documents/assets/js/73.e4dfdd52.js"><link rel="prefetch" href="/documents/assets/js/74.cf446ebe.js"><link rel="prefetch" href="/documents/assets/js/75.9f990d7e.js"><link rel="prefetch" href="/documents/assets/js/76.74313612.js"><link rel="prefetch" href="/documents/assets/js/77.7f838d05.js"><link rel="prefetch" href="/documents/assets/js/78.c17c2b93.js"><link rel="prefetch" href="/documents/assets/js/79.4c148acb.js"><link rel="prefetch" href="/documents/assets/js/8.9beca52e.js"><link rel="prefetch" href="/documents/assets/js/80.318549bf.js"><link rel="prefetch" href="/documents/assets/js/81.bfd5153e.js"><link rel="prefetch" href="/documents/assets/js/82.4878e630.js"><link rel="prefetch" href="/documents/assets/js/83.18adcc4a.js"><link rel="prefetch" href="/documents/assets/js/84.bd95cafa.js"><link rel="prefetch" href="/documents/assets/js/85.875809b6.js"><link rel="prefetch" href="/documents/assets/js/86.2033664c.js"><link rel="prefetch" href="/documents/assets/js/87.0e86ff75.js"><link rel="prefetch" href="/documents/assets/js/88.3deaf402.js"><link rel="prefetch" href="/documents/assets/js/89.1471fd1b.js"><link rel="prefetch" href="/documents/assets/js/9.f166463c.js"><link rel="prefetch" href="/documents/assets/js/90.ff07776f.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.061186d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">随风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Java Script</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/front-end/JavaScript/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/documents/front-end/JavaScript/a-object-prototype.html" aria-current="page" class="active sidebar-link">object原型链</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/a-object-prototype.html#设计模式" class="sidebar-link">设计模式</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/a-object-prototype.html#继承" class="sidebar-link">继承</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/JavaScript/a-object-prototype.html#从js数据类型到原型原型链" class="sidebar-link">从js数据类型到原型原型链</a></li></ul></li><li><a href="/documents/front-end/JavaScript/browder-deep.html" class="sidebar-link">浏览器运行机制</a></li><li><a href="/documents/front-end/JavaScript/browser-session-cookie.html" class="sidebar-link">SSO/session/cookie/JWT</a></li><li><a href="/documents/front-end/JavaScript/deep-app-bridge.html" class="sidebar-link">App Bridge原理</a></li><li><a href="/documents/front-end/JavaScript/deep-weex.html" class="sidebar-link">weex原理</a></li><li><a href="/documents/front-end/JavaScript/methods-debounce.html" class="sidebar-link">函数防抖、节流</a></li><li><a href="/documents/front-end/JavaScript/request-animation-frame.html" class="sidebar-link">JS实现持续动画效果</a></li><li><a href="/documents/front-end/JavaScript/service-worker.html" class="sidebar-link">Service Worker</a></li><li><a href="/documents/front-end/JavaScript/site-blob.html" class="sidebar-link">流文件</a></li><li><a href="/documents/front-end/JavaScript/wx-about.html" class="sidebar-link">小程序</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>对象方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数组方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>字符串方法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>函数</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tips/方法实现</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="设计模式"><a href="#设计模式" class="header-anchor">#</a> 设计模式</h2> <ul><li>工厂模式</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function Person(name, age) {
+	var o = new Object();
+    o.name = name;
+    o.age = age;
+    o.say = function() {
+    	console.log(`${this.name},${this.age}`);
+    }
+    return o;
+}
+//调用
+var p1 = Person('lean', 22);
+var p2 = Person('Ada',33)
+</code></pre></div><p>使用工厂模式虽然解决了子类的问题，但是无法检测子类的数据类型</p> <ul><li>构造函数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function Person(name, age) {
+	this.name = name;
+    this.age = age;
+    this.say = function() {
+    	console.log(`${this.name},${this.age}`);
+    }
+}
+//调用
+var p1 = new Person('Ada', 33);
+var p2 = new Person('xx', 23);
+</code></pre></div><p>问题：p1.say === p2.say 返回false<br>
+每一个对象都会生成一个方法的拷贝，如果对象行为很多的话，空间占用率会大大增加。所以将行为设置全局行为=&gt;但破坏对象的封装</p> <div class="language- extra-class"><pre class="language-text"><code>function say(){
+	console.log('xxx');
+}
+</code></pre></div><ul><li>原型模式</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function Prson(){};
+Person.prototype.name = 'len';
+Person.prototype.age = 23;
+Person.prototype.say = function(){
+	console.log(`${this.name},${this.age}`)
+}
+//调用
+var p1 = new Person();
+var p2 = new Person();
+</code></pre></div><p>会改变应用类型的值</p> <blockquote><ul><li>检测某个对象是否是某个函数的原型<br>
+Persson.prototype.isPrototypeof(p1)</li> <li>检测某个对象的constructor<br>
+p1.constructor === person</li> <li>检测某个某个属性是否是自身属性<br>
+p1.hasOwnPropertyp('name')</li> <li>检测某个对象在原型或自己中是否包含某个属性通过in<br>
+console.log(&quot;name&quot; in p1)</li></ul></blockquote> <h2 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h2> <ul><li>简单原型继承</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function Super() {
+	this.name = 'hzzly';
+    this.obj = {a:1}
+}
+function Sub() {}
+Sub.prototype = new Super();
+//修改sub1.obj.a后,sub2.obj.a也变了
+</code></pre></div><ul><li>构造函数式继承</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function Super(name) {
+	this.name = name';
+    this.fun = function() {}
+}
+function Sub() {
+	Super.call(this,name)
+}
+//无法实现函数的复用，每个子类实例都吃鱿鱼一个新的fun函数，太多影响性能，内存爆炸
+</code></pre></div><ul><li>组合式继承</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function Super(){
+	this.name = 'hzzly';
+}
+Super.prototype.fun = function(){};
+function Sub() {
+	Super.call(this)
+}
+Sub.prototype = new Super();//核心
+//子类原型上有一份多余的父类实例熟悉感，因为父类构造函数被调用了两次，而子类实例上那一份屏蔽了子类原型上的父类的 内存浪费
+</code></pre></div><ul><li>寄生组合式继承</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function Super() {};
+Super.prototype.fun = function() {}
+function Sub() {
+	Super.call(this);
+}
+Sub.prototype = new Object(Super.prototype);
+Sub.prototype.constructor = Sub;
+</code></pre></div><ul><li>ES6的class继承方式</li></ul> <div class="language- extra-class"><pre class="language-text"><code>class A{};
+class B extends A{};
+B.__proto__ === A;
+B.prototype.__proto__ === A.prototype
+</code></pre></div><h2 id="从js数据类型到原型原型链"><a href="#从js数据类型到原型原型链" class="header-anchor">#</a> 从js数据类型到原型原型链</h2> <p><a href="https://blog.csdn.net/hf872914334/article/details/79843420" target="_blank" rel="noopener noreferrer">原文地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="一、数据类型"><a href="#一、数据类型" class="header-anchor">#</a> 一、数据类型</h3> <p>在JavaScript中，数据类型可以分为原始类型以及引用类型。原始类型：Number,String,Boolean, null, undefined,Symbol(ES6新增，表示独一无二的值)，这6种数据类型是按照值进行分配的，是存放在栈内存中的简单数据段，可以直接访问，数据大小确定，内存空间大小可以分配。</p> <p>引入数据类型包括function,object,array等可以使用new创建的数据，又叫对象类型，他们是存放在堆内存中，如var a = {},变量a实际保存的是一个指针，这个指针指向内存中的数据{}</p> <p>JavaScript中的变量具有动态类型这一特性，意味着相同的变量可用做不同的类型</p> <div class="language- extra-class"><pre class="language-text"><code>var x;
+x = 6;
+x = 'hfhan'
+</code></pre></div><p>JavaScript中可以用typeof操作符来检测一个数据的数据类型，但是需要注意的是typeof null结果是Object,这个是历史遗漏bug</p> <div class="language- extra-class"><pre class="language-text"><code>typeof 123 // numbner
+typeof 'hfhan' // string
+typeof true // boolean
+typeof null // object 独一份的与众不同
+typeof undefined // undefined
+typeof Symbol('hfhabn') // symbol
+typeof function() {} // function
+typeof {} // object
+</code></pre></div><h3 id="对象类型"><a href="#对象类型" class="header-anchor">#</a> 对象类型</h3> <p>宿主环境:由Web浏览器或者桌面应用系统造就的js引擎执行的环境即宿主环境</p> <p><strong>1. 本地对象</strong></p> <p>ECMA-262把本地对象定义为&quot;独立于宿主环境的ECMAScript实现提供的对象&quot;</p> <p>本地对象包含但不限于Object, Function, Array, String, Boolean, Number,Data, RegExp,各种错误类对象(Error, EvalError...)</p> <p>注意：这里的Object,Function, Array等不是指构造函数，而是指对象的类型</p> <p><strong>2. 内置对象</strong></p> <p>ECMA-262把内置对象定义为'由ECMAScript实现提供的、独立于宿主环境的所有对象，在ECMAScript程序开始执行时出现'。意味着开发者不比明确实例化内置对象，它已经被实例化了</p> <p>其中Global对象是ECMAScript中最特别的对象，因为实际上它根本不存在，但大家要清楚，在ECMAScript中，不存在独立的函数，所有函数都必须是某个对象的方法。类似于isNaN()、parseInt()和parseFloat()方法等，看起来都是函数，而实际上，它们都是Global对象的方法。而且Global对象的方法还不止这些。有关Global对象的具体方法和属性，感兴趣的同学可以看一下这里：JavaScript 全局对象参考手册</p> <p>对于web浏览器而言，Global有一个代言人window，但是window并不是ECMAScripta规定的内置对象，因为window对象是相对于web浏览器而言的，而js不仅仅可以用在浏览器中。</p> <p>Global与window的关系可以看这里：概念区分：JavaScript中的global对象，window对象以及document对象</p> <p>可以看出，JavaScript中真正的内置对象其实只有两个：Global 和 Math，可是观看网上的文章资料，千篇一律的都在讲JavaScript的11大内置对象（不是说只有11个，而是常用的有11个：Object、Function、Array、String、Boolean、Number、Date、RegExp、Error、Math、Global，ES6中出现的Set 、Map、Promise、Proxy等应该也算是比较常用的），这是不严谨的，JavaScript中本地对象、内置对象和宿主对象一文中，把本地对象、内置对象统称为“内部对象”，算是比较贴切的。</p> <p>更多“内部对象”可以查看MDN&gt;JavaScript&gt;引用&gt;内置对象 内容，或者通过浏览器控制台打印window来查找。</p> <p><strong>3. 宿主对象</strong></p> <p>由ECMAScript实现的宿主环境提供的对象，可以理解为：浏览器提供的对象。所有的BOM和DOM都是宿主对象。</p> <p><strong>4. 自定义对象</strong></p> <p>顾名思义，就是开发人员自己定义的对象。JavaScrip允许使用自定义对象，使JavaScript应用及功能得到扩充</p> <p><strong>5. 判断对象的类型</strong></p> <p>对象的类型不能使用typeof来判断，因为除了Function外其他类型的对象所得到的结果全为”object”</p> <div class="language- extra-class"><pre class="language-text"><code>typeof function(){} // function
+typeof {} // object
+typeof new RegExp; //object
+typeof new Date // object
+typeof Math // object
+typeof new Error //object
+</code></pre></div><p>一个使用最多的检测对象类型的方法是Object.prototype.toString;</p> <div class="language- extra-class"><pre class="language-text"><code>Object.prototype.toString.apply(new Function);// &quot;[object Function]&quot;
+Object.prototype.toString.apply(new Object);// &quot;[object Object]&quot;
+Object.prototype.toString.apply(new Date);// &quot;[object Date]&quot;
+Object.prototype.toString.apply(new Array);// &quot;[object Array]&quot;
+Object.prototype.toString.apply(new RegExp);// &quot;[object RegExp]&quot;
+Object.prototype.toString.apply(new ArrayBuffer);  // &quot;[object ArrayBuffer]&quot;
+Object.prototype.toString.apply(Math);// &quot;[object Math]&quot;
+Object.prototype.toString.apply(JSON); // &quot;[object JSON]&quot;
+var promise = new Promise(function(resolve, reject) {
+    resolve();
+});
+Object.prototype.toString.apply(promise);// &quot;[object Promise]&quot;
+…
+</code></pre></div><h5 id="构造函数"><a href="#构造函数" class="header-anchor">#</a> 构造函数</h5> <p>构造函数是描述一类对象统一结构的函数--相当于图纸</p> <p><strong>1. 对象的创建</strong></p> <p>生成一个函数可以通过Function关键字</p> <div class="language- extra-class"><pre class="language-text"><code>function a() {
+	console.log(1);
+}
+// 或者
+var b = function() {
+	console.log(2);
+}
+</code></pre></div><p>此外创建一个对象(类型为Object的对象)，可以通过{};创建一个数组，可以通过[];创建一个正则对象可以通过/.*/。但是那些没有特殊技巧的对象，就只能老老实实使用构造函数来创建了</p> <p>JavaScript语言中，生成实例对象的传统方法是通过构造函数，即我们通过函数来创建对象，这也证明了函数在JavaScript中具有非常重要的地位，因此函数是一等公民</p> <p><strong>2. 构造函数创建对象</strong></p> <p>js中对象在使用的时候，大部分需要先进行实例化(除了已经实例化完成的Math对象以及Json对象)</p> <div class="language- extra-class"><pre class="language-text"><code>var a = new Function('console.log(a)'); // 构造函数创建Function对象
+
+var b = new Object({a:1}) // 构造函数创建Object对象
+ 
+var c = new Data() //构造函数创建Data对象
+
+var d = new Set();  // 构造函数创建Set对象
+
+var e = new Array(10); // 构造一个初始长度为10的数组对象
+</code></pre></div><p>使用构造函数创建的数据全是对象，即使用new关键字创建的数据全是对象，其中new做了四件事</p> <div class="language- extra-class"><pre class="language-text"><code>1) 创建一个空对象
+
+var obj = new Object();
+
+2)让Person中的this指向obj，并执行Person的函数体
+
+var result = Person.apply(obj, arguments);
+
+3）设置原型链，将obj的__proto__成员指向Person函数对象的prototype成员对象
+
+obj.__proto__ = Person.prototype;
+
+4)判断Person的返回值类型，如果是值类型，返回obj；如果是引用类型，就返回这个引用类型的对象；
+
+if(typeof resule === 'object') {
+	person = result;
+} else {
+	person = obj;
+}
+</code></pre></div><p>除了浏览器本身自带的构造函数，我们还可以使用一个普通的函数来创建对象</p> <div class="language- extra-class"><pre class="language-text"><code>function Person() {};
+var p1 = new Person();
+</code></pre></div><p>这个例子Person就是一个普普通通的空函数，但是依然可以作为构造函数来创建对象，我们打印下p1的类型，可以看出使用自定义的构造函数，所创建的嗯对象类型为Object</p> <div class="language- extra-class"><pre class="language-text"><code>Object.prototype.toString.apply(p1); // &quot;[object object]&quot;
+</code></pre></div><p>**3. 构造函数和普通函数 **</p> <p>实际上并不存在创建构造函数，其与普通函数唯一的区别在于调用方法。对于任意函数，使用new操作符调用，那么它就是构造函数，又叫工厂函数；不使用new操作符调用，那么它就是普通函数。</p> <p>按照惯例，我们约定构造函数名以大写字母开头，普通函数以小写字符开头，这样有利于显性区分二者</p> <h3 id="原型与原型链"><a href="#原型与原型链" class="header-anchor">#</a> 原型与原型链</h3> <p>**1.prototype 与__proto__</p> <p>原型是指原型对象，原型对象从哪里来？</p> <p>每个函数在被创建的时候，会同时在内存中创建一个空对象，每个函数都有一个prototype属性，这个属性指向这个空对象，那么这个空对象就叫做函数的原型对象，每一个原型对象中都会有一个constructor属性，指向该对象</p> <div class="language- extra-class"><pre class="language-text"><code>function b(){console.log(1)};
+b.prototype.constructor === b;
+</code></pre></div><p>抽象理解：构造函数是妻子，原型对象是丈夫，prototype是找丈夫，constructor是找妻子</p> <p>手动更改函数的原型对象</p> <div class="language- extra-class"><pre class="language-text"><code>var a = {a: 1};
+b.prototype = a; // 更改b的原型对象为a
+a.constructor // function Object() {native code}
+</code></pre></div><p>为什么这里a.constructor不指向B函数？</p> <p>这是因为变量a所对应的对象是事先声明好的，不是跟随函数一起创建的，所以他没有constructor属性，这时候寻找construcotor属性就会到父对象上去找，而所有对象默认都继承自己Object.Prototype,所以最后找的就是Object.Prototype.Contructor,也就是Object函数。</p> <p>继承又是怎么一回事呢？？？
+所有对象都有一个__proto__属性，这个属性指向其父元素，也就是所继承的对象，一般为构造函数的prototype对象</p> <p><img src="/documents/assets/img/20180407174353545.9557e01c.png" alt="upload successful"></p> <p>prototype是函数独有的；__proto__是所有对象都有的，是继承的。调用一个对象的某一个属性，如果该对象上没有该属性，就去其原型链上找。</p> <p>比如上例中，调用p.a，对象p上找不到a属性，就会去找p.<strong>proto</strong>.a,p__ptoto__a找不到，就会去找p.<strong>proto</strong>.<strong>proto</strong>.a，以此类推，直到找到Object.prototype.a也没找到，就会返回undefined；</p> <p>原型链是由各级子对象的__proto__属性连续引用形式的结构，所有对象原型链的顶部都是Object.prototype</p> <p>我们知道，当子对象被实例化之后在去修改构造函数的prototype属性是不会改变子对象与原型对象的继承关系的，但是通过修改子对象的__proto__属性，我们可以解除子对象与原型对象之间的继承关系</p> <div class="language- extra-class"><pre class="language-text"><code>var A = function(){} //构造函数
+A.prototype = {a:1} //修改原型对象
+var a = new A; // 实例化子对象a,此时a继承自{a: 1}
+a.a // 1
+A.prototype = {a: 2} // 更改构造函数的原型对象
+a.a // 1 此时，a仍然继承自{a: 1}
+a.__proto__ = {a: 3} // 更改构造函数的原型对象
+a.a // 3 此时 a继承自{a:3}
+</code></pre></div><p><strong>Object.prototype与Function.prototype</strong></p> <p>一切诞生于虚无</p> <p>上面讲了，所有对象原型链的顶部都是Object.prototype,那么Object.prototype是怎么来的，凭空造的嘛 ？？还真是！！</p> <div class="language- extra-class"><pre class="language-text"><code>Object.prototype.__proto__ === null; // true
+</code></pre></div><p>上面讲了，我们可以通过修改对象的__proto__属性来更改继承关系,但是，Object.prototype的__proto__属性不允许更改，这是浏览器对Object.prototype的保护措施，修改Object.prototype的__proto__属性会抛出错误。同时，Object.prototype.<strong>proto</strong> 也只能进行取值操作，因为null和undefined没有对应的包装类型，因此不能调用任何方法和属性。</p> <p>Object.prototype与Function.prototype是原型链中最难理解也是最重要的两个对象。下面我们用抽象的方法来理解这两个对象</p> <p>天地伊始，万物初开，诞生了一个对象，不知其姓名，只知道他的类型为&quot;[object Object]&quot;,他是一切对象的先祖，为初代对象，继承与虚无(null)</p> <p>后来，又诞生了一个对象，也不知其姓名，只知道他的类型为&quot;[object Function]&quot;,他是一切函数的先祖，继承于对象先祖，为二代对象</p> <p><img src="data:image/png;base64,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" alt="function null object"></p> <p>经年流转，函数先祖发挥特长，制造出了一系列的函数，如Object,Function,Array, Date, String, Number等，都说龙生九子，这些函数虽说各个都貌美如花，神通通天，但功能上还是有很大的去别的</p> <p>其中最需要关注的是Object以及Function。原来函数先祖在创造Function的时候，悄悄的把Function的prototype属性指向了自己，也把自己的constructor属性指向了Function。如果说Function是函数先祖为自己创造的妻子，那么Object就是函数先祖为对象先祖创造的妻子，同样的，Object的prototype属性指向了对象先祖，对象先祖也把自己的constructor属性指向Object，表示他同意了这门婚事。</p> <p>此后，世人都称对象先祖为Object.prototype，函数先祖为Function.prototype。</p> <p>从上可以看出，对象先祖是一开始就存在的，而不是同Object一起被创建的，所以手动更改Object.prototype的指向后：</p> <div class="language- extra-class"><pre class="language-text"><code>Object.prototype = {a:1};    //修改Object.prototype的指向
+var a = {};                  //通过字面量创建对象
+a.a                          //undefined 此时a仍然继承于对象先祖
+var b = new Object();        //通过new来创建对象
+b.a                          //结果是???
+</code></pre></div><p>这里我原本以为会打印1，但是实际上打印的还是undefined，然后在控制台打印下Object.prototype，发现Object.prototype仍然指向对象先祖，也就是说Object.prototype = {a:1}指向更改失败，我猜测和上面Object.prototype的__proto__属性不允许更改，原因是一样的，是浏览器对Object.prototype的保护措施。</p> <p>在控制台打印下Object.prototype的保护属性：</p> <div class="language- extra-class"><pre class="language-text"><code>Object.getOwnPropertyDescriptor(Object,&quot;prototype&quot;); 
+</code></pre></div><img src="/documents/images/20180408130006343.png" alt="prototype"> <p>可以看到，其writable、enumerable、configurable属性均为false，也就是其prototype属性不可修改，不可删除，不可修改属性特性。</p> <p>其实不光Object.prototype不能修改，Function. Prototype、String. Prototype等内部对象都不允许修改。</p> <img src="/documents/images/20180407174211796.png" alt="原型链"> <p>因为Object、Function、Array、String等都继承自Function.prototype，所以有</p> <div class="language- extra-class"><pre class="language-text"><code>Object.__proto__ === Function.prototype;       // true
+Function.__proto__ === Function.prototype;     // true
+Array.__proto__ === Function.prototype;        // true
+String.__proto__ === Function.prototype;       // true
+</code></pre></div><p>所有的对象都继承于Object.prototype，所以有</p> <div class="language- extra-class"><pre class="language-text"><code>Function.prototype.__proto__ === Object.prototype;     // true
+Array.prototype.__proto__ === Object.prototype;        // true
+String.prototype.__proto__ === Object.prototype;       // true
+
+</code></pre></div><p><strong>3.自定义构造函数创建对象</strong></p> <p>当我们自定义一个对象的时候，这个对象在整个原型链上的位置是？</p> <p>这里我们不对对象的创建方式多做讨论，仅以构造函数为例</p> <p>当我们使用字面量创建一个对象的时候，其父对象默认为对象先祖，也就是Object.prototype</p> <div class="language- extra-class"><pre class="language-text"><code>var a = {};
+a.__proto__===Object.prototye //true
+</code></pre></div><p>上面讲了，自定义构造函数所创建的对象他的类型均为”[object Object]”，在函数建立的时候，会在内存中同步建立一个空对象，其过程可以看作：</p> <div class="language- extra-class"><pre class="language-text"><code>function F(){};  // prototype 赋值  F.prototype = {}，此时{}继承于Object.prototype
+
+</code></pre></div><p>当我们使用构造函数创建一个对象时，会把构造函数的prototype属性赋值给子对象的__proto__属性，即：</p> <div class="language- extra-class"><pre class="language-text"><code>var a = new F();   //__proto__赋值 a.__proto__ = F.prototype;
+</code></pre></div><p>因为F.prototype继承于Object.prototype，所以有</p> <div class="language- extra-class"><pre class="language-text"><code>a.__proto__.__proto__ === Object.prototype;  // true
+</code></pre></div><img src="/documents/images/20180408120353800.png" alt="自定义构造函数原型链"> <p>综上我们可以看出，原型链就是根据__proto__维系的由子对象-父对象的一条单向通道，不过要理解这条通道，我们还需要理解构造对象，类，prototype，constructor等，这些都是原型链上的美丽的风景。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/front-end/JavaScript/" class="prev router-link-active">
+        首页
+      </a></span> <span class="next"><a href="/documents/front-end/JavaScript/browder-deep.html">
+        浏览器运行机制
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.c707dd89.js" defer></script><script src="/documents/assets/js/2.3c62c32c.js" defer></script><script src="/documents/assets/js/10.69e99cad.js" defer></script>
+  </body>
+</html>

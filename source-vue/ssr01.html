@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ssr01 | 随风</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="apple-touch-icon" href="/documents/apple-touch-icon.png">
+    <link rel="icon" href="/documents/favicon.ico">
+    <link rel="manifest" href="/documents/manifest.json">
+    <meta name="description" content="随风随雨又随流">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.061186d0.css" as="style"><link rel="preload" href="/documents/assets/js/app.c707dd89.js" as="script"><link rel="preload" href="/documents/assets/js/2.3c62c32c.js" as="script"><link rel="preload" href="/documents/assets/js/5.90a7d0ce.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.69e99cad.js"><link rel="prefetch" href="/documents/assets/js/11.8fbb9784.js"><link rel="prefetch" href="/documents/assets/js/12.af316f6b.js"><link rel="prefetch" href="/documents/assets/js/13.8acb8718.js"><link rel="prefetch" href="/documents/assets/js/14.aa98616d.js"><link rel="prefetch" href="/documents/assets/js/15.2104e116.js"><link rel="prefetch" href="/documents/assets/js/16.f872625d.js"><link rel="prefetch" href="/documents/assets/js/17.ba745fa0.js"><link rel="prefetch" href="/documents/assets/js/18.51697a59.js"><link rel="prefetch" href="/documents/assets/js/19.35ff6f52.js"><link rel="prefetch" href="/documents/assets/js/20.37ea7475.js"><link rel="prefetch" href="/documents/assets/js/21.640a6f3a.js"><link rel="prefetch" href="/documents/assets/js/22.64d5e463.js"><link rel="prefetch" href="/documents/assets/js/23.81360713.js"><link rel="prefetch" href="/documents/assets/js/24.2e39871a.js"><link rel="prefetch" href="/documents/assets/js/25.067a6c74.js"><link rel="prefetch" href="/documents/assets/js/26.c948c8e8.js"><link rel="prefetch" href="/documents/assets/js/27.0172c73a.js"><link rel="prefetch" href="/documents/assets/js/28.5de342bb.js"><link rel="prefetch" href="/documents/assets/js/29.c25a7247.js"><link rel="prefetch" href="/documents/assets/js/3.c7fe7f92.js"><link rel="prefetch" href="/documents/assets/js/30.ade90ad4.js"><link rel="prefetch" href="/documents/assets/js/31.51548b2b.js"><link rel="prefetch" href="/documents/assets/js/32.7ae35906.js"><link rel="prefetch" href="/documents/assets/js/33.a2eedc65.js"><link rel="prefetch" href="/documents/assets/js/34.a1f44fcf.js"><link rel="prefetch" href="/documents/assets/js/35.83a76c5e.js"><link rel="prefetch" href="/documents/assets/js/36.7e32c612.js"><link rel="prefetch" href="/documents/assets/js/37.d3dea4df.js"><link rel="prefetch" href="/documents/assets/js/38.5b7974ad.js"><link rel="prefetch" href="/documents/assets/js/39.de5105d8.js"><link rel="prefetch" href="/documents/assets/js/4.e2d1f35b.js"><link rel="prefetch" href="/documents/assets/js/40.8aefc0a5.js"><link rel="prefetch" href="/documents/assets/js/41.5c837005.js"><link rel="prefetch" href="/documents/assets/js/42.b00cda00.js"><link rel="prefetch" href="/documents/assets/js/43.0496a7bb.js"><link rel="prefetch" href="/documents/assets/js/44.d4da3abc.js"><link rel="prefetch" href="/documents/assets/js/45.103bfc3d.js"><link rel="prefetch" href="/documents/assets/js/46.a9e570c2.js"><link rel="prefetch" href="/documents/assets/js/47.34ceda5f.js"><link rel="prefetch" href="/documents/assets/js/48.c13eede0.js"><link rel="prefetch" href="/documents/assets/js/49.d8be950d.js"><link rel="prefetch" href="/documents/assets/js/50.c1a7ffc5.js"><link rel="prefetch" href="/documents/assets/js/51.36bed2d5.js"><link rel="prefetch" href="/documents/assets/js/52.4b402bc0.js"><link rel="prefetch" href="/documents/assets/js/53.40339bbf.js"><link rel="prefetch" href="/documents/assets/js/54.bb09090d.js"><link rel="prefetch" href="/documents/assets/js/55.1be86dcd.js"><link rel="prefetch" href="/documents/assets/js/56.f9897b08.js"><link rel="prefetch" href="/documents/assets/js/57.90e90dce.js"><link rel="prefetch" href="/documents/assets/js/58.60a63e8d.js"><link rel="prefetch" href="/documents/assets/js/59.2ec6ca9f.js"><link rel="prefetch" href="/documents/assets/js/6.e2fac099.js"><link rel="prefetch" href="/documents/assets/js/60.6e398555.js"><link rel="prefetch" href="/documents/assets/js/61.51e7f6a5.js"><link rel="prefetch" href="/documents/assets/js/62.27907374.js"><link rel="prefetch" href="/documents/assets/js/63.8e7580d7.js"><link rel="prefetch" href="/documents/assets/js/64.e973d499.js"><link rel="prefetch" href="/documents/assets/js/65.f8485304.js"><link rel="prefetch" href="/documents/assets/js/66.f8c086b3.js"><link rel="prefetch" href="/documents/assets/js/67.bce45500.js"><link rel="prefetch" href="/documents/assets/js/68.64946ebc.js"><link rel="prefetch" href="/documents/assets/js/69.1dc4be67.js"><link rel="prefetch" href="/documents/assets/js/7.69cf438d.js"><link rel="prefetch" href="/documents/assets/js/70.0ff84dd2.js"><link rel="prefetch" href="/documents/assets/js/71.3fd48685.js"><link rel="prefetch" href="/documents/assets/js/72.9e715534.js"><link rel="prefetch" href="/documents/assets/js/73.e4dfdd52.js"><link rel="prefetch" href="/documents/assets/js/74.cf446ebe.js"><link rel="prefetch" href="/documents/assets/js/75.9f990d7e.js"><link rel="prefetch" href="/documents/assets/js/76.74313612.js"><link rel="prefetch" href="/documents/assets/js/77.7f838d05.js"><link rel="prefetch" href="/documents/assets/js/78.c17c2b93.js"><link rel="prefetch" href="/documents/assets/js/79.4c148acb.js"><link rel="prefetch" href="/documents/assets/js/8.9beca52e.js"><link rel="prefetch" href="/documents/assets/js/80.318549bf.js"><link rel="prefetch" href="/documents/assets/js/81.bfd5153e.js"><link rel="prefetch" href="/documents/assets/js/82.4878e630.js"><link rel="prefetch" href="/documents/assets/js/83.18adcc4a.js"><link rel="prefetch" href="/documents/assets/js/84.bd95cafa.js"><link rel="prefetch" href="/documents/assets/js/85.875809b6.js"><link rel="prefetch" href="/documents/assets/js/86.2033664c.js"><link rel="prefetch" href="/documents/assets/js/87.0e86ff75.js"><link rel="prefetch" href="/documents/assets/js/88.3deaf402.js"><link rel="prefetch" href="/documents/assets/js/89.1471fd1b.js"><link rel="prefetch" href="/documents/assets/js/9.f166463c.js"><link rel="prefetch" href="/documents/assets/js/90.ff07776f.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.061186d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">随风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link router-link-active">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link router-link-active">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Source Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>diff算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>ssr</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/source-vue/ssr01.html" aria-current="page" class="active sidebar-link">ssr01</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/source-vue/ssr01.html#ssr的概念" class="sidebar-link">ssr的概念</a></li><li class="sidebar-sub-header"><a href="/documents/source-vue/ssr01.html#基本使用" class="sidebar-link">基本使用</a></li><li class="sidebar-sub-header"><a href="/documents/source-vue/ssr01.html#" class="sidebar-link"></a></li><li class="sidebar-sub-header"><a href="/documents/source-vue/ssr01.html#其他" class="sidebar-link">其他</a></li><li class="sidebar-sub-header"><a href="/documents/source-vue/ssr01.html#异步数据同步问题" class="sidebar-link">异步数据同步问题</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="ssr的概念"><a href="#ssr的概念" class="header-anchor">#</a> ssr的概念</h2> <p>将一个Vue组件在服务器端渲染为HTML字符串并发送到浏览器，最后再将这些静态标记激活为可交互应用程序的过程成为服务端的渲染</p> <h2 id="基本使用"><a href="#基本使用" class="header-anchor">#</a> 基本使用</h2> <h3 id="新建工程"><a href="#新建工程" class="header-anchor">#</a> 新建工程</h3> <div class="language- extra-class"><pre class="language-text"><code>vue create ssr
+</code></pre></div><h3 id="安装依赖"><a href="#安装依赖" class="header-anchor">#</a> 安装依赖</h3> <div class="language- extra-class"><pre class="language-text"><code>npm install vue-server-renderer express -D
+</code></pre></div><h3 id="编写服务的启动脚本"><a href="#编写服务的启动脚本" class="header-anchor">#</a> 编写服务的启动脚本</h3> <p>server=&gt;index.js</p> <div class="language- extra-class"><pre class="language-text"><code>// nodejs服务器
+const express = require('express');
+const Vue = require('vue');
+
+// 创建express实例和vue实例
+const app = express();
+
+// 创建渲染器
+const renderer = require('vue-server-renderer').createRenderer();
+
+// 将来用渲染器渲染page可以得到html内容
+const page = new Vue({
+    data: {title: '测试'}，
+    template: '&lt;div&gt;&lt;h1&gt;{{title}}&lt;/h1&gt;&lt;div&gt;hello, vue ssr!&lt;/div&gt;&lt;/div&gt;'
+})
+
+app.get('/', async (req, res) =&gt; {
+    try {
+        const html = await renderer.renderToString(page);
+        console.log(html);
+        res.send(html)l
+    } catch (error) {
+        res.status(500).send('服务器内部错误');
+    }
+})
+
+app.listen(3000, () =&gt; {
+    console.log('渲染服务器启动成功');
+});
+</code></pre></div><p><strong>server=&gt;index2.js</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// nodejs服务器
+const express = require('express');
+const Vue = require('vue');
+const fs = require('fs');
+// 创建express实例和vue实例
+const app = express();
+
+// 创建渲染器
+const {createBundleRenderer} = require('vue-server-renderer');
+
+const serverBundle = require('../dist/server/vue-ssr-server-bundle.json');
+const clientManifest = require('../dist/server/vue-ssr-client-manifest.json');
+const renderer = createBundleRenderer(serverBundle, {
+    runInNewContext: false,
+    template: fs.readFileSync('../public/index.temp.html', 'utf-8'), // 宿主模板文件
+    clientManifest,
+})
+
+// 中间件处理静态文件请求-- 关闭index
+app.use(express.static('../dist/client', {index: false})); 
+
+// 将来用渲染器渲染page可以得到html内容
+const page = new Vue({
+    data: {title: '测试'}，
+    template: '&lt;div&gt;&lt;h1&gt;{{title}}&lt;/h1&gt;&lt;div&gt;hello, vue ssr!&lt;/div&gt;&lt;/div&gt;'
+})
+
+// 路由处理交给vue
+app.get('*', async (req, res) =&gt; {
+    try {
+        const context = {
+            url: req.url,
+            title: 'ssr'
+        }
+
+        const html = await renderer.renderToString(context);
+        console.log(html);
+        res.send(html)l
+    } catch (error) {
+        res.status(500).send('服务器内部错误');
+    }
+})
+
+app.listen(3000, () =&gt; {
+    console.log('渲染服务器启动成功');
+});
+</code></pre></div><p><strong>index.temp.html</strong></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- vue-ssr-outlet --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h3 id="路由"><a href="#路由" class="header-anchor">#</a> 路由</h3> <p>安装 vue-router</p> <h3 id="入口"><a href="#入口" class="header-anchor">#</a> 入口</h3> <p>app.js</p> <h3 id="服务的入口"><a href="#服务的入口" class="header-anchor">#</a> 服务的入口</h3> <p>entry-server.js</p> <h3 id="客户端入口"><a href="#客户端入口" class="header-anchor">#</a> 客户端入口</h3> <p>entry-client.js</p> <h3 id="webpack"><a href="#webpack" class="header-anchor">#</a> webpack</h3> <p>// router=&gt;index.js</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue';
+import Router from 'vue-router';
+import Index from '@/components/Index';
+import Detail from '@/components/Detail';
+
+Vue.use(Router);
+
+// exort default new Router({})
+
+// 这里为什么不导出一个router实例
+/**
+每次用户请求都需要创建router实例
+优化：？？缓存？
+*/
+export default function createRouter() {
+    return new Router({
+        node: 'history',
+        routes: [
+            {path: '/', component: Index},
+            {path: '/detail', compoents: Detail},
+        ]
+    })
+}
+</code></pre></div><p>app.js</p> <div class="language- extra-class"><pre class="language-text"><code>// 创建vue实例
+import Vue from 'vue';
+import App from './App.vue';
+import createRouter from './router';
+
+export default function createApp() {
+    const router = createRouter();
+    const app = new Vue({
+        router,
+        render: h =&gt; h(App)
+    })
+    // .$mount()  无需挂载 只需要里面内容
+
+    return {app, router}
+}
+</code></pre></div><p>entry-server.js</p> <div class="language- extra-class"><pre class="language-text"><code>// 渲染首屏
+import createApp from './app';
+
+// context哪儿来？？
+export default context =&gt; {
+    return new Promise((resolve, reject) =&gt; {
+        const {app, router} = createApp();
+        // 进入首屏
+        router.push(context.url);
+        router.onReady(() =&gt; {
+            resolve();
+        }, reject)
+    })
+};
+</code></pre></div><p>entry-client.js</p> <div class="language- extra-class"><pre class="language-text"><code>// 挂载、激活app
+
+import createApp from './app';
+
+const {app, router} = createApp();
+router.onReady(() =&gt; {
+    app.$mount('#app');
+})
+</code></pre></div><p>webpack
+<img src="/documents/assets/img/WechatIMG84.db816c21.png" alt="构建图"> <img src="/documents/assets/img/WechatIMG85.694f0041.png" alt="构建图"> <img src="/documents/assets/img/WechatIMG86.0a61cda8.png" alt="构建图"> <img src="/documents/assets/img/WechatIMG87.661ea319.png" alt="构建图"></p> <p><img src="/documents/assets/img/WechatIMG82.4850510d.png" alt="构建图"> <img src="/documents/assets/img/WechatIMG83.a5a68cdd.png" alt="代码结构"></p> <h2 id=""><a href="#" class="header-anchor">#</a></h2> <h2 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h2> <h3 id="csr特点"><a href="#csr特点" class="header-anchor">#</a> csr特点</h3> <ul><li>首屏渲染速度慢</li> <li>SEO不友好</li></ul> <p>ssr</p> <ul><li>开发条件受限</li> <li>构建部署要求多</li> <li>服务端负载变大</li></ul> <h2 id="异步数据同步问题"><a href="#异步数据同步问题" class="header-anchor">#</a> 异步数据同步问题</h2> <p>数据预取</p> <p>服务器端渲染的应用程序的&quot;快照&quot;,如果应用依赖与一些异步数据，那么在开始渲染之前，需要先预取和解析好这些数据</p> <p>store/index.js</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue';
+import Vuex from 'vuex';
+
+Vue.use(Vuex);
+
+export function createStore() {
+    return new Vuex.Stror({
+        state: {
+            count: 0
+        },
+        mutations: {
+            init(state, count) {
+                state.count = count;
+            },
+            add(state) {
+                state.count += 1;
+            }
+        },
+        actions: {
+            // 加一个异步请求count的action
+            getCount({commit}) {
+                return new Promise(resolve =&gt; {
+                    setTimeout(() =&gt; {
+                        commit('init', Math.random * 100);
+                        resolve()
+                    }, 1000);
+                })
+            }
+        }
+    })
+}
+</code></pre></div><p>app.js</p> <div class="language- extra-class"><pre class="language-text"><code>// 创建vue实例
+import Vue from 'vue';
+import App from './App.vue';
+import createRouter from './router';
+import {createStore} from './store';
+
+Vue.config.productionTip = false;
+
+// 加入一个群居混入，处理客户端asyncData调用
+Vue.mixin({
+    beforeMount() {
+        const {asyncData} = this.$options;
+        if (asyncData) {
+            asyncData({
+                store.this.$store,
+                route: this.$route
+            })
+        }
+    }
+})
+
+// 需要返回一个应用程序工厂:返回vue实例和router实例、store实例
+export default function createApp() {
+    // 处理首屏，就要先处理路由跳转
+    const router = createRouter();
+    const app = new Vue({
+        router,
+        store,
+        context,
+        render: h =&gt; h(App)
+    })
+    // .$mount()  无需挂载 只需要里面内容
+
+    return {app, router, store}
+}
+</code></pre></div><p>Home.vue</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;h2 @click=&quot;$store.commit('add')&quot;&gt;{{$store.state.count}}&lt;/h2&gt;
+
+asyncData({store, route}) {
+    return store.dispath('getCount')
+}
+</code></pre></div><p>entry-server.js</p> <div class="language- extra-class"><pre class="language-text"><code>// 渲染首屏
+import createApp from './app';
+
+// context哪儿来？？
+export default context =&gt; {
+    return new Promise((resolve, reject) =&gt; {
+        const {app, router} = createApp();
+        // 进入首屏
+        router.push(context.url);
+        router.onReady(() =&gt; {
+            // 获取当前匹配的所有组件
+            const metched = router.getMatchedComponents();
+
+            // 404
+            if (!matched.length) {
+                return reject({code: 404});
+            }
+
+            // 遍历matched 数组，判断他们内部有没有asyncData
+            // 如果有就执行，等待返回结果
+            Promise.all(
+                matched.map(Component =&gt; {
+                    if (Component.asyncData) {
+                        return Component.asyncData({
+                            store, 
+                            route: router.currentRoute
+                        })
+                    }
+                })
+            ).then(() =&gt; {
+                // 约定 将app数据状态放入context.state
+                // 渲染器会将state序列化变成字符串 window.__INITIAL_STATE__
+                // 未来在前端激活之前可以在恢复
+                context.state = store.state;
+                resolve(app);
+            }).catch(reject);
+        }, reject)
+    })
+};
+</code></pre></div><p>entry-client.js</p> <div class="language- extra-class"><pre class="language-text"><code>// 挂载、激活app
+
+import createApp from './app';
+// 客户端激活
+const {app, router} = createApp();
+
+// 还原state
+if (window.__INITIAL_STATE__) {
+    store.replaceState(window.__INITIAL_STATE__);
+}
+
+router.onReady(() =&gt; {
+    app.$mount('#app');
+})
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/source-vue/vue-diff.html" class="prev">
+        预习
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.c707dd89.js" defer></script><script src="/documents/assets/js/2.3c62c32c.js" defer></script><script src="/documents/assets/js/5.90a7d0ce.js" defer></script>
+  </body>
+</html>

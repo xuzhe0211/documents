@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>curl使用 | 随风</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="apple-touch-icon" href="/documents/apple-touch-icon.png">
+    <link rel="icon" href="/documents/favicon.ico">
+    <link rel="manifest" href="/documents/manifest.json">
+    <meta name="description" content="随风随雨又随流">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.061186d0.css" as="style"><link rel="preload" href="/documents/assets/js/app.c707dd89.js" as="script"><link rel="preload" href="/documents/assets/js/2.3c62c32c.js" as="script"><link rel="preload" href="/documents/assets/js/87.0e86ff75.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.69e99cad.js"><link rel="prefetch" href="/documents/assets/js/11.8fbb9784.js"><link rel="prefetch" href="/documents/assets/js/12.af316f6b.js"><link rel="prefetch" href="/documents/assets/js/13.8acb8718.js"><link rel="prefetch" href="/documents/assets/js/14.aa98616d.js"><link rel="prefetch" href="/documents/assets/js/15.2104e116.js"><link rel="prefetch" href="/documents/assets/js/16.f872625d.js"><link rel="prefetch" href="/documents/assets/js/17.ba745fa0.js"><link rel="prefetch" href="/documents/assets/js/18.51697a59.js"><link rel="prefetch" href="/documents/assets/js/19.35ff6f52.js"><link rel="prefetch" href="/documents/assets/js/20.37ea7475.js"><link rel="prefetch" href="/documents/assets/js/21.640a6f3a.js"><link rel="prefetch" href="/documents/assets/js/22.64d5e463.js"><link rel="prefetch" href="/documents/assets/js/23.81360713.js"><link rel="prefetch" href="/documents/assets/js/24.2e39871a.js"><link rel="prefetch" href="/documents/assets/js/25.067a6c74.js"><link rel="prefetch" href="/documents/assets/js/26.c948c8e8.js"><link rel="prefetch" href="/documents/assets/js/27.0172c73a.js"><link rel="prefetch" href="/documents/assets/js/28.5de342bb.js"><link rel="prefetch" href="/documents/assets/js/29.c25a7247.js"><link rel="prefetch" href="/documents/assets/js/3.c7fe7f92.js"><link rel="prefetch" href="/documents/assets/js/30.ade90ad4.js"><link rel="prefetch" href="/documents/assets/js/31.51548b2b.js"><link rel="prefetch" href="/documents/assets/js/32.7ae35906.js"><link rel="prefetch" href="/documents/assets/js/33.a2eedc65.js"><link rel="prefetch" href="/documents/assets/js/34.a1f44fcf.js"><link rel="prefetch" href="/documents/assets/js/35.83a76c5e.js"><link rel="prefetch" href="/documents/assets/js/36.7e32c612.js"><link rel="prefetch" href="/documents/assets/js/37.d3dea4df.js"><link rel="prefetch" href="/documents/assets/js/38.5b7974ad.js"><link rel="prefetch" href="/documents/assets/js/39.de5105d8.js"><link rel="prefetch" href="/documents/assets/js/4.e2d1f35b.js"><link rel="prefetch" href="/documents/assets/js/40.8aefc0a5.js"><link rel="prefetch" href="/documents/assets/js/41.5c837005.js"><link rel="prefetch" href="/documents/assets/js/42.b00cda00.js"><link rel="prefetch" href="/documents/assets/js/43.0496a7bb.js"><link rel="prefetch" href="/documents/assets/js/44.d4da3abc.js"><link rel="prefetch" href="/documents/assets/js/45.103bfc3d.js"><link rel="prefetch" href="/documents/assets/js/46.a9e570c2.js"><link rel="prefetch" href="/documents/assets/js/47.34ceda5f.js"><link rel="prefetch" href="/documents/assets/js/48.c13eede0.js"><link rel="prefetch" href="/documents/assets/js/49.d8be950d.js"><link rel="prefetch" href="/documents/assets/js/5.90a7d0ce.js"><link rel="prefetch" href="/documents/assets/js/50.c1a7ffc5.js"><link rel="prefetch" href="/documents/assets/js/51.36bed2d5.js"><link rel="prefetch" href="/documents/assets/js/52.4b402bc0.js"><link rel="prefetch" href="/documents/assets/js/53.40339bbf.js"><link rel="prefetch" href="/documents/assets/js/54.bb09090d.js"><link rel="prefetch" href="/documents/assets/js/55.1be86dcd.js"><link rel="prefetch" href="/documents/assets/js/56.f9897b08.js"><link rel="prefetch" href="/documents/assets/js/57.90e90dce.js"><link rel="prefetch" href="/documents/assets/js/58.60a63e8d.js"><link rel="prefetch" href="/documents/assets/js/59.2ec6ca9f.js"><link rel="prefetch" href="/documents/assets/js/6.e2fac099.js"><link rel="prefetch" href="/documents/assets/js/60.6e398555.js"><link rel="prefetch" href="/documents/assets/js/61.51e7f6a5.js"><link rel="prefetch" href="/documents/assets/js/62.27907374.js"><link rel="prefetch" href="/documents/assets/js/63.8e7580d7.js"><link rel="prefetch" href="/documents/assets/js/64.e973d499.js"><link rel="prefetch" href="/documents/assets/js/65.f8485304.js"><link rel="prefetch" href="/documents/assets/js/66.f8c086b3.js"><link rel="prefetch" href="/documents/assets/js/67.bce45500.js"><link rel="prefetch" href="/documents/assets/js/68.64946ebc.js"><link rel="prefetch" href="/documents/assets/js/69.1dc4be67.js"><link rel="prefetch" href="/documents/assets/js/7.69cf438d.js"><link rel="prefetch" href="/documents/assets/js/70.0ff84dd2.js"><link rel="prefetch" href="/documents/assets/js/71.3fd48685.js"><link rel="prefetch" href="/documents/assets/js/72.9e715534.js"><link rel="prefetch" href="/documents/assets/js/73.e4dfdd52.js"><link rel="prefetch" href="/documents/assets/js/74.cf446ebe.js"><link rel="prefetch" href="/documents/assets/js/75.9f990d7e.js"><link rel="prefetch" href="/documents/assets/js/76.74313612.js"><link rel="prefetch" href="/documents/assets/js/77.7f838d05.js"><link rel="prefetch" href="/documents/assets/js/78.c17c2b93.js"><link rel="prefetch" href="/documents/assets/js/79.4c148acb.js"><link rel="prefetch" href="/documents/assets/js/8.9beca52e.js"><link rel="prefetch" href="/documents/assets/js/80.318549bf.js"><link rel="prefetch" href="/documents/assets/js/81.bfd5153e.js"><link rel="prefetch" href="/documents/assets/js/82.4878e630.js"><link rel="prefetch" href="/documents/assets/js/83.18adcc4a.js"><link rel="prefetch" href="/documents/assets/js/84.bd95cafa.js"><link rel="prefetch" href="/documents/assets/js/85.875809b6.js"><link rel="prefetch" href="/documents/assets/js/86.2033664c.js"><link rel="prefetch" href="/documents/assets/js/88.3deaf402.js"><link rel="prefetch" href="/documents/assets/js/89.1471fd1b.js"><link rel="prefetch" href="/documents/assets/js/9.f166463c.js"><link rel="prefetch" href="/documents/assets/js/90.ff07776f.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.061186d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">随风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link router-link-active">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link router-link-active">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Other</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/tools/Other/" aria-current="page" class="sidebar-link">开发工具</a></li><li><a href="/documents/tools/Other/curl.html" aria-current="page" class="active sidebar-link">curl使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/tools/Other/curl.html#curl请求" class="sidebar-link">curl请求</a></li><li class="sidebar-sub-header"><a href="/documents/tools/Other/curl.html#简介" class="sidebar-link">简介</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="curl请求"><a href="#curl请求" class="header-anchor">#</a> curl请求</h2> <div class="language- extra-class"><pre class="language-text"><code>curl -X DELETE --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'token: x-csrf-token' -d '{&quot;id&quot;:&quot;19&quot;}' http://192.168.3.6:7001/v1/api/acts/19
+
+curl -X GET &quot;http://http://172.24.193.39:8801/ihs/charge/traffic/actual_path?page_no=0&amp;page_size=20&amp;passid=101&quot; -H &quot;accept: */*&quot;
+
+
+curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{&quot;title&quot;:&quot;test1&quot;}' http://192.168.3.6:7001/v1/api/acts/19
+</code></pre></div><p><a href="http://www.ruanyifeng.com/blog/2019/09/curl-reference.html" target="_blank" rel="noopener noreferrer">阮一峰curl用法指南<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <a href="http://www.ruanyifeng.com/blog/2011/09/curl.html" target="_blank" rel="noopener noreferrer">阮一峰curl开发指南<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <p>curl是常用的命令行工具，用来请求Web服务器。它的名字就是客户端(client)的URL工具的意思。</p> <p>它的功能非常强大，命令行参数多达几十种。如果熟练的话，完全可以取代Postman这一类的图形界面工具.</p> <p>本文介绍它的主要命令行参数，作为日常的参考，方便查阅。内容主要翻译自《curl cookbook》。为了节约篇幅，下面的例子不包括运行时的输出，初学者可以先看我以前写的<a href="http://www.ruanyifeng.com/blog/2011/09/curl.html" target="_blank" rel="noopener noreferrer">curl 初学者教程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <p>不带有任何参数时，curl就是发出GET请求。</p> <div class="language- extra-class"><pre class="language-text"><code>curl https: //www.example.com
+</code></pre></div><p>上面命令向www.example.com发出GET请求，服务器返回的内容会在命令行输出。</p> <h3 id="a"><a href="#a" class="header-anchor">#</a> -A</h3> <p>-A参数指定客户端的用户代理标头，即User-Agent。curl的默认用户代理字符串是curl/[version].</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -A 'Mozilla/5.0 (Window NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' https://google.com'
+</code></pre></div><p>上面命令将User-Agent改成Chrome浏览器</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -A '' https://google.com
+</code></pre></div><p>上面命令会移除User-Agent标头.</p> <p>也可以通过-H参数直接指定标头，更改User-Agent.</p> <div class="language- extra-class"><pre class="language-text"><code>curl -H 'User-Agent: php/1.0' https://google.com
+</code></pre></div><h3 id="b"><a href="#b" class="header-anchor">#</a> -b</h3> <p>-b 参数用来向服务器发送Cookie。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -b 'foo=bar' https://google.com
+</code></pre></div><p>上面命令会生成一个标头Cookie: foo=bar,想服务器发送一个名为foo、值为bar的Cookie。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -b 'foo1=bar;foo2=bar2' https://google.com
+</code></pre></div><p>上面命令发送两个Cookie。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -b cookies.txt https://www.google.com
+</code></pre></div><p>上面命令读取本地文件cookies.txt，里面是服务器设置的Cookie(参见-c参数)，将其发送到服务器</p> <h3 id="c"><a href="#c" class="header-anchor">#</a> -c</h3> <p>-c参数将服务器设置的Cookie写入一个文件。</p> <div class="language- extra-class"><pre class="language-text"><code>$curl -c cookie.txt https://www.google.com
+</code></pre></div><p>上面命令将服务器的HTTP回应所设置Cookie写入文本文件cookies.txt</p> <h3 id="d"><a href="#d" class="header-anchor">#</a> -d</h3> <p>-d参数用于发送POST请求的数据体。</p> <div class="language- extra-class"><pre class="language-text"><code>$curl -d 'login=emma &amp;&amp;password=123' -X POST https://google.com/login
+# 或者
+$curl -d 'login=emma' -d 'password=123' -X POST https://google.com/login
+</code></pre></div><p>使用-d参数以后，HTTP请求会自动加上标头Content-Type: application/x-wwwform-urlencodeed.并且会自动将请求转为POST方法，因此可以省略 -X POST。</p> <p>-d参数可以读取本地文本文件的数据，想服务器发送。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -d '@data.txt' https://google.com/login
+</code></pre></div><p>上面命令读取data.txt文件的内容，作为数据体向服务器发送。</p> <h3 id="data-urlencode"><a href="#data-urlencode" class="header-anchor">#</a> --data-urlencode</h3> <p>--data-urlencode参数等同于-d，发送POST请求的数据体，区别在于会自动发送的数据进行URL编码.</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl --data-urlencode 'comment=hello world' https://google.com/login
+</code></pre></div><p>上面代码中，发送的数据hello world之间有一个空格,需要进行URL编码</p> <h3 id="e"><a href="#e" class="header-anchor">#</a> -e</h3> <p>-e参数用来设置HTTP的标头Referer,表情请求的来源。</p> <div class="language- extra-class"><pre class="language-text"><code>curl -e 'https://google.com?q=example' https://www.example.com
+</code></pre></div><p>上面的命令将Referer标头设为https://google.com?q=example.</p> <p>-H参数可以通过直接添加标头Referer，达到同样效果</p> <div class="language- extra-class"><pre class="language-text"><code>curl -H 'Referer: https://google.com?q=example' https://www.example.com
+</code></pre></div><h3 id="f"><a href="#f" class="header-anchor">#</a> -F</h3> <p>-F 参数用来向服务器上传二进制文件</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -F 'file=@photo.png;type=image/png' https://google.com/profile
+</code></pre></div><p>上面命令会给HTTP请求加上标头Content-Type:multipart/form-data,然后将文件photo.png作为file字段上传。</p> <p>-F参数可以指定MIME类型</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -F 'file=@photo.png;type:image/png' https://google.com/profile
+</code></pre></div><p>上面命令指定MIME类型为image/png,否则curl会吧MIME类型设为application/octet-stream</p> <p>-F参数也可以指定文件名</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -F 'file=@photo.png;filename=me.png' https://google.com/profile
+</code></pre></div><p>上面命令中，原始文件名为photo.png,但是服务器接受到的文件名为me.png</p> <h3 id="g"><a href="#g" class="header-anchor">#</a> -G</h3> <p>-G参数用来构造URL的查询字符串。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -G -d 'q=kitties' -d 'count=20' https://google.com/search
+</code></pre></div><p>上面命令会发出一个GET请求，实际请求的URL为https://google.com/search?q=kittes&amp;count=20。如果省略--G，会发出一个POST请求。</p> <p>如果数据需要URL编码，可以结合--data--urlencode参数。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -G --data-urlencode 'comment=hello world' https://www.example.com
+</code></pre></div><h3 id="h"><a href="#h" class="header-anchor">#</a> -H</h3> <p>-H参数添加HTTP请求的标头</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -H 'Accept-Language: en-US' https://google.com
+</code></pre></div><p>上面命令添加HTTP标头Accept-Language:en-US.</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -H 'Accept-Language:en-US' -H 'Secret-Message:xyzzy' https://google.com
+</code></pre></div><p>上面命令添加两个HTTP标头</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -d '{&quot;login&quot;: &quot;emma&quot;, &quot;pass&quot;: &quot;123&quot;}' -H 'Content-Type: application/json' https://google.com/login
+</code></pre></div><p>上面命令添加 HTTP 请求的标头是Content-Type: application/json，然后用-d参数发送 JSON 数据。</p> <h3 id="i"><a href="#i" class="header-anchor">#</a> -i</h3> <p>-i参数打印出服务器回应的HTTP标头。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -i https://www.example.com
+</code></pre></div><p>上面命令收到服务器回应后，先输出服务器回应的标头,然后空一行，在输出网页的源码。</p> <h3 id="i-2"><a href="#i-2" class="header-anchor">#</a> -I</h3> <p>-I参数向服务器发出HEAD请求，然后会将服务器返回的HTTP标头打印出来。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -I https://www.example.com
+</code></pre></div><p>上面命令输出服务器对HEAD请求的回应</p> <p>--head参数等同于-I</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl --head https://www.example.com
+</code></pre></div><h3 id="k"><a href="#k" class="header-anchor">#</a> -k</h3> <p>-k参数指定跳过SSL检测</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -k https://www.example.com
+</code></pre></div><p>上面命令不会检查服务器的SSL证书是否正确</p> <h3 id="l"><a href="#l" class="header-anchor">#</a> -L</h3> <p>-L参数会让HTTP请求更随服务器的重定向。curl默认不更随重定向</p> <div class="language- extra-class"><pre class="language-text"><code>$curl -L -d 'tweet=hi' https://api.twitter.com/tweet
+</code></pre></div><h3 id="limit-rate"><a href="#limit-rate" class="header-anchor">#</a> --limit-rate</h3> <p>--limit-rate用来限制HTTP请求和回应的带宽，模拟慢网速的环境</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl --limit-rate 200k https://google.com
+</code></pre></div><p>上面命令将带宽限制在每秒200K字节。</p> <h3 id="o"><a href="#o" class="header-anchor">#</a> -o</h3> <p>-o参数将服务器的回应保存为文件，等同于wget命令。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -o example.html https://www.example.com
+</code></pre></div><p>上面命令将www.example.com保存成example.html</p> <h3 id="o-2"><a href="#o-2" class="header-anchor">#</a> -O</h3> <p>-O参数将服务器回应保存成文件，并将URL的最后部分当成文件名。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -O https://www.example.com/foo/bar.html
+</code></pre></div><p>上面命令将服务器回应保存成文件，文件名为bar.html</p> <h3 id="s"><a href="#s" class="header-anchor">#</a> -s</h3> <p>-s参数将不输出错误和进度信息</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -s https://www.example.com
+</code></pre></div><p>上面命令一旦发生错误，不会显示错误信息。不发生错误的华，会正常显示运行结果。</p> <p>如果想让curl不产生任何输出，可以使用下面命令</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -s -o /dev/null https://google.com
+</code></pre></div><h3 id="s-2"><a href="#s-2" class="header-anchor">#</a> -S</h3> <p>-S参数指定只输出错误信息，通常与-s一起使用</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -s -o /dev/null https://google.com
+</code></pre></div><p>上面命令没有任何输出，除非发生错误。</p> <h3 id="u"><a href="#u" class="header-anchor">#</a> -u</h3> <p>-u参数用来设置服务器认证的用户名和密码</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -u 'bob:12345' https://google.com/login
+</code></pre></div><p>上面命令设置用户名为bob，密码为12345，然后将其转为HTTP标头uthorization: Basic Ym9iOjEyMzQ1</p> <p>curl能识别URL里面的用户名和密码</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl https://bob:12345@google.com/login
+</code></pre></div><p>上面命令能够识别URL里面的用户名和密码，将其转为上个例子里面的HTTP标头</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -u 'bob' https://google.com/login
+</code></pre></div><p>上面命令只设置了用户名，执行后，curl会提示用户输入密码</p> <h3 id="v"><a href="#v" class="header-anchor">#</a> -V</h3> <p>-v参数输出通信的整个过程，用于调试.</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -v https://www.example.com
+</code></pre></div><p>--trace参数也可以用用于调试，还会输出原始的二进制数据</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl --trace - https://www.example.com
+</code></pre></div><h3 id="x"><a href="#x" class="header-anchor">#</a> -x</h3> <p>-x参数指定HTTP请求的代理</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -x socks5://james:cate@myproxy.com:8080 https://www.example.com
+</code></pre></div><p>上面命令指定HTTP请求通过myproxy.com:8080的socks5代理发出</p> <p>如果没有指定代理协议，默认为HTTP。</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -x james:cats@myproxy.com:8080 https://www.example.com
+</code></pre></div><p>上面命令中，请求的代理使用HTTP协议</p> <h3 id="x-2"><a href="#x-2" class="header-anchor">#</a> -X</h3> <p>-X参数指定HTTP请求的方法</p> <div class="language- extra-class"><pre class="language-text"><code>$ curl -X POST https://www.example.com
+</code></pre></div><p>上面命令对https://www.example.com发出POST请求</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/tools/Other/" class="prev router-link-active">
+        开发工具
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.c707dd89.js" defer></script><script src="/documents/assets/js/2.3c62c32c.js" defer></script><script src="/documents/assets/js/87.0e86ff75.js" defer></script>
+  </body>
+</html>

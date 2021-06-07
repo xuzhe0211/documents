@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>网络编程/http协议相关 | 随风</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="apple-touch-icon" href="/documents/apple-touch-icon.png">
+    <link rel="icon" href="/documents/favicon.ico">
+    <link rel="manifest" href="/documents/manifest.json">
+    <meta name="description" content="随风随雨又随流">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.061186d0.css" as="style"><link rel="preload" href="/documents/assets/js/app.c707dd89.js" as="script"><link rel="preload" href="/documents/assets/js/2.3c62c32c.js" as="script"><link rel="preload" href="/documents/assets/js/35.83a76c5e.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.69e99cad.js"><link rel="prefetch" href="/documents/assets/js/11.8fbb9784.js"><link rel="prefetch" href="/documents/assets/js/12.af316f6b.js"><link rel="prefetch" href="/documents/assets/js/13.8acb8718.js"><link rel="prefetch" href="/documents/assets/js/14.aa98616d.js"><link rel="prefetch" href="/documents/assets/js/15.2104e116.js"><link rel="prefetch" href="/documents/assets/js/16.f872625d.js"><link rel="prefetch" href="/documents/assets/js/17.ba745fa0.js"><link rel="prefetch" href="/documents/assets/js/18.51697a59.js"><link rel="prefetch" href="/documents/assets/js/19.35ff6f52.js"><link rel="prefetch" href="/documents/assets/js/20.37ea7475.js"><link rel="prefetch" href="/documents/assets/js/21.640a6f3a.js"><link rel="prefetch" href="/documents/assets/js/22.64d5e463.js"><link rel="prefetch" href="/documents/assets/js/23.81360713.js"><link rel="prefetch" href="/documents/assets/js/24.2e39871a.js"><link rel="prefetch" href="/documents/assets/js/25.067a6c74.js"><link rel="prefetch" href="/documents/assets/js/26.c948c8e8.js"><link rel="prefetch" href="/documents/assets/js/27.0172c73a.js"><link rel="prefetch" href="/documents/assets/js/28.5de342bb.js"><link rel="prefetch" href="/documents/assets/js/29.c25a7247.js"><link rel="prefetch" href="/documents/assets/js/3.c7fe7f92.js"><link rel="prefetch" href="/documents/assets/js/30.ade90ad4.js"><link rel="prefetch" href="/documents/assets/js/31.51548b2b.js"><link rel="prefetch" href="/documents/assets/js/32.7ae35906.js"><link rel="prefetch" href="/documents/assets/js/33.a2eedc65.js"><link rel="prefetch" href="/documents/assets/js/34.a1f44fcf.js"><link rel="prefetch" href="/documents/assets/js/36.7e32c612.js"><link rel="prefetch" href="/documents/assets/js/37.d3dea4df.js"><link rel="prefetch" href="/documents/assets/js/38.5b7974ad.js"><link rel="prefetch" href="/documents/assets/js/39.de5105d8.js"><link rel="prefetch" href="/documents/assets/js/4.e2d1f35b.js"><link rel="prefetch" href="/documents/assets/js/40.8aefc0a5.js"><link rel="prefetch" href="/documents/assets/js/41.5c837005.js"><link rel="prefetch" href="/documents/assets/js/42.b00cda00.js"><link rel="prefetch" href="/documents/assets/js/43.0496a7bb.js"><link rel="prefetch" href="/documents/assets/js/44.d4da3abc.js"><link rel="prefetch" href="/documents/assets/js/45.103bfc3d.js"><link rel="prefetch" href="/documents/assets/js/46.a9e570c2.js"><link rel="prefetch" href="/documents/assets/js/47.34ceda5f.js"><link rel="prefetch" href="/documents/assets/js/48.c13eede0.js"><link rel="prefetch" href="/documents/assets/js/49.d8be950d.js"><link rel="prefetch" href="/documents/assets/js/5.90a7d0ce.js"><link rel="prefetch" href="/documents/assets/js/50.c1a7ffc5.js"><link rel="prefetch" href="/documents/assets/js/51.36bed2d5.js"><link rel="prefetch" href="/documents/assets/js/52.4b402bc0.js"><link rel="prefetch" href="/documents/assets/js/53.40339bbf.js"><link rel="prefetch" href="/documents/assets/js/54.bb09090d.js"><link rel="prefetch" href="/documents/assets/js/55.1be86dcd.js"><link rel="prefetch" href="/documents/assets/js/56.f9897b08.js"><link rel="prefetch" href="/documents/assets/js/57.90e90dce.js"><link rel="prefetch" href="/documents/assets/js/58.60a63e8d.js"><link rel="prefetch" href="/documents/assets/js/59.2ec6ca9f.js"><link rel="prefetch" href="/documents/assets/js/6.e2fac099.js"><link rel="prefetch" href="/documents/assets/js/60.6e398555.js"><link rel="prefetch" href="/documents/assets/js/61.51e7f6a5.js"><link rel="prefetch" href="/documents/assets/js/62.27907374.js"><link rel="prefetch" href="/documents/assets/js/63.8e7580d7.js"><link rel="prefetch" href="/documents/assets/js/64.e973d499.js"><link rel="prefetch" href="/documents/assets/js/65.f8485304.js"><link rel="prefetch" href="/documents/assets/js/66.f8c086b3.js"><link rel="prefetch" href="/documents/assets/js/67.bce45500.js"><link rel="prefetch" href="/documents/assets/js/68.64946ebc.js"><link rel="prefetch" href="/documents/assets/js/69.1dc4be67.js"><link rel="prefetch" href="/documents/assets/js/7.69cf438d.js"><link rel="prefetch" href="/documents/assets/js/70.0ff84dd2.js"><link rel="prefetch" href="/documents/assets/js/71.3fd48685.js"><link rel="prefetch" href="/documents/assets/js/72.9e715534.js"><link rel="prefetch" href="/documents/assets/js/73.e4dfdd52.js"><link rel="prefetch" href="/documents/assets/js/74.cf446ebe.js"><link rel="prefetch" href="/documents/assets/js/75.9f990d7e.js"><link rel="prefetch" href="/documents/assets/js/76.74313612.js"><link rel="prefetch" href="/documents/assets/js/77.7f838d05.js"><link rel="prefetch" href="/documents/assets/js/78.c17c2b93.js"><link rel="prefetch" href="/documents/assets/js/79.4c148acb.js"><link rel="prefetch" href="/documents/assets/js/8.9beca52e.js"><link rel="prefetch" href="/documents/assets/js/80.318549bf.js"><link rel="prefetch" href="/documents/assets/js/81.bfd5153e.js"><link rel="prefetch" href="/documents/assets/js/82.4878e630.js"><link rel="prefetch" href="/documents/assets/js/83.18adcc4a.js"><link rel="prefetch" href="/documents/assets/js/84.bd95cafa.js"><link rel="prefetch" href="/documents/assets/js/85.875809b6.js"><link rel="prefetch" href="/documents/assets/js/86.2033664c.js"><link rel="prefetch" href="/documents/assets/js/87.0e86ff75.js"><link rel="prefetch" href="/documents/assets/js/88.3deaf402.js"><link rel="prefetch" href="/documents/assets/js/89.1471fd1b.js"><link rel="prefetch" href="/documents/assets/js/9.f166463c.js"><link rel="prefetch" href="/documents/assets/js/90.ff07776f.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.061186d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">随风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link router-link-active">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link router-link-active">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" class="nav-link">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>工程化</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/front-end/Engineering/Axios.html" class="sidebar-link">axios</a></li><li><a href="/documents/front-end/Engineering/Http.html" aria-current="page" class="active sidebar-link">网络编程/http协议相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/front-end/Engineering/Http.html#http协议" class="sidebar-link">http协议</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/Engineering/Http.html#其他" class="sidebar-link">其他</a></li></ul></li><li><a href="/documents/front-end/Engineering/" aria-current="page" class="sidebar-link">webpack</a></li><li><a href="/documents/front-end/Engineering/Regexp.html" class="sidebar-link">正则表达式</a></li><li><a href="/documents/front-end/Engineering/Webpack.html" class="sidebar-link">webpack-dev-server的proxy用法</a></li><li><a href="/documents/front-end/Engineering/flexible.html" class="sidebar-link">移动端适配方案</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="http协议"><a href="#http协议" class="header-anchor">#</a> http协议</h2> <h3 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h3> <ol><li>无连接</li> <li>无状态</li> <li>简单快速</li> <li>灵活</li></ol> <h3 id="request"><a href="#request" class="header-anchor">#</a> Request</h3> <h4 id="请求行"><a href="#请求行" class="header-anchor">#</a> 请求行</h4> <ul><li>Method
+<ul><li>GET---请求获取Request-URI所标识的资源
+   - POST---在Request-URI所标识的资源后附加新的数据
+   - HEAD---请求获取由Request-URI所标识的资源的响应消息报头
+   - PUT---请求服务器存储一个资源，并用Request-URI作为其标识
+   - DELETE---请求服务器删除Request-URI所标识的资源
+   - TRACE---请求服务器回送收到的请求信息，主要用于测试或诊断
+   - CONNECT--- 保留将来使用
+   - OPTIONS---预检请求/请求查询服务器的性能，或者查询与资源相关的选项和需求</li></ul></li> <li>RequestUrl---https://www.baidu.com/img</li> <li>HttpVersion--Http 1.1</li></ul> <h4 id="消息报头"><a href="#消息报头" class="header-anchor">#</a> 消息报头</h4> <ul><li>Accept--- 指定客户端接受哪些类型的信息/MIME
+<ul><li>image/gif gif图片
+   - text/html html文本</li></ul></li> <li>Accept-Charset--- 客户端接受的字符集
+<ul><li>gb2312中文字符
+   - iso-8859-1 西文字符集
+   - utf-8 多语言字符</li></ul></li> <li>Accept-Encoding----可接受的内容编码
+<ul><li>gzip，deflate 压缩类型
+   - identity 默认</li></ul></li> <li>Accept-Language---指定一种自然语言--zh-cn</li> <li>Authorization--- 证明客户端有权查看某个资源</li> <li>Host--- 指定被请求资源的Internet主机和端口号--www.kaikeba.com:8080</li> <li>User-Agent-用户代理
+<ul><li>操作系统及版本
+   - CPU类型
+   - 浏览器及版本
+   -浏览器渲染引擎
+   - 浏览器语言
+   - 浏览器插件</li></ul></li> <li>Content-Type --- Body编码方式</li></ul> <h4 id="请求正文-根据头部的content-type确定"><a href="#请求正文-根据头部的content-type确定" class="header-anchor">#</a> 请求正文--根据头部的Content-Type确定</h4> <ul><li>application/x-www-form-urlencoded
+<ul><li>title=test&amp;sub%5B%5D=1
+   - 默认数据编码方式</li></ul></li> <li>application/json
+<ul><li>序列化后的JSON字符串
+   - ajax</li></ul></li> <li>text/xml--- XML作为编码方式的远程调用规范</li> <li>text/plain--数据以纯文本形式(text/json/html)进行编码</li> <li>multipart/form-data
+<ul><li>既有文本数据，又有文本等二进制数据
+   	- WebKitFormBoundaryrGKCBY7qhFd3TrwA
+<ul><li>Content-Dispostion:form-data;name=&quot;text&quot;</li> <li>title</li> <li>Content-Dispositon:from-data;name=&quot;file&quot;;filename=&quot;chorme.png&quot;</li> <li>Content-type:image/png</li> <li>PNG...content fo chrome.png...
+   - 允许在数据中包含整个文件，所以常用于文件上传</li></ul></li></ul></li></ul> <h3 id="response"><a href="#response" class="header-anchor">#</a> Response</h3> <h4 id="状态行-状态码"><a href="#状态行-状态码" class="header-anchor">#</a> 状态行--状态码</h4> <ul><li>1xx---指示消息--表示请求已接受，继续处理</li> <li>2xx---成功--表示请求已被成功接收、理解、接受
+<ul><li>200 ok 请求成功
+   - 206 客户端发送一个带Range头的GET请求 服务器完成</li></ul></li> <li>3xx---重定向--要完成请求必须进行更进一步操作
+<ul><li>301 所有请求页面转移到URL
+   - 302 所有请求转移到临时重定向</li></ul></li> <li>4xx---客户端错误--请求有语法错误或请求无法实现
+<ul><li>400 Bad Request 客户端请求有语法错误，不能被服务器所理解
+   - 401 Unauthorized 请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用
+   - 403 Forbidden 服务器收到请求，但是拒绝提供服务
+   - 404 Not Fount 请求资源不存在，eg:输入了错误的URL</li></ul></li> <li>5xx---服务的错误--服务器未能实现合法的请求
+<ul><li>500 Internal Server Error 服务器发生不可预期的错误
+   - 503 Server Unavailable 服务器当前不能处理客户端的请求，一段时间后可能恢复请求</li></ul></li></ul> <h4 id="消息报头-2"><a href="#消息报头-2" class="header-anchor">#</a> 消息报头</h4> <ul><li>响应报头
+<ul><li>Location 重定向接受者到一个新的位置
+   - WWW-Authenticate 包含在401(未授权)响应信息中，客户端收到401响应消息的时候，并发送Authorzation报头域请求服务器对其进行验证时，服务的响应报头就包含该报头域
+   - Server 包含了服务器用来处理请求的软件信息 -- Apache-Coyote/1.1</li></ul></li> <li>实体报头</li> <li>Content-Encoding 媒体类型的修饰符 eg：Content-Encoding:gzip</li> <li>Content-Language 资源所用的自然语言。没有设置该域则认为实体内容将提供给所有的语言阅读</li> <li>Content-Length 正文长度，以字节方式存储的十进制数字来表示</li> <li>Content-Type 实体报头域用于指名发送接受者的实体正文的媒体类型
+<ul><li>text/html;chartset=UTF-8</li> <li>application/json;charset=UTF-8
+   - <a href="https://tool.oschina.net/commons/" target="_blank" rel="noopener noreferrer">详细列表<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>POST</li></ul></li> <li>Expires 响应过期的日期和时间
+<ul><li>为了让代理服务器或浏览器在一段时间以后更新缓存中(再次访问曾访问过的页面时，直接从缓存中加载，缩短响应时间和降低服务器负载)的页面
+   - 无缓存 response.setDateHeader('Expires', '0');</li></ul></li></ul> <h4 id="响应正文"><a href="#响应正文" class="header-anchor">#</a> 响应正文</h4> <h2 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h2> <ul><li>Get和Post的区别
+<ul><li>GET回退无害化 POST会再次提交</li> <li>Get产生URL地址收藏 Post不可以</li> <li>GET请求会被浏览器主动缓存</li> <li>GET请求需要URL编码</li> <li>Get请求长度有限制</li> <li>Get参数通过URL传递 Post放在Request Body中</li></ul></li></ul> <h3 id="restful风格"><a href="#restful风格" class="header-anchor">#</a> Restful风格</h3> <ul><li><p>每一个URI代表一中资源 http://kaikeba.com/coures</p></li> <li><p>客户端和服务器之间，传递这种自愿的某种表现层</p></li> <li><p>表现层状态转化 URL设计 动宾结构</p> <ul><li>动词
+<ul><li>GET 读取</li> <li>Post 新建</li> <li>PUT 更新</li> <li>DELETE 删除</li></ul></li> <li>宾语
+<ul><li>名词
+<ul><li>GET /users --- 推荐</li> <li>GET /getUsers --- 不推荐</li></ul></li> <li>复数
+<ul><li>GET /users /users/1 ---推荐</li> <li>GET /user /user/1 ---不推荐</li></ul></li> <li>避免多级
+<ul><li>GET /authors/12?categories=2</li> <li>GET /authors/12/categories/2</li></ul></li></ul></li></ul></li> <li><p>状态码</p> <ul><li>1xx 相关信息</li> <li>2xx 操作成功</li> <li>3xx 重定向</li> <li>4xx 客户端错误</li> <li>5xx 服务器错误</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/front-end/Engineering/Axios.html" class="prev">
+        axios
+      </a></span> <span class="next"><a href="/documents/front-end/Engineering/" class="router-link-active">
+        webpack
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.c707dd89.js" defer></script><script src="/documents/assets/js/2.3c62c32c.js" defer></script><script src="/documents/assets/js/35.83a76c5e.js" defer></script>
+  </body>
+</html>

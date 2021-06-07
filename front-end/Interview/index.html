@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端面试题 | 随风</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="apple-touch-icon" href="/documents/apple-touch-icon.png">
+    <link rel="icon" href="/documents/favicon.ico">
+    <link rel="manifest" href="/documents/manifest.json">
+    <meta name="description" content="随风随雨又随流">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="Ld_AEWr30siza2LmmZ12csitRGsSj9gqqEAch0UXkTc">
+    
+    <link rel="preload" href="/documents/assets/css/0.styles.061186d0.css" as="style"><link rel="preload" href="/documents/assets/js/app.c707dd89.js" as="script"><link rel="preload" href="/documents/assets/js/2.3c62c32c.js" as="script"><link rel="preload" href="/documents/assets/js/43.0496a7bb.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.69e99cad.js"><link rel="prefetch" href="/documents/assets/js/11.8fbb9784.js"><link rel="prefetch" href="/documents/assets/js/12.af316f6b.js"><link rel="prefetch" href="/documents/assets/js/13.8acb8718.js"><link rel="prefetch" href="/documents/assets/js/14.aa98616d.js"><link rel="prefetch" href="/documents/assets/js/15.2104e116.js"><link rel="prefetch" href="/documents/assets/js/16.f872625d.js"><link rel="prefetch" href="/documents/assets/js/17.ba745fa0.js"><link rel="prefetch" href="/documents/assets/js/18.51697a59.js"><link rel="prefetch" href="/documents/assets/js/19.35ff6f52.js"><link rel="prefetch" href="/documents/assets/js/20.37ea7475.js"><link rel="prefetch" href="/documents/assets/js/21.640a6f3a.js"><link rel="prefetch" href="/documents/assets/js/22.64d5e463.js"><link rel="prefetch" href="/documents/assets/js/23.81360713.js"><link rel="prefetch" href="/documents/assets/js/24.2e39871a.js"><link rel="prefetch" href="/documents/assets/js/25.067a6c74.js"><link rel="prefetch" href="/documents/assets/js/26.c948c8e8.js"><link rel="prefetch" href="/documents/assets/js/27.0172c73a.js"><link rel="prefetch" href="/documents/assets/js/28.5de342bb.js"><link rel="prefetch" href="/documents/assets/js/29.c25a7247.js"><link rel="prefetch" href="/documents/assets/js/3.c7fe7f92.js"><link rel="prefetch" href="/documents/assets/js/30.ade90ad4.js"><link rel="prefetch" href="/documents/assets/js/31.51548b2b.js"><link rel="prefetch" href="/documents/assets/js/32.7ae35906.js"><link rel="prefetch" href="/documents/assets/js/33.a2eedc65.js"><link rel="prefetch" href="/documents/assets/js/34.a1f44fcf.js"><link rel="prefetch" href="/documents/assets/js/35.83a76c5e.js"><link rel="prefetch" href="/documents/assets/js/36.7e32c612.js"><link rel="prefetch" href="/documents/assets/js/37.d3dea4df.js"><link rel="prefetch" href="/documents/assets/js/38.5b7974ad.js"><link rel="prefetch" href="/documents/assets/js/39.de5105d8.js"><link rel="prefetch" href="/documents/assets/js/4.e2d1f35b.js"><link rel="prefetch" href="/documents/assets/js/40.8aefc0a5.js"><link rel="prefetch" href="/documents/assets/js/41.5c837005.js"><link rel="prefetch" href="/documents/assets/js/42.b00cda00.js"><link rel="prefetch" href="/documents/assets/js/44.d4da3abc.js"><link rel="prefetch" href="/documents/assets/js/45.103bfc3d.js"><link rel="prefetch" href="/documents/assets/js/46.a9e570c2.js"><link rel="prefetch" href="/documents/assets/js/47.34ceda5f.js"><link rel="prefetch" href="/documents/assets/js/48.c13eede0.js"><link rel="prefetch" href="/documents/assets/js/49.d8be950d.js"><link rel="prefetch" href="/documents/assets/js/5.90a7d0ce.js"><link rel="prefetch" href="/documents/assets/js/50.c1a7ffc5.js"><link rel="prefetch" href="/documents/assets/js/51.36bed2d5.js"><link rel="prefetch" href="/documents/assets/js/52.4b402bc0.js"><link rel="prefetch" href="/documents/assets/js/53.40339bbf.js"><link rel="prefetch" href="/documents/assets/js/54.bb09090d.js"><link rel="prefetch" href="/documents/assets/js/55.1be86dcd.js"><link rel="prefetch" href="/documents/assets/js/56.f9897b08.js"><link rel="prefetch" href="/documents/assets/js/57.90e90dce.js"><link rel="prefetch" href="/documents/assets/js/58.60a63e8d.js"><link rel="prefetch" href="/documents/assets/js/59.2ec6ca9f.js"><link rel="prefetch" href="/documents/assets/js/6.e2fac099.js"><link rel="prefetch" href="/documents/assets/js/60.6e398555.js"><link rel="prefetch" href="/documents/assets/js/61.51e7f6a5.js"><link rel="prefetch" href="/documents/assets/js/62.27907374.js"><link rel="prefetch" href="/documents/assets/js/63.8e7580d7.js"><link rel="prefetch" href="/documents/assets/js/64.e973d499.js"><link rel="prefetch" href="/documents/assets/js/65.f8485304.js"><link rel="prefetch" href="/documents/assets/js/66.f8c086b3.js"><link rel="prefetch" href="/documents/assets/js/67.bce45500.js"><link rel="prefetch" href="/documents/assets/js/68.64946ebc.js"><link rel="prefetch" href="/documents/assets/js/69.1dc4be67.js"><link rel="prefetch" href="/documents/assets/js/7.69cf438d.js"><link rel="prefetch" href="/documents/assets/js/70.0ff84dd2.js"><link rel="prefetch" href="/documents/assets/js/71.3fd48685.js"><link rel="prefetch" href="/documents/assets/js/72.9e715534.js"><link rel="prefetch" href="/documents/assets/js/73.e4dfdd52.js"><link rel="prefetch" href="/documents/assets/js/74.cf446ebe.js"><link rel="prefetch" href="/documents/assets/js/75.9f990d7e.js"><link rel="prefetch" href="/documents/assets/js/76.74313612.js"><link rel="prefetch" href="/documents/assets/js/77.7f838d05.js"><link rel="prefetch" href="/documents/assets/js/78.c17c2b93.js"><link rel="prefetch" href="/documents/assets/js/79.4c148acb.js"><link rel="prefetch" href="/documents/assets/js/8.9beca52e.js"><link rel="prefetch" href="/documents/assets/js/80.318549bf.js"><link rel="prefetch" href="/documents/assets/js/81.bfd5153e.js"><link rel="prefetch" href="/documents/assets/js/82.4878e630.js"><link rel="prefetch" href="/documents/assets/js/83.18adcc4a.js"><link rel="prefetch" href="/documents/assets/js/84.bd95cafa.js"><link rel="prefetch" href="/documents/assets/js/85.875809b6.js"><link rel="prefetch" href="/documents/assets/js/86.2033664c.js"><link rel="prefetch" href="/documents/assets/js/87.0e86ff75.js"><link rel="prefetch" href="/documents/assets/js/88.3deaf402.js"><link rel="prefetch" href="/documents/assets/js/89.1471fd1b.js"><link rel="prefetch" href="/documents/assets/js/9.f166463c.js"><link rel="prefetch" href="/documents/assets/js/90.ff07776f.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.061186d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">随风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/source-study/" class="nav-link">
+  课程学习
+</a></div><div class="nav-item"><a href="/documents/source-vue/" class="nav-link">
+  Vue源码
+</a></div><div class="nav-item"><a href="/documents/source-react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front End Menu" class="dropdown-title"><span class="title">Front End</span> <span class="arrow down"></span></button> <button type="button" aria-label="Front End Menu" class="mobile-dropdown-title"><span class="title">Front End</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/front-end/Html/" class="nav-link">
+  HTML-DOM
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Frame/" class="nav-link">
+  框架
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Code/" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/documents/front-end/Interview/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  前端面试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="back End Menu" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="back End Menu" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/back-end/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/documents/back-end/Docker/" class="nav-link">
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="tools End Menu" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="tools End Menu" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/VScode/" class="nav-link">
+  VScode
+</a></li><li class="dropdown-item"><!----> <a href="/documents/tools/Other/" class="nav-link">
+  工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="wander End Menu" class="dropdown-title"><span class="title">随记</span> <span class="arrow down"></span></button> <button type="button" aria-label="wander End Menu" class="mobile-dropdown-title"><span class="title">随记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/documents/wander/Work/" class="nav-link">
+  工作
+</a></li><li class="dropdown-item"><!----> <a href="/documents/wander/Life/" class="nav-link">
+  生活
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>面试</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/front-end/Interview/2020.html" class="sidebar-link">2020面试记录</a></li><li><a href="/documents/front-end/Interview/" aria-current="page" class="active sidebar-link">前端面试题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/front-end/Interview/#柯里化函数-add-1-2-3" class="sidebar-link">柯里化函数 add(1)(2)(3)</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/Interview/#q-统计网站出现最多的html标签" class="sidebar-link">Q 统计网站出现最多的html标签</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/Interview/#转化为驼峰命名" class="sidebar-link">转化为驼峰命名</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/Interview/#查找字符串中出现最多的字符和个数" class="sidebar-link">查找字符串中出现最多的字符和个数</a></li><li class="sidebar-sub-header"><a href="/documents/front-end/Interview/#promise-相关题目" class="sidebar-link">promise 相关题目</a></li></ul></li><li><a href="/documents/front-end/Interview/toutiao.html" class="sidebar-link">头条面试题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="开发模式、算法、并发限制"><a href="#开发模式、算法、并发限制" class="header-anchor">#</a> 开发模式、算法、并发限制</h3> <h2 id="柯里化函数-add-1-2-3"><a href="#柯里化函数-add-1-2-3" class="header-anchor">#</a> 柯里化函数 add(1)(2)(3)</h2> <div class="language- extra-class"><pre class="language-text"><code>function add() {
+    // 第一次执行时，定义一个数组专门用来存储所有的参数
+    var _args = Array.prototype.slice.call(arguments);
+
+    // 在内部声明一个函数，利用闭包的特性保存_args并收集所有的参数值
+    var _adder = function() {
+        _args.push(...arguments);
+        return _adder;
+    };
+
+    // 利用toString隐式转换的特性，当最后执行时隐式转换，并计算最终的值返回
+    _adder.toString = function () {
+        return _args.reduce(function (a, b) {
+            return a + b;
+        });
+    }
+    return _adder;
+}
+
+// 可使用剩余参数的方式
+function add(..._args) {
+    // 在内部声明一个函数，利用闭包的特性保存_args并收集所有的参数值
+    var _adder = function() {
+        _args.push(...arguments);
+        return _adder;
+    };
+
+    // 利用toString隐式转换的特性，当最后执行时隐式转换，并计算最终的值返回
+    _adder.toString = function () {
+        return _args.reduce(function (a, b) {
+            return a + b;
+        });
+    }
+    return _adder;
+}
+</code></pre></div><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters" target="_blank" rel="noopener noreferrer">剩余参数<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>剩余参数语法允许我们将一个不定数量的参数表示为一个数组。</p> <h3 id="虚拟dom-diff算法-编译compile"><a href="#虚拟dom-diff算法-编译compile" class="header-anchor">#</a> 虚拟DOM,diff算法，编译compile</h3> <h3 id="q1-请说一下你的上一家公司开发发布流程。"><a href="#q1-请说一下你的上一家公司开发发布流程。" class="header-anchor">#</a> Q1 请说一下你的上一家公司开发发布流程。</h3> <h3 id="q-http-的-cache-浏览器如何获取设置"><a href="#q-http-的-cache-浏览器如何获取设置" class="header-anchor">#</a> Q http 的 cache ，浏览器如何获取设置</h3> <p>强缓存&amp;协商缓存</p> <h3 id="q2-虚拟dom是怎么实现的"><a href="#q2-虚拟dom是怎么实现的" class="header-anchor">#</a> Q2 虚拟dom是怎么实现的</h3> <h3 id="q3-你说一下为什么canvas的图片为什么会有跨域问题"><a href="#q3-你说一下为什么canvas的图片为什么会有跨域问题" class="header-anchor">#</a> Q3 你说一下为什么canvas的图片为什么会有跨域问题</h3> <h3 id="q4-你说一下webpack的一些plugin-怎么使用webpack对项目进行优化。"><a href="#q4-你说一下webpack的一些plugin-怎么使用webpack对项目进行优化。" class="header-anchor">#</a> Q4 你说一下webpack的一些plugin，怎么使用webpack对项目进行优化。</h3> <p>1、减少编译体积 ContextReplacementPugin、IgnorePlugin、babel-plugin-import、babel-plugin-transform-runtime。</p> <p>2、并行编译 happypack、thread-loader、uglifyjsWebpackPlugin开启并行</p> <p>3、缓存 cache-loader、hard-source-webpack-plugin、uglifyjsWebpackPlugin开启缓存、babel-loader开启缓存</p> <p>4、预编译 dllWebpackPlugin &amp;&amp; DllReferencePlugin、auto-dll-webapck-plugin</p> <h2 id="q-统计网站出现最多的html标签"><a href="#q-统计网站出现最多的html标签" class="header-anchor">#</a> Q 统计网站出现最多的html标签</h2> <div class="language- extra-class"><pre class="language-text"><code>var map = {};
+    //采用递归调用的方法，比较方便和简单。
+    function fds(node) {
+
+        if (node.nodeType === 1) {
+            //这里我们用nodeName属性，直接获取节点的节点名称
+            var tagName = node.nodeName;
+            //判断对象中存在不存在同类的节点，若存在则添加，不存在则添加并赋值为1
+            map[tagName] = map[tagName] ? map[tagName] + 1 : 1;
+        }
+            //获取该元素节点的所有子节点
+        var children = node.childNodes;
+        for (var i = 0; i &lt; children.length; i++) {
+            //递归调用
+            fds(children[i])
+        }
+    }
+    fds(document);
+    console.log(map)
+    
+    
+    function objvalueSort(obj) {//排序的函数
+    //1.根据数组中的对象的“xxx”，得到排序后的key，return key2-key1 表示降序
+    var newkey = Object.keys(obj).sort(function(key1,key2){
+
+        return obj[key2]['xxx']-obj[key1]['xxx'];
+    })
+　　//2.用排序后的key构建新的对象数组
+    var newObj = {};//创建一个新的对象，用于存放排好序的键值对
+    for (var i = 0; i &lt; newkey.length; i++) {//遍历newkey数组
+        newObj[newkey[i]] = obj[newkey[i]];//向新创建的对象中按照排好的顺序依次增加键值对
+    }
+    
+    return newObj;//返回排好序的新对象
+}
+</code></pre></div><h3 id="q5说一下你觉得你最得意的一个项目-你这个项目有什么缺陷-弊端吗"><a href="#q5说一下你觉得你最得意的一个项目-你这个项目有什么缺陷-弊端吗" class="header-anchor">#</a> Q5说一下你觉得你最得意的一个项目？你这个项目有什么缺陷，弊端吗？</h3> <h3 id="q6-请手写实现一个promise"><a href="#q6-请手写实现一个promise" class="header-anchor">#</a> Q6 请手写实现一个promise</h3> <h3 id="q7-现在有那么一个团队-假如让你来做技术架构-你会怎么做"><a href="#q7-现在有那么一个团队-假如让你来做技术架构-你会怎么做" class="header-anchor">#</a> Q7 现在有那么一个团队，假如让你来做技术架构，你会怎么做？</h3> <div class="language- extra-class"><pre class="language-text"><code>
+
+
+性能评估与优化；
+工作中怎样收集性能相关信息，有哪些关键数据，如何获取的，
+然后做了哪些优化工作，达到什么效果之类的
+
+还有就是我简历有电视端 web 的开发，问了很多电视上焦点控制和内存占用的控制的问题
+
+
+还有就是怎么拆解 KPI 或 OKR，怎么跟团队成员分配任务
+</code></pre></div><h2 id="转化为驼峰命名"><a href="#转化为驼峰命名" class="header-anchor">#</a> 转化为驼峰命名</h2> <div class="language- extra-class"><pre class="language-text"><code>var s1 = &quot;get-element-by-id&quot; // 转化为 getElementById
+var f = function(s) {
+	return s.replace(/-\w/g, function(x) {
+		return x.slice(1).toUpperCase(); 
+    })
+}
+</code></pre></div><h2 id="查找字符串中出现最多的字符和个数"><a href="#查找字符串中出现最多的字符和个数" class="header-anchor">#</a> 查找字符串中出现最多的字符和个数</h2> <div class="language- extra-class"><pre class="language-text"><code>let str = &quot;abcabcabcbbccccc&quot;;
+let num = 0;
+let char = '';
+// 使其按照一定的次序排列
+str = str.split('').sort().join(''); // &quot;aaabbbbbcccccccc&quot;
+// 定义正则表达式
+let re = /(\w)\1+/g;
+str.replace(re,($0,$1) =&gt; {
+    if(num &lt; $0.length){
+        num = $0.length;
+        char = $1;
+    }
+});
+console.log(`字符最多的是${char}，出现了${num}次`)
+</code></pre></div><h2 id="promise-相关题目"><a href="#promise-相关题目" class="header-anchor">#</a> promise 相关题目</h2> <div class="language- extra-class"><pre class="language-text"><code>现在有一个 js 函数，接受一个参数：uid 的数组，数组长度最长 100 ，批量去服务端查询用户 profile：
+const getUserProfileByUids = (uidList) =&gt; {
+    return fetch(`/user/get?uidlist=${encodeURIComponent(uidList.join('.'))}`).then((res) =&gt; {
+        return res.json();
+    });
+}
+// 服务端的返回值的结构是：  [{uid: &quot;001&quot;, nick: 'xx', age: 18},{uid: &quot;002&quot;, nick: 'xx', age: 18}]
+// 如果传入的 uid 在服务端不存在，在返回值里就没这个 uid 的相关数据
+现在要求实现一个新的查询方法，接受单个 uid，返回一个 Promise ，查询成功，resolve 这个 uid 的 profile，否则 reject。
+要求合并 100ms 内的单个查询，只去服务端批量查询一次，不允许使用任何三方库，批量查询直接使用 getUserProfileByUids
+输入输出样例
+1. 100ms 内的单个请求能够被合并
+2. 请求成功和失败都能正确派发请求的结果，对应 promise 的 resove 和 reject
+3. 窗口内超过 100 个请求，能确保每次批量请求的 ID 个数不超过 100
+</code></pre></div><p>解题</p> <div class="language- extra-class"><pre class="language-text"><code>// 入口函数
+const getUserProfileByUid = function (uid) {
+  return mergeRequest(uid).then(function (res) {
+    return res[uid];
+  })
+}
+const debounce = (runner, timeout = 100, max = 100) =&gt; {
+  let timer = null;
+  let uidCatch = new Array();
+  let promiseCatch = new Array();
+  return function () {
+    clearTimeout(timer);
+    timer = null
+    uidCatch.push(arguments[0])
+    let task = myPromise();
+    promiseCatch.push(task);
+    let callback = function () {
+      timer = null;
+      let uidCatchTemp = uidCatch;
+      uidCatch = [];
+      let tmpPromises = promiseCatch;
+      promiseCatch = [];
+      let delay = Promise.resolve().then(function () {
+        return runner(uidCatchTemp);
+      });
+      tmpPromises.forEach(function (v) {
+        delay.then(v.resolve, v.reject)
+      });
+    };
+    if (uidCatch.length &gt;= max) {
+      callback();
+    } else {
+      timer = setTimeout(callback, timeout);
+    }
+    return task.promise;
+  };
+}
+
+const mergeRequest = debounce(function (uidList) {
+  return fetch(`/user/get?uidlist=${encodeURIComponent(uidList.join('.'))}`).then((userList) =&gt; {
+    let result = {};
+    userList.forEach(function (user) {
+      if (!result[user.uid]) {
+        result[user.uid] = user;
+      }
+    });
+    return result;
+  });
+
+  // 调用模拟 API
+  // return api(uidList.join('.')).then(function (userList) {
+  //   let result = {};
+  //   userList.forEach(function (user) {
+  //     if (!result[user.uid]) {
+  //       result[user.uid] = user;
+  //     }
+  //   });
+  //   return result;
+  // });
+});
+
+// 同级获取 resolve reject
+const myPromise = () =&gt; {
+  let obj = {};
+  obj.promise = new Promise(function (resolve, reject) {
+    obj.resolve = resolve;
+    obj.reject = reject;
+  });
+  return obj;
+}
+
+
+// 以下均为方便调试的模拟方法，真实场景不需要
+// 模拟并发
+// const main = () =&gt; {
+//   for (let uid = 0; uid &lt; 10; uid++) {
+//     getUserProfileByUid(uid).then(res =&gt; console.log('res',res.name))
+//   }
+// }
+
+// 模拟接口
+// const api = (arrStr) =&gt; {
+//   return new Promise((resolve, reject) =&gt; {
+//     setTimeout(() =&gt; {
+//       let arr = arrStr.split('.')
+//       let res = arr.map((uid, index) =&gt; {
+//         return {
+//           uid: uid,
+//           name: 'demo' + index
+//         }
+//       })
+//       resolve(res)
+//     }, 20);
+//   })
+// }
+</code></pre></div><h5 id="输出"><a href="#输出" class="header-anchor">#</a> 输出</h5> <div class="language- extra-class"><pre class="language-text"><code>Promise.resolve().then(() =&gt; {
+    console.log(0);
+    return Promise.resolve(4);
+}).then((res) =&gt; {
+    console.log(res)
+})
+
+Promise.resolve().then(() =&gt; {
+    console.log(1);
+}).then(() =&gt; {
+    console.log(2);
+}).then(() =&gt; {
+    console.log(3);
+}).then(() =&gt; {
+    console.log(5);
+}).then(() =&gt;{
+    console.log(6);
+})
+
+// 输出
+0
+1
+2
+3
+4
+5
+6
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/front-end/Interview/2020.html" class="prev">
+        2020面试记录
+      </a></span> <span class="next"><a href="/documents/front-end/Interview/toutiao.html">
+        头条面试题
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documents/assets/js/app.c707dd89.js" defer></script><script src="/documents/assets/js/2.3c62c32c.js" defer></script><script src="/documents/assets/js/43.0496a7bb.js" defer></script>
+  </body>
+</html>
