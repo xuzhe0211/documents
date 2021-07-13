@@ -13,7 +13,8 @@ module.exports = [
             { text: '框架', link: '/front-end/Frame/' },
             { text: '算法', link: '/front-end/Code/' },
             { text: '工程化', link: '/front-end/Engineering/' },
-            { text: '前端面试题', link: '/front-end/Interview/' }
+            { text: '前端面试题', link: '/front-end/Interview/' },
+            { text: '可视化', link: '/front-end/Visual/' }
         ]
     },
     {

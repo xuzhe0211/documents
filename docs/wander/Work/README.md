@@ -189,3 +189,54 @@ video.js
 ```
 
 
+## 使用css3动画，页面抖动闪屏
+
+### 问题原因
+使用css3动画制作，但是动画会导致页面抖动闪屏
+
+### 解决方案
+
+使用到动画的样式设置如下样式，可解决
+```
+-webkit-backface-visibility: hidden;（设置进行转换的元素的背面在面对用户时是否可见：隐藏）
+// 如果有3d加上下面句 ，没有可省略
+-webkit-transform-style: preserve-3d; （设置内嵌的元素在 3D 空间如何呈现：保留 3D ）
+```
+
+eg:
+
+```
+.num {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+```
+
+:::tip
+上面问题在解决大屏的时候还是未生效，最后改写css动画使用requestAnimationFrame
+:::
+
+```
+async animationRender() {
+    if (!this.$refs.animationEle) {
+        return false;
+    }
+    const parentHeight = this.$refs.animationEle.clientHeight;
+    const itemHeight = this.$refs.animationEle.querySelector('div').clientHeight;
+    if (this.indexAnimation <= -(parentHeight - 3 * itemHeight)) {
+        this.indexAnimation = 0;
+        await sleep(2000);
+    } else {
+        this.indexAnimation--;
+    }
+    this.$refs.animationEle ? (this.$refs.animationEle.style.top = `${this.indexAnimation}px`) : '';
+},
+animationloop() {
+    this.animationRender();
+    this.visibilityList.length > 3 ? this.animationId = window.requestAnimationFrame(this.animationloop) : '';
+}
+
+animationloop()
+```

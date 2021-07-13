@@ -106,3 +106,62 @@ elem.onclick = function() {
   })()
 }
 ```
+[参考文档](https://www.jianshu.com/p/fa5512dfb4f5)
+
+### window.requestAnimationFrame
+
+[参考地址](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)
+
+window.requestAnimationFrame()告诉浏览器--你希望执行一个动画,并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。该方法需要传入一个回调函数作为参数，该回调函数会在浏览器下一次重绘之前执行
+
+:::danger
+注意:若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用window.requestAnimationFrame();
+:::
+
+当你准备更新动画时你应该调用此方法。这将使浏览器在下一次重绘之前调用你传入该方法的动画函数(即你的回调函数)。
+回调函数执行次数通常是每秒60次，但在大多数遵循W3C建议的浏览器中，回调函数执行次数通常与浏览器屏幕刷新次数想匹配。为了提高性能和电池寿命，因此在大多数浏览器中，当requestAnimationFrame()运行在后台标签页或者隐藏的iframe里时，requestAnimationFrame()会被暂时停用以提升性能和电池寿命。
+
+回调函数会被传入DOMHighResTimeStamp参数，DOMHighResTimeStamp指示当前被requestAnimationFrame()排序的回调函数被触发的时间。在同一个帧中的多个回调函数，他们每一个都会接受到一个相同的时间戳，即使在计算上一个回调函数的工作负载期间已经消耗了一些事件。该时间戳是一个十进制数，单位是毫秒，最小精度是1ms
+
+:::danger
+请确保总是使用第一个参数(或其他获得当前事件的方法)计算每次调用之间的时间间隔，否则动画在高刷新率的屏幕中会运行的更快，请参考下面里的做法
+:::
+
+#### 语法
+
+:::tip
+window.requestAnimationFrame(callback);
+:::
+
+##### 参数
+- callback
+
+下一次重绘之前更新动画帧所调用的函数(即上面所说的回调函数)。该回调函数会被传入DOMHighResTimeStamp参数，该参数与performance.now()的返回值相同，它表示requestAnimationFrame()开始去执行回调函数的时刻。
+
+- 返回值
+
+一个long正数，请求ID，是返回列表中唯一的标识。是个非零值，没别的意义。你可以传这个值给window.cancelAnimationFrame()以取消回调函数。
+
+##### 范例
+
+```
+const element = document.getElementById('some-element-you-want-to-animate');
+let start;
+
+function step(timestamp) {
+    if (start === undefined) {
+        start = timestamp;
+    }
+    const elapased = timestamp - start;
+
+    // 这里使用`Math.min()`确保元素刚好停在200px的位置
+    element.style.transform = `translateX(${Math.min(0.1 * elapsed, 200)}px)`;
+
+    // 在两秒后停止动画
+    if (elapsed < 2000) {
+        window.requestAnimationFrame(step);
+    }
+}
+
+window.requestAnimationFrame(step);
+```

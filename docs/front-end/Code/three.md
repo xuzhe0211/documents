@@ -291,3 +291,47 @@ const maxDepth = (root) => {
     return depth;
 }
 ```
+
+
+## 右明树
+
+1. DFS
+
+```
+var rightSideView = function(root) {
+    if (!root) return [];
+    let arr = [];
+    dfs(root, 0, arr);
+    return arr;
+}
+function dfs(root, step, res) {
+    if (root) {
+        if (res.length === step) {
+            res.push(root.val);
+        }
+        dfs(root.right, step + 1, res);
+        dfs(root.left, step + 1, res);
+    }
+}
+```
+
+2. BFS
+
+```
+var rightSideView = function(root) {
+    if (!root) return [];
+    let queue = [root];
+    let arr = [];
+    while(queue.length > 0) {
+        let len = queue.length;
+        while (len) {
+            let node = queue.shift();
+            if (len === 1) arr.push(node.val);
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+            len--;
+        }
+    }
+    return arr;
+}
+```

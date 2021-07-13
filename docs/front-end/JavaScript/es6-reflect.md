@@ -16,6 +16,19 @@ Reflect对象与proxy对象一样，也是ES6为了操作对象而提供的新AP
 
 4. Reflect对象的方法与Proxy对象的方法一一对应，只要是Proxy对象的方法，就能在Reflect对象上找到对应的方法。这就让Proxy对象可以方便的调用对应的Reflect方法完成默认行为，作为修改行为的基础。也就是说，不管Proxy怎么修改默认行为，你总在Reflect上获取默认行为。
 
+Proxy可以对目标对象的读取、函数调用等操作进行拦截，然后进行操作处理。它不直接操作对象，而是像代理模式，通过对象的代理对象进行操作，在进行这些操作时候，可以添加一些需要的额外操作
+
+Reflect可以用于获取目标对象的行为，它与Object类似，但是更益读，为操作对象提供了一个更优雅的方式，他的对象与Proxy是对应的
+
+
+ES6中将Object的一些明显属于语言内部的方法移植到了Reflect对象上(当前某些方法同时存在Object和Reflect对象上)，未来新的方法只会部署在Reflect对象上
+
+Reflect对象对某些方法的返回结果进行了修改，使其更加合理。
+
+Reflect对象使用函数的方式实现了Object的命令式操作。
+
+[Proxy、Reflect教程](https://www.runoob.com/w3cnote/es6-reflect-proxy.html)
+
 ```
 Proxy(target, {
 	set: function(target, name, value, receiver) {
@@ -31,7 +44,7 @@ Proxy(target, {
 
 ```
 var loggedObj = new Proxy(obj, {
-	get(targe, name) {
+	get(target, name) {
     	console.log('get', target, name);
 		return Reflect.get(target, name);
     },

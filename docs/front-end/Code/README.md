@@ -445,6 +445,94 @@ while（index !=== -1）{
 }
 console.log('f一共出现了'+num+'次')；
 ```
+## 缺失的第一个正数
+:::tip
+给一个未排序的正数数组，找出没有出现的最小正正数
+
+[1,2,0] => 3
+
+[3, 4, -1, 1] => 2
+
+[7, 8, 9,11, 12] => 1
+:::
+
+```
+var firstMissingPositive = function(nums) {
+    let result = 1;
+    while(nums.includes(result)) {
+        result++;
+    }
+    return result;
+}
+```
+## 长度最小的子数组
+:::tip
+s = 7； nums = [2, 3,1, 2, 4, 3];
+
+输出2， 子数组[4, 3] 最小的连续子数组
+
+:::
+
+```
+var minSubArrayLen = function(s, nums) {
+    let n = nums.length;
+    let left = 0, res = Infinity, sum = 0;
+    for (let right = 0; right < n; right++) {
+        //记录和
+        sum += nums[right];
+        //满足条件,收缩左指针
+        while(sum >= s) {
+            //收缩之前，取最小值  
+            res = Math.min(res, right - left + 1);
+            sum -= nums[left++];
+        }
+    }
+    //注意数组全部加起来或者数组为0的时候，res不变；
+    return res == Infinity ? 0 : res;
+}
+```
+## 数组组合
+[力扣地址](https://leetcode-cn.com/problems/combinations/)
+给定两个整数n和k,返回1...n中所有可能的k个数的组合。
+
+示例：
+```
+输入: n = 4， k = 2;
+
+输出：
+[
+    [2,4],
+    [3,4],
+    [2,3],
+    [1,2],
+    [1,3],
+    [1,4]
+]
+```
+
+**题解**
+```
+const combine = function(n, k) {
+    const res = [];
+    const could = [];
+    if (k === 0) {
+        return [[]];
+    }
+    function dfs(start, n, k, res, could) {
+        if (could.length === k) {
+            res.push(could.slice(0));
+            return;
+        }
+        for (let i = start; i < n + 1; i++) {
+            could.push(i);
+            dfs(i+1, n, k, res, could);
+            could.pop();
+        }
+        return res;
+    }
+    return dfs(1, n, k, res, could);
+}
+```
 
 ## 字符串有效性检查
 ```

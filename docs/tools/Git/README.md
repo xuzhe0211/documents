@@ -155,8 +155,29 @@ git push origin test_tag // 本地推送到线上
 
 git tag -d test_tag // 本地删除tag
 git push origin :refs/tags/test_tag // 本地tag删除了,在执行该句，删除线上tag
-```
 
+
+用git ls-remote -t 查看远程tags                 git tag -l查看本地tag
+
+然后用 git tag -d xxx删除本地tag
+
+最后远程拉取远程tags   git fetch origin --prune-tags
+
+```
+### git 切换到某个tag
+
+```
+git checkout tag_name
+```
+但是，这时候git可能会提示你当前处于一个"detached Head状态"。
+
+因为tag相当于一个快找，是不能更改他的代码的
+
+如果要在tag代码的基础上做修改，你需要新建一个分支
+
+```
+git checkout -b branch_name tag_name
+```
 
 ## Git rebase
 
@@ -235,3 +256,51 @@ git rebase -i 3a226a
   # Please enter the commit message for your changes. Lines starting # with ‘#’ will be ignored, and an empty message aborts the commit.
   ```
   5.输入wq保存并推出, 再次输入git log查看 commit 历史信息，你会发现这两个 commit 已经合并了。
+
+## 使用git remove而不删除文件
+如果使用Git，那么随着项目的不断发展，可能一直都在添加文件。但是有时，您实际上可能需要从Git存储库中删除文件，而不是从本地文件中删除文件。例如，假设你忘记将文件添加到.gitignore但又不想从本地开发环境中删除。这可能是由于错误造成的,或者您没有意识到新的程序包或某些东西创建了一些您不想在回购中使用的讨厌的日志文件。无论那种方式，这实际上都很容易做到的。
+
+### 使用Git删除单个文件而不是删除它
+此方法将从您的Git存储库中删除一个文件，而不会从本地环境中删除该文件，然后当您运行git push，文件将在远程仓库中删除。
+```
+git rm --cached filexample.txt
+```
+### 使用Git删除多个文件
+以类似的方式，您可以一次对多个文件执行此操作
+```
+git rm --cached file.txt file2.txt file2.txt
+```
+### 删除整个目录而不删除文件
+只要您将-r标志添加到命令中，这也可以递归的用于文件夹
+```
+git rm -r --cached folder
+```
+
+
+## 清除所有untracked file
+
+  有时候我们第一次进入公司从这个服务器上clone下来了这个工程，然后我们运行了。领导当我们修改了一点点小东西，然后准备提交了，很多人习惯 git add . 结果导致很多编译的文件也都add汲取了，当然也可以撤销这次提交重新做。但是我们建议。
+
+  1. 添加修改过的单个或多个文件，不要视图去 git add .
+  2. 提交时情记得过一遍进行过的修改，保证没问题
+  3. 我们如果想保证有一个干净的工程(没有编译过的文件，大部分都是untracked file)，我们可以这样
+
+  ```
+  git clean -f ---是清除untracked文件
+  git clean -df --是清除untracked目录和文件
+  ```
+  这样我们为add的文件就不会被以为操作添加进来了
+
+  另外我们如果想撤销当前修改可以
+
+  ```
+  git reset --hard ---回到干净的时候
+  ```
+
+:::tip
+git clean命令用来从你的工作目录中删除所有没有tracked过的文件
+git clean经常和git reset --hard一起结合使用，记住reset只影响被track过的文件，所以需要clean来删除没有trank过的文件，结合使用这两个命令能让你的目录完全回到一个指定的commit的状态
+:::
+[git clean](https://blog.csdn.net/allanGold/article/details/79213606)
+
+
